@@ -1,0 +1,40 @@
+.icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-size: cover;
+
+    &-google-plus {
+        background: url('../img/social/google-plus-social-logotype.png') center no-repeat;
+        background-size: 18px 18px;
+    }
+    &-facebook {
+        background-image: url('../img/social/facebook-logo.png');
+    }
+    &-twitter {
+        background-image: url('../img/social/twitter-social-logotype.png');
+    }
+    &-instagram {
+        background-image: url('../img/social/instagram-social-network-logo-of-photo-camera.png');
+    }
+    &-pinterest {
+        background-image: url('../img/social/pinterest-social-logo.png');
+    }
+    &-youtube {
+        background-image: url('../img/social/youtube-symbol.png');
+    }
+}
+
+.header-delimiter {
+    width: 0;
+    height: 50px;
+    position: relative;
+    &:after {
+        content: '';
+        width: 1px;
+        height: 100%;
+        background-color: $main-grey;
+        position: absolute;
+        top: 0;
+    }
+}
