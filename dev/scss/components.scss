@@ -37,4 +37,8 @@
         position: absolute;
         top: 0;
     }
+
+    @media (max-width: 992px) {
+        height: 30px;
+    }
 }

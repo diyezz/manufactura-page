@@ -2,7 +2,7 @@ header {
     border-bottom: solid 1px #d2d2d2;
 }
 .header {
-    height: 90px;
+    min-height: 90px;
 
     &__logo {
         text-transform: uppercase;
@@ -10,11 +10,12 @@ header {
     }
 
     &__menu-button {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         background-color: transparent;
         border: none;
         outline: none;
+        padding: 0;
 
         &:hover, &:focus, &:active {
             outline: none;
@@ -75,14 +76,31 @@ header {
             }
         }
     }
+
+    @media (max-width: 576px) {
+        &__adds-list {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    @media (max-width: 767px) {
+        &__logo {
+            text-align: center;
+        }
+    }
+    @media (max-width: 992px) {
+        &__adds-list {
+            justify-content: space-between;
+        }
+    }
 }
 
 .slider {
 
     &__slide {
-        height: 100%;
         width: 100%;
         height: calc(100vh - 100px);
+        min-height: 468px;
         max-height: 642px;
         background-image: url('../img/slide3.jpg');
         background-repeat: no-repeat;
