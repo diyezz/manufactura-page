@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     setBackgroundFromSource('slider__slide', 'slider__slide-background');
+    setBackgroundFromSource('about-us__one-of-work', 'about-us__one-of-work-background');
 
     $('.slider__slides-wrapper').slick({
         autoplay: true,

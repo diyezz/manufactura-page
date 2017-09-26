@@ -42,3 +42,50 @@
         height: 30px;
     }
 }
+
+.header-text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    h2 {
+        margin: 0;
+        padding: 0;
+        font-size: $xl-font;
+        font-weight: 600;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            background-color: $main-red;
+            width: 100px;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+        }
+    }
+    a {
+        font-size: $small-font;
+        text-transform: uppercase;
+        color: $secondary-black;
+    }
+}
+
+.link-button {
+    display: flex;
+    padding: 15px 30px;
+    text-align: center;
+    background-color: $main-black;
+    color: $main-white;
+    text-transform: uppercase;
+    transition: all 1s ease;
+
+    &:hover {
+        background-color: $main-grey;
+        color: $main-white;
+        text-decoration: none;
+    }
+}

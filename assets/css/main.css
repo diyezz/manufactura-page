@@ -32,6 +32,44 @@
     .header-delimiter {
       height: 30px; } }
 
+.header-text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; }
+  .header-text h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative; }
+    .header-text h2:after {
+      content: '';
+      position: absolute;
+      background-color: #e41e1b;
+      width: 100px;
+      height: 2px;
+      bottom: -2px;
+      left: 0; }
+  .header-text a {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #3D3D3D; }
+
+.link-button {
+  display: flex;
+  padding: 15px 30px;
+  text-align: center;
+  background-color: #262626;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: all 1s ease; }
+  .link-button:hover {
+    background-color: #d2d2d2;
+    color: #ffffff;
+    text-decoration: none; }
+
 header {
   border-bottom: solid 1px #d2d2d2; }
 
@@ -131,3 +169,47 @@ header {
   width: 265px;
   color: #ffffff;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.7); }
+
+.about-us {
+  display: flex;
+  flex-wrap: wrap; }
+  .about-us__header {
+    width: 100%; }
+  .about-us__text {
+    width: 50%;
+    padding: 5%;
+    font-size: 0.875rem; }
+    .about-us__text p:last-child {
+      margin-bottom: 0; }
+  .about-us__one-of-work {
+    width: 50%;
+    padding-left: 15px; }
+  .about-us__team-link {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+  .about-us__one-of-work {
+    background-size: cover;
+    background-position: center;
+    transform: translateX(25px);
+    animation: smallTranslate 2s ease; }
+  .about-us__one-of-work-background {
+    display: none; }
+  @media (max-width: 768px) {
+    .about-us {
+      flex-direction: column; }
+      .about-us__text {
+        width: 100%; }
+      .about-us__one-of-work {
+        width: 100%;
+        min-height: 300px;
+        transform: translateX(0);
+        animation: none; } }
+
+@keyframes smallTranslate {
+  0% {
+    transform: translateX(-25px); }
+  100% {
+    transform: translateX(25px); } }
