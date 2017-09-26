@@ -39,7 +39,8 @@ header {
   min-height: 90px; }
   .header__logo {
     text-transform: uppercase;
-    font-weight: 500; }
+    color: #e41e1b;
+    font-weight: 600; }
   .header__menu-button {
     width: 30px;
     height: 30px;
@@ -72,7 +73,7 @@ header {
   .header__text-for-call {
     text-transform: uppercase;
     margin-right: 0.5rem;
-    color: #e41e1b; }
+    color: #262626; }
   .header__back-call {
     color: #262626; }
   .header__social-list ul {
@@ -97,14 +98,14 @@ header {
 .slider__slide {
   width: 100%;
   height: calc(100vh - 100px);
-  min-height: 468px;
+  min-height: 280px;
   max-height: 642px;
-  background-image: url("../img/slide3.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
   display: block;
-  position: relative; }
+  position: relative;
+  outline: none; }
 
 .slider__slide-content {
   border: solid 3px #ffffff;
@@ -116,6 +117,10 @@ header {
   top: 50%;
   left: 25%;
   transform: translateY(-50%); }
+
+.slider__slide-background {
+  max-width: 100%;
+  visibility: hidden; }
 
 .slider__slide-headline {
   width: 265px;

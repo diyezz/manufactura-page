@@ -8,7 +8,6 @@
     <!-- Development stylesheets -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.js">
     <!-- Project's stylesheets -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -18,19 +17,19 @@
     <header>
         <div class="container">
             <div class="row align-items-center header">
-                <div class="col-lg-2 col-sm-12 col-12">
+                <div class="col-lg-3 col-sm-12 col-12">
                     <div class="header__logo">
-                        Some site
+                        MANUFACTURA
                     </div>
                 </div>
-                <div class="col-lg-6 col-sm-10 col-9 offset-lg-2">
+                <div class="col-9 col-sm-10 col-lg-7 offset-lg-2">
                     <div class="header__adds-list">
-                        <div class="header__call-us hidden-xs-down">
-                            <span class="header__text-for-call">Call us:</span>
+                        <div class="header__call-us d-none d-sm-flex">
+                            <span class="header__text-for-call d-none d-md-inline">Call us:</span>
                             <a class="header__back-call" href="javascript:void(0);">0 (800) 400 500 12</a>
                         </div>
 
-                        <div class="header-delimiter hidden-sm-down"></div>
+                        <div class="header-delimiter d-none d-md-flex"></div>
 
                         <div class="header__social-list">
                             <ul class="">
@@ -72,6 +71,15 @@
                                 <h2 class="slider__slide-headline">Our first project with huge history</h2>
                                 <p class="slider__slide-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa perspiciatis repellendus!</p>
                             </div>
+                            <img class="slider__slide-background" src="assets/img/slide3.jpg" alt="">
+                        </div>
+
+                        <div class="slider__slide">
+                            <div class="slider__slide-content">
+                                <h2 class="slider__slide-headline">Our first project with huge history</h2>
+                                <p class="slider__slide-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa perspiciatis repellendus!</p>
+                            </div>
+                            <img class="slider__slide-background" src="assets/img/slide2.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -89,7 +97,7 @@
                     <div class="about-us__text"></div>
                     <div class="about-us__one-of-work">
                         <img src="" alt="">
-                        <a href="#to this one of work"></a>
+                        <a href="#"></a>
                     </div>
                     <div class="about-us__team-link"></div>
                 </div>
@@ -132,5 +140,8 @@
     </div>
 </section>
 
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/slick-carousel/slick/slick.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
