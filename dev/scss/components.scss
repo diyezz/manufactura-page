@@ -75,6 +75,13 @@
     }
 }
 
+.headline-text {
+    font-size: $xl-font;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 .link-button {
     display: flex;
     padding: 15px 30px;

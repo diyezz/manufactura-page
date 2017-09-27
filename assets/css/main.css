@@ -58,6 +58,12 @@
     text-transform: uppercase;
     color: #3D3D3D; }
 
+.headline-text {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
 .link-button {
   display: flex;
   padding: 15px 30px;
