@@ -5,6 +5,7 @@
 
   &__header {
     width: 100%;
+
   }
   &__text {
     width: 50%;
@@ -31,6 +32,41 @@
     background-position: center;
     transform: translateX(25px);
     animation: smallTranslate 2s ease;
+    position: relative;
+
+    a {
+      display: block;
+      padding: 5px 10px;
+      position: absolute;
+      text-transform: capitalize;
+      color: $main-red;
+      font-size: $middle-font;
+      font-weight: 600;
+      line-height: 1;
+      bottom: 30px;
+      right: 30px;
+      background-color: $main-white;
+      transition: background 0.5s ease;
+
+      &:before {
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: $main-red;
+        bottom: 3px;
+        left: -5px;
+        display: block;
+        position: absolute;
+        transition: width 0.5s ease;
+      }
+      &:hover {
+        background-color: transparent;
+        color: $main-white;
+        &:before {
+          width: calc(100% + 10px);
+        }
+      }
+    }
   }
   &__one-of-work-background {
     display: none;

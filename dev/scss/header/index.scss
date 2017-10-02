@@ -5,9 +5,11 @@ header {
     min-height: 90px;
 
     &__logo {
-        text-transform: uppercase;
+        text-transform: lowercase;
         color: $main-red;
-        font-weight: 600;
+        font-weight: 700;
+        font-size: $xl-font;
+        line-height: 1;
     }
 
     &__menu-button {

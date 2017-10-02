@@ -1,0 +1,43 @@
+.slick {
+  &-dots {
+    display: flex;
+    margin: 30px 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      margin: 0 4px;
+
+      button {
+        font-size: 0;
+        line-height: 0;
+        color: transparent;
+        border: none;
+        border-radius: 2px;
+        outline: none;
+        width: 16px;
+        height: 16px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &.slick-active {
+        button {
+          background-color: $main-red;
+        }
+      }
+    }
+  }
+
+  &-slider {
+    .slick-slide {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.projects {
+  overflow: hidden;
+
+  &__slider {
+    margin: 0 -5px;
+  }
+
+  &__slide {
+    min-height: 150px;
+    padding: 5px;
+  }
+  &__image-wrapper {
+    height: 100%;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-color: $main-grey;
+  }
+  &__slide-background {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
