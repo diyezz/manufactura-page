@@ -80,6 +80,11 @@ a:hover {
     transform: rotate(45deg);
     transform-origin: center; }
 
+.retina-size-wrapper {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .header-delimiter {
   width: 0;
   height: 50px;
@@ -113,7 +118,7 @@ a:hover {
       content: '';
       position: absolute;
       background-color: #e41e1b;
-      width: 100px;
+      width: 65%;
       height: 2px;
       bottom: -2px;
       left: 0; }
@@ -189,7 +194,16 @@ a:hover {
     margin: 0; } }
 
 header {
-  border-bottom: solid 1px #d2d2d2; }
+  background-color: #ffffff;
+  position: relative;
+  z-index: 100; }
+
+.header-section {
+  margin-bottom: -120px;
+  margin-top: 30px; }
+  @media (max-width: 575px) {
+    .header-section {
+      margin-top: 0; } }
 
 .header {
   min-height: 90px; }
@@ -255,8 +269,8 @@ header {
 
 .slider__slide {
   width: 100%;
-  height: calc(100vh - 100px);
-  min-height: 280px;
+  height: calc(100vh - 15px);
+  min-height: 335px;
   max-height: 642px;
   background-repeat: no-repeat;
   background-position: center top;
@@ -272,7 +286,7 @@ header {
   padding-top: 65px;
   padding-bottom: 65px;
   position: absolute;
-  top: 50%;
+  top: calc(50% + 60px);
   left: 25%;
   transform: translateY(-50%); }
 
@@ -372,7 +386,8 @@ header {
     padding: 5px; }
   .projects__image-wrapper {
     height: 100%;
-    min-height: 400px;
+    min-height: 320px;
+    max-height: calc(100vh - 20px);
     background-size: cover;
     background-position: center;
     background-color: #d2d2d2; }

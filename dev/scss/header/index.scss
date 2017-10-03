@@ -1,6 +1,18 @@
 header {
-    border-bottom: solid 1px #d2d2d2;
+    background-color: $main-white;
+    position: relative;
+    z-index: 100;
 }
+
+.header-section {
+    margin-bottom: -120px;
+    margin-top: 30px;
+
+    @media (max-width: 575px) {
+        margin-top: 0;
+    }
+}
+
 .header {
     min-height: 90px;
 
@@ -102,8 +114,8 @@ header {
 
     &__slide {
         width: 100%;
-        height: calc(100vh - 100px);
-        min-height: 280px;
+        height: calc(100vh - 15px);
+        min-height: 335px;
         max-height: 642px;
         background-repeat: no-repeat;
         background-position: center top;
@@ -120,7 +132,7 @@ header {
         padding-top: 65px;
         padding-bottom: 65px;
         position: absolute;
-        top: 50%;
+        top: calc(50% + 60px);
         left: 25%;
         transform: translateY(-50%);
     }
