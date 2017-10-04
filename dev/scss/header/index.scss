@@ -88,6 +88,13 @@ header {
             li {
                 display: inline-block;
                 margin: 0 .5rem;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -96,6 +103,11 @@ header {
         &__adds-list {
             flex-direction: column;
             align-items: flex-start;
+        }
+        &__social-list {
+            ul {
+                justify-content: space-between;
+            }
         }
     }
     @media (max-width: 767px) {
@@ -118,7 +130,7 @@ header {
         min-height: 335px;
         max-height: 642px;
         background-repeat: no-repeat;
-        background-position: center top;
+        background-position: 25%;
         background-size: cover;
         display: block;
         position: relative;

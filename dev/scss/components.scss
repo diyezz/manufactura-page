@@ -5,23 +5,23 @@
     background-size: cover;
 
     &-google-plus {
-        background: url('../img/social/google-plus-social-logotype.png') center no-repeat;
+        background: url('../img/svg/google-plus-social-logotype.svg') center no-repeat;
         background-size: 18px 18px;
     }
     &-facebook {
-        background-image: url('../img/social/facebook-logo.png');
+        background-image: url('../img/svg/facebook-logo.svg');
     }
     &-twitter {
-        background-image: url('../img/social/twitter-social-logotype.png');
+        background-image: url('../img/svg/twitter-social-logotype.svg');
     }
     &-instagram {
-        background-image: url('../img/social/instagram-social-network-logo-of-photo-camera.png');
+        background-image: url('../img/svg/instagram-social-network-logo-of-photo-camera.svg');
     }
     &-pinterest {
-        background-image: url('../img/social/pinterest-social-logo.png');
+        background-image: url('../img/svg/pinterest-social-logo.svg');
     }
     &-youtube {
-        background-image: url('../img/social/youtube-symbol.png');
+        background-image: url('../img/svg/youtube-symbol.svg');
     }
 }
 .logo-cutted {
@@ -35,7 +35,7 @@
         background-color: $main-white;
         position: absolute;
         top: -1rem;
-        left: -1rem;
+        left: -1.2rem;
         display: block;
         transform: rotate(45deg);
         transform-origin: center;
@@ -47,7 +47,7 @@
         background-color: $main-white;
         position: absolute;
         bottom: -1.3rem;
-        right: -1rem;
+        right: -1.3rem;
         display: block;
         transform: rotate(45deg);
         transform-origin: center;
@@ -123,6 +123,10 @@
         color: $main-red;
         text-decoration: none;
     }
+
+    &.is-active {
+        color: $main-red;
+    }
 }
 
 .headline-text {
@@ -130,6 +134,74 @@
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin: 0;
+
+    &--white {
+        color: $main-white;
+    }
+    &--red {
+        color: $main-red;
+    }
+    &--shadow {
+        text-shadow: 0 0 3px rgba(0,0,0,.7);
+    }
+}
+.city {
+    font-size: $small-font;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 0;
+    margin: 0;
+}
+.date {
+    font-size: $small-font;
+    font-weight: 300;
+    text-transform: capitalize;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+.description-text {
+    font-size: $middle-font;
+    font-weight: 300;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.link-to-project {
+    display: block;
+    padding: 5px 10px;
+    position: absolute;
+    text-transform: capitalize;
+    color: $main-red;
+    font-size: $middle-font;
+    font-weight: 600;
+    line-height: 1;
+    bottom: 30px;
+    right: 30px;
+    background-color: $main-white;
+    transition: background 0.5s ease;
+
+    &:before {
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: $main-red;
+        bottom: 3px;
+        left: -5px;
+        display: block;
+        position: absolute;
+        transition: width 0.5s ease;
+    }
+    &:hover {
+        background-color: transparent;
+        color: $main-white;
+        &:before {
+            width: calc(100% + 10px);
+        }
+    }
 }
 
 .link-button {
@@ -137,6 +209,7 @@
     padding: 15px 30px;
     text-align: center;
     background-color: $main-black;
+    border: solid 1px transparent;
     color: $main-white;
     text-transform: uppercase;
     transition: all 1s ease;
@@ -145,6 +218,7 @@
         background-color: $main-white;
         color: $main-red;
         text-decoration: none;
+        border-color: $main-grey;
     }
 }
 
