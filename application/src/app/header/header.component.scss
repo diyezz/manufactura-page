@@ -1,3 +1,5 @@
+@import "../../assets/scss/main";
+
 header {
     background-color: $main-white;
     position: relative;
@@ -125,50 +127,5 @@ header {
         &__adds-list {
             justify-content: space-between;
         }
-    }
-}
-
-.slider {
-
-    &__slide {
-        width: 100%;
-        height: calc(100vh - 15px);
-        min-height: 335px;
-        max-height: 642px;
-        background-repeat: no-repeat;
-        background-position: 25%;
-        background-size: cover;
-        display: block;
-        position: relative;
-        outline: none;
-    }
-
-    &__slide-content {
-        border: solid 3px $main-white;
-        width: 265px;
-        padding-left: 65px;
-        padding-top: 65px;
-        padding-bottom: 65px;
-        position: absolute;
-        top: calc(50% + 60px);
-        left: 25%;
-        transform: translateY(-50%);
-    }
-
-    &__slide-background {
-        max-width: 100%;
-        visibility: hidden;
-    }
-
-    &__slide-headline {
-        width: 265px;
-        color: $main-red;
-        display: inline-block;
-    }
-
-    &__slide-description {
-        width: 265px;
-        color: $main-white;
-        text-shadow: 0 0 4px $shadow-color;
     }
 }

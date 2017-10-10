@@ -276,6 +276,10 @@ header {
     font-weight: 700;
     font-size: 2rem;
     line-height: 1; }
+  .header__menu-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
   .header__menu-button {
     width: 30px;
     height: 30px;

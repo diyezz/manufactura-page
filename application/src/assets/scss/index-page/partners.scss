@@ -1,0 +1,33 @@
+.partners {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &__partner {
+    max-width: 260px;
+    display: block;
+    img {
+      width: 100%;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
+    &:hover {
+      img {
+        filter: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__partner {
+      max-width: 50%;
+    }
+  }
+}
+
+.topography-patter {
+  background-image: url("../../assets/img/pattern/topography.png");
+  padding-bottom: 60px;
+}
