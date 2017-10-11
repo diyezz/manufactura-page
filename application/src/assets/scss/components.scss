@@ -5,23 +5,23 @@
     background-size: cover;
 
     &-google-plus {
-        background: url('../../assets/img/svg/google-plus-social-logotype.svg') center no-repeat;
+        background: url('#{$base-url}/assets/img/svg/google-plus-social-logotype.svg') center no-repeat;
         background-size: 18px 18px;
     }
     &-facebook {
-        background-image: url('../../assets/img/svg/facebook-logo.svg');
+        background-image: url('#{$base-url}/assets/img/svg/facebook-logo.svg');
     }
     &-twitter {
-        background-image: url('../../assets/img/svg/twitter-social-logotype.svg');
+        background-image: url('#{$base-url}/assets/img/svg/twitter-social-logotype.svg');
     }
     &-instagram {
-        background-image: url('../../assets/img/svg/instagram-social-network-logo-of-photo-camera.svg');
+        background-image: url('#{$base-url}/assets/img/svg/instagram-social-network-logo-of-photo-camera.svg');
     }
     &-pinterest {
-        background-image: url('../../assets/img/svg/pinterest-social-logo.svg');
+        background-image: url('#{$base-url}/assets/img/svg/pinterest-social-logo.svg');
     }
     &-youtube {
-        background-image: url('../../assets/img/svg/youtube-symbol.svg');
+        background-image: url('#{$base-url}/assets/img/svg/youtube-symbol.svg');
     }
 }
 .logo-cutted {

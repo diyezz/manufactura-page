@@ -28,6 +28,6 @@
 }
 
 .topography-patter {
-  background-image: url("../../assets/img/pattern/topography.png");
   padding-bottom: 60px;
+  background-image: url('#{$base-url}/assets/img/pattern/topography.png');
 }
