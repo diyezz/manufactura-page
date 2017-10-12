@@ -9,6 +9,7 @@
     display: block;
     img {
       width: 100%;
+      max-width: 260px;
       -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
       filter: grayscale(100%);
     }

@@ -129,6 +129,8 @@ header {
 }
 
 .slider {
+    margin-right: -15px;
+    margin-left: -15px;
 
     &__slide {
         width: 100%;
@@ -145,14 +147,19 @@ header {
 
     &__slide-content {
         border: solid 3px $main-white;
-        width: 265px;
-        padding-left: 65px;
-        padding-top: 65px;
-        padding-bottom: 65px;
+        width: 50%;
+        max-width: calc(1140px - 12.5%);
+        padding-top: 35px;
+        padding-bottom: 35px;
         position: absolute;
         top: calc(50% + 60px);
         left: 25%;
         transform: translateY(-50%);
+
+        @media (max-width: 576px) {
+            left: 15px;
+            border-color: transparent;
+        }
     }
 
     &__slide-background {
@@ -161,14 +168,23 @@ header {
     }
 
     &__slide-headline {
-        width: 265px;
-        color: $main-red;
-        display: inline-block;
+        min-width: 290px;
+        max-width: 300px;
+        margin: auto;
+        color: $main-white;
+        display: block;
+        font-size: $huge-font;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
     }
 
     &__slide-description {
-        width: 265px;
+        max-width: 400px;
+        min-width: 290px;
         color: $main-white;
         text-shadow: 0 0 4px $shadow-color;
+        text-align: center;
+        margin: auto;
     }
 }
