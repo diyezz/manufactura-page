@@ -1,1 +1,10 @@
 @import "../../../assets/scss/main";
+
+.particles-wrapper {
+  position: relative;
+  .particles-js {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}

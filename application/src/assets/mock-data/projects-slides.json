@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "header": "Jarim coffee",
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of city",
+      "link": "",
+      "image": "../../../assets/img/original/1.jpg"
+    },
+    {
+      "header": "Another coffee",
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of city",
+      "link": "",
+      "image": "../../../assets/img/original/2.jpg"
+    }
+  ]
+}

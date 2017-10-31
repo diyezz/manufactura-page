@@ -4,30 +4,15 @@
             <div class="col-12">
                 <div class="slider">
                     <div class="slider__header"></div>
-                    <div class="slider__slides-wrapper">
-                        <div class="slider__slide">
-                            <div class="slider__slide-content">
-                                <h2 class="slider__slide-headline">Build your dreams</h2>
-                                <p class="slider__slide-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa perspiciatis repellendus!</p>
-                            </div>
-                            <img class="slider__slide-background" src="../../../assets/img/original/1.jpg" alt="">
-                        </div>
-
-                        <div class="slider__slide">
-                            <div class="slider__slide-content">
-                                <h2 class="slider__slide-headline">Modern design of business</h2>
-                                <p class="slider__slide-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa perspiciatis repellendus!</p>
-                            </div>
-                            <img class="slider__slide-background" src="../../../assets/img/original/2.jpg" alt="">
-                        </div>
-                    </div>
+                    <app-headline-slider></app-headline-slider>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section>
+<section class="particles-wrapper">
+    <div id="particles-js" class="particles-js"></div>
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -70,15 +55,11 @@
                 <div class="projects">
                     <div class="projects__header header-text">
                         <h2>Latest projects</h2>
-
-
                         <ul class="filter__list">
                             <li class="filter__item is-active"><a href="javascript:void(0);">all</a></li>
                             <li class="filter__item"><a href="javascript:void(0);">buildings</a></li>
                             <li class="filter__item"><a href="javascript:void(0);">interiors</a></li>
                         </ul>
-
-
                         <a class="link-more" href="javascript:void(0);">View all projects</a>
                     </div>
                     <div class="projects__link-to-all-projects"></div>
@@ -92,60 +73,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <div class="projects__slider">
-                    <div class="projects__slide">
-                        <div class="projects__image-wrapper">
-                            <div class="projects__description">
-                                <div class="projects__name">
-                                    <p class="date">December 11, 2016</p>
-                                    <h3 class="headline-text">
-                                        Jarim coffee
-                                    </h3>
-                                    <p class="city">Odessa</p>
-                                    <p class="description-text">Brand design of small cafe in center of city</p>
-                                </div>
-                                <a class="link-to-project" href="javascript:void(0)">See project</a>
-                            </div>
-                            <img class="projects__slide-background" src="../../../assets/img/original/1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="projects__slide">
-                        <div class="projects__image-wrapper">
-                            <div class="projects__description">
-                                <div class="projects__name">
-                                    <p class="date">April 24, 2017</p>
-                                    <h3 class="headline-text">
-                                        Omega Three
-                                    </h3>
-                                    <p class="city">Odessa</p>
-                                    <p class="description-text">Restaurant brand design</p>
-                                </div>
-                                <a class="link-to-project" href="javascript:void(0)">See project</a>
-                            </div>
-                            <img class="projects__slide-background" src="../../../assets/img/original/2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="projects__slide">
-                        <div class="projects__image-wrapper">
-                            <img class="projects__slide-background" src="../../../assets/img/original/3.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="projects__slide">
-                        <div class="projects__image-wrapper">
-                            <img class="projects__slide-background" src="../../../assets/img/original/4.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="projects__slide">
-                        <div class="projects__image-wrapper">
-                            <img class="projects__slide-background" src="../../../assets/img/original/5.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="projects__slide">
-                        <div class="projects__image-wrapper">
-                            <img class="projects__slide-background" src="../../../assets/img/original/6.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
+                <app-projects-slider></app-projects-slider>
             </div>
         </div>
     </div>
