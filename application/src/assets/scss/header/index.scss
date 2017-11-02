@@ -22,6 +22,12 @@ header {
         font-weight: 700;
         font-size: $xl-font;
         line-height: 1;
+        span, a {
+            color: $main-red;
+            &:hover {
+                color: darken($main-red, 10%);
+            }
+        }
     }
 
     &__menu-button-wrapper {
