@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { DataService } from "../../services/data.service";
 
 @Component({
   selector: 'app-partners-slider',
@@ -8,7 +8,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class PartnersSliderComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private dataService:DataService) { }
 
   slideData: any[];
 
@@ -18,10 +18,11 @@ export class PartnersSliderComponent implements OnInit {
 
   getData() {
       // Make the HTTP request:
-    return this.http.get('http://localhost:4040/assets/mock-data/partners-slides.json').subscribe(data => {
+    return this.dataService.getPartners()
+        .subscribe(data => {
           // Read the result field from the JSON response.
           this.slideData = data['data'];
-      });
+        });
   }
 
 }

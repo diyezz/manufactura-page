@@ -1,54 +1,20 @@
-<div class="projects__slider">
-  <div class="projects__slide">
-    <div class="projects__image-wrapper">
-      <div class="projects__description">
-        <div class="projects__name">
-          <p class="date">December 11, 2016</p>
-          <h3 class="headline-text">
-            Jarim coffee
-          </h3>
-          <p class="city">Odessa</p>
-          <p class="description-text">Brand design of small cafe in center of city</p>
+<ngx-slick #slickModal="slick-modal" class="projects__slider" [config]="getSliderSettings()">
+  <div ngxSlickItem *ngFor="let slide of slideData | filterByCategory: 'category' : slideCategory : 'all'" class="slide">
+    <div class="projects__slide">
+      <div class="projects__image-wrapper" [style.background-image]="'url(' + slide.image +')'">
+        <div class="projects__description">
+          <div class="projects__name">
+            <p class="date">{{slide.date}}</p>
+            <h3 class="headline-text">
+              {{slide.title}}
+            </h3>
+            <p class="city">{{slide.city}}</p>
+            <p class="description-text">{{slide.description}}</p>
+          </div>
+          <a class="link-to-project" href="{{slide.link}}">See project</a>
         </div>
-        <a class="link-to-project" href="javascript:void(0)">See project</a>
+        <img class="projects__slide-background" src="../../../assets/img/original/1.jpg" alt="">
       </div>
-      <img class="projects__slide-background" src="../../../assets/img/original/1.jpg" alt="">
     </div>
   </div>
-  <div class="projects__slide">
-    <div class="projects__image-wrapper">
-      <div class="projects__description">
-        <div class="projects__name">
-          <p class="date">April 24, 2017</p>
-          <h3 class="headline-text">
-            Omega Three
-          </h3>
-          <p class="city">Odessa</p>
-          <p class="description-text">Restaurant brand design</p>
-        </div>
-        <a class="link-to-project" href="javascript:void(0)">See project</a>
-      </div>
-      <img class="projects__slide-background" src="../../../assets/img/original/2.jpg" alt="">
-    </div>
-  </div>
-  <div class="projects__slide">
-    <div class="projects__image-wrapper">
-      <img class="projects__slide-background" src="../../../assets/img/original/3.jpg" alt="">
-    </div>
-  </div>
-  <div class="projects__slide">
-    <div class="projects__image-wrapper">
-      <img class="projects__slide-background" src="../../../assets/img/original/4.jpg" alt="">
-    </div>
-  </div>
-  <div class="projects__slide">
-    <div class="projects__image-wrapper">
-      <img class="projects__slide-background" src="../../../assets/img/original/5.jpg" alt="">
-    </div>
-  </div>
-  <div class="projects__slide">
-    <div class="projects__image-wrapper">
-      <img class="projects__slide-background" src="../../../assets/img/original/6.jpg" alt="">
-    </div>
-  </div>
-</div>
+</ngx-slick>

@@ -56,9 +56,10 @@
                     <div class="projects__header header-text">
                         <h2>Latest projects</h2>
                         <ul class="filter__list">
-                            <li class="filter__item is-active"><a href="javascript:void(0);">all</a></li>
-                            <li class="filter__item"><a href="javascript:void(0);">buildings</a></li>
-                            <li class="filter__item"><a href="javascript:void(0);">interiors</a></li>
+                            <li class="filter__item"
+                                *ngFor="let item of filters; let i = index"
+                                (click)="changeCategory($event, i)"
+                                [class.is-active]="i == selectedItem">{{ item.name }}</li>
                         </ul>
                         <a class="link-more" href="javascript:void(0);">View all projects</a>
                     </div>
@@ -73,7 +74,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <app-projects-slider></app-projects-slider>
+                <app-projects-slider [slideCategory]="slideCategoryName"></app-projects-slider>
             </div>
         </div>
     </div>

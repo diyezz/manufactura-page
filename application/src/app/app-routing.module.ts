@@ -2,15 +2,17 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from '@angular/router';
 
 // Page components
-import {IndexComponent} from "./pages/index/index.component";
-import {AboutComponent} from "./pages/about/about.component";
-import {CareerComponent} from "./pages/career/career.component";
-import {LocationComponent} from "./pages/location/location.component";
-import {ContactsComponent} from "./pages/contacts/contacts.component";
+import {
+    IndexComponent,
+    AboutComponent,
+    CareerComponent,
+    LocationComponent,
+    ContactsComponent
+} from './pages/pages';
 
 const routes: Routes = [
     {
-        path: 'index',
+        path: '',
         component: IndexComponent
     },
     {
@@ -26,12 +28,12 @@ const routes: Routes = [
         component: LocationComponent
     },
     {
-        path: 'contacts',
+        path: 'contact',
         component: ContactsComponent
     },
     {
         path: '**',
-        redirectTo: 'index',
+        redirectTo: '',
     }
 ];
 

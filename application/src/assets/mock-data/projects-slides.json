@@ -5,14 +5,63 @@
       "city": "Odessa",
       "description": "Brand design of small cafe in center of city",
       "link": "",
-      "image": "../../../assets/img/original/1.jpg"
+      "date": "10.11.2017",
+      "image": "http://localhost:4040/assets/img/original/1.jpg",
+      "category": "buildings"
     },
     {
       "header": "Another coffee",
       "city": "Odessa",
       "description": "Brand design of small cafe in center of city",
       "link": "",
-      "image": "../../../assets/img/original/2.jpg"
+      "date": "10.11.2017",
+      "image": "http://localhost:4040/assets/img/original/2.jpg",
+      "category": "buildings"
+    },
+    {
+      "header": "Another coffee",
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of city",
+      "link": "",
+      "date": "10.11.2017",
+      "image": "http://localhost:4040/assets/img/original/3.jpg",
+      "category": "interiors"
+    },
+    {
+      "header": "Another coffee",
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of city",
+      "link": "",
+      "date": "10.11.2017",
+      "image": "http://localhost:4040/assets/img/original/4.jpg",
+      "category": "interiors"
+    },
+    {
+      "header": "Another coffee",
+      "city": "New York",
+      "description": "Brand design of small cafe in center of city",
+      "link": "",
+      "date": "10.11.2017",
+      "image": "http://localhost:4040/assets/img/original/2.jpg",
+      "category": "buildings"
+    },
+    {
+      "header": "Another coffee",
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of city",
+      "link": "",
+      "date": "10.11.2017",
+      "image": "http://localhost:4040/assets/img/original/5.jpg",
+      "category": "interiors"
+    },
+    {
+      "header": "Another coffee",
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of city",
+      "link": "",
+      "date": "10.11.2017",
+      "image": "http://localhost:4040/assets/img/original/6.jpg",
+      "category": "interiors"
     }
   ]
 }

@@ -1,28 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { SlickModule } from "ngx-slick";
 
 import { AppComponent } from './app.component';
-import {AppRoutingModule} from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { FilterPipe } from "./pipes/filter.pipe";
 
 // Providers
-import {HttpClientModule} from "@angular/common/http";
-import { PartnersSliderComponent } from './components/partners-slider/partners-slider.component';
+import { HttpClientModule } from "@angular/common/http";
+
+// Services
+import { DataService } from "./services/data.service";
 
 // Components
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialListComponent } from './components/social-list/social-list.component';
+import { PartnersSliderComponent } from './components/partners-slider/partners-slider.component';
 import { HeadlineSliderComponent } from './components/headline-slider/headline-slider.component';
 import { ProjectsSliderComponent } from './components/projects-slider/projects-slider.component';
 
 // Pages
-import { IndexComponent } from './pages/index/index.component';
-import { AboutComponent } from './pages/about/about.component';
-import { CareerComponent } from './pages/career/career.component';
-import { LocationComponent } from './pages/location/location.component';
-import { ContactsComponent } from './pages/contacts/contacts.component';
-
-
+import {
+    IndexComponent,
+    AboutComponent,
+    CareerComponent,
+    LocationComponent,
+    ContactsComponent
+} from './pages/pages';
 
 @NgModule({
   declarations: [
@@ -37,14 +42,18 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
     AboutComponent,
     CareerComponent,
     LocationComponent,
-    ContactsComponent
+    ContactsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlickModule.forRoot()
   ],
-  providers: [],
+  providers: [
+      DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

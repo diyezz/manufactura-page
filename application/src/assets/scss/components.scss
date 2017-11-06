@@ -239,18 +239,16 @@
         display: inline-block;
         list-style: none;
         margin: auto 10px;
-        a {
-            font-weight: 700;
-            font-size: $middle-font;
-            line-height: 1;
-            &:hover {
-                color: $main-red;
-            }
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: $middle-font;
+        line-height: 1;
+        &:hover {
+            color: $main-red;
+            cursor: pointer;
         }
         &.is-active {
-            a {
-                color: $main-red;
-            }
+            color: $main-red;
         }
     }
 

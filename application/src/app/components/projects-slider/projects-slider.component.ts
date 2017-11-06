@@ -1,56 +1,31 @@
-import {AfterContentInit, AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import * as $ from 'jquery';
-import 'slick-carousel';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {DataService} from "../../services/data.service";
 
 @Component({
   selector: 'app-projects-slider',
   templateUrl: './projects-slider.component.html',
   styleUrls: ['./projects-slider.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+    inputs: ['slideData']
 })
-export class ProjectsSliderComponent implements OnInit, AfterViewInit, AfterContentInit {
+export class ProjectsSliderComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  @Input() slideCategory:string;
+
+  constructor(private dataService: DataService) { }
 
   slideData: any[];
 
   ngOnInit() {
-      // Make the HTTP request:
-      this.http.get('http://localhost:4040/assets/mock-data/projects-slides.json').subscribe(data => {
-          // Read the result field from the JSON response.
-          this.slideData = data['data'];
-      });
+      this.getProjectsData();
   }
 
-  ngAfterContentInit() {
-
-  }
-
-  ngAfterViewInit() {
-
-      this.setBackgroundFromSource('about-us__one-of-work', 'about-us__one-of-work-background');
-      this.setBackgroundFromSource('projects__image-wrapper', 'projects__slide-background');
-
-      this.initSlick();
-  }
-
-  setBackgroundFromSource(container, background) {
-      let parentClass = $('.' + container);
-      let bgClass = $('.' + background);
-
-      parentClass.each(function() {
-          let srcAttr = $(this).find(bgClass).attr('src');
-          $(this).css('background-image', 'url('+ srcAttr +')');
-      });
-  }
-
-  initSlick(){
-      $('.projects__slider').slick(this.getSliderSettings());
-  }
-
-  updateSlick() {
-      $('.projects__slider').slick(this.getSliderSettings());
+  getProjectsData() {
+      return this.dataService.getProjects()
+          .subscribe(data => {
+              // Read the result field from the JSON response.
+              this.slideData = data['data'];
+          });
   }
 
   getSliderSettings() {
@@ -62,7 +37,7 @@ export class ProjectsSliderComponent implements OnInit, AfterViewInit, AfterCont
           infinite: true,
           speed: 1000,
           slidesToShow: 4,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           responsive: [
               {
                   breakpoint: 1024,
