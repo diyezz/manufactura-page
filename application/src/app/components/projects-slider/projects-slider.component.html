@@ -1,7 +1,7 @@
 <ngx-slick #slickModal="slick-modal" class="projects__slider" [config]="getSliderSettings()">
   <div ngxSlickItem *ngFor="let slide of slideData | filterByCategory: 'category' : slideCategory : 'all'" class="slide">
     <div class="projects__slide">
-      <div class="projects__image-wrapper" [style.background-image]="'url(' + slide.image +')'">
+      <div class="projects__image-wrapper" [style.background-image]="'url(' + slide.cover +')'">
         <div class="projects__description">
           <div class="projects__name">
             <p class="date">{{slide.date}}</p>
@@ -11,9 +11,9 @@
             <p class="city">{{slide.city}}</p>
             <p class="description-text">{{slide.description}}</p>
           </div>
-          <a class="link-to-project" href="{{slide.link}}">See project</a>
+          <a class="link-to-project" [routerLink]="['/project-detail', slide.id]">See project</a>
         </div>
-        <img class="projects__slide-background" src="../../../assets/img/original/1.jpg" alt="">
+        <img class="projects__slide-background" src="{{slide.cover}}" alt="">
       </div>
     </div>
   </div>

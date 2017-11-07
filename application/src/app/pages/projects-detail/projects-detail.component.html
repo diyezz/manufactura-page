@@ -1,0 +1,46 @@
+<section class="retina-size-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="slider">
+          <div class="slider__header"></div>
+          <app-headline-slider *ngIf="currentProject" [images]="currentProject.images"></app-headline-slider>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="">
+  <div class="container" *ngIf="currentProject">
+    <div class="row">
+      <div class="col-12">
+        <div class="projects">
+          <div class="projects__header header-text">
+            <h2>{{currentProject.header}}</h2>
+            <a class="link-more" href="javascript:void(0);" (click)="goBack()">Go back</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8 col-12">
+        <div class="project-description">
+          <p>{{currentProject.city}}, {{currentProject.date}}, Category: <b>{{currentProject.category}}</b></p>
+          <p>
+            {{currentProject.fullDescription}}
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4 col-12">
+        <div class="info-table">
+          <h4 class="info-table__headline">{{currentProject.description}}</h4>
+          <ul class="info-table__list">
+            <li><span>Client:</span> Joseph Hautington</li>
+            <li><span>Completion:</span> {{currentProject.date}}</li>
+            <li><span>Project type:</span> Cafe, Small business</li>
+            <li><span>Architects:</span> Denis Bragarchuk</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

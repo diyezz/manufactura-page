@@ -7,7 +7,8 @@ import {
     AboutComponent,
     CareerComponent,
     LocationComponent,
-    ContactsComponent
+    ContactsComponent,
+    ProjectsDetailComponent
 } from './pages/pages';
 
 const routes: Routes = [
@@ -30,6 +31,10 @@ const routes: Routes = [
     {
         path: 'contact',
         component: ContactsComponent
+    },
+    {
+        path: 'project-detail/:id',
+        component: ProjectsDetailComponent
     },
     {
         path: '**',

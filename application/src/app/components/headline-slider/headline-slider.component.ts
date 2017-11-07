@@ -1,6 +1,4 @@
-import { Component, OnInit, AfterContentInit, ViewEncapsulation } from '@angular/core';
-import * as $ from 'jquery';
-import 'slick-carousel';
+import {Component, OnInit, AfterContentInit, ViewEncapsulation, Input} from '@angular/core';
 
 @Component({
   selector: 'app-headline-slider',
@@ -10,16 +8,16 @@ import 'slick-carousel';
 })
 export class HeadlineSliderComponent implements OnInit, AfterContentInit {
 
+    @Input() images;
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {}
 
-  }
+  ngAfterContentInit() {}
 
-  ngAfterContentInit() {
-      this.setBackgroundFromSource('slider__slide', 'slider__slide-background');
-
-      $('.slider__slides-wrapper').slick({
+  getSliderSettings() {
+      return {
           arrows: false,
           autoplay: true,
           autoplaySpeed: 3000,
@@ -27,16 +25,6 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit {
           infinite: true,
           speed: 1000,
           slidesToShow: 1
-      });
-  }
-
-  setBackgroundFromSource(container, background) {
-      let parentClass = $('.' + container);
-      let bgClass = $('.' + background);
-
-      parentClass.each(function() {
-          let srcAttr = $(this).find(bgClass).attr('src');
-          $(this).css('background-image', 'url('+ srcAttr +')');
-      });
+      }
   }
 }

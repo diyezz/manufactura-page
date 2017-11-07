@@ -1,1 +1,111 @@
 @import "../../../assets/scss/main";
+
+header {
+  background-color: $main-white;
+  position: relative;
+  z-index: 100;
+}
+
+.header-section {
+  margin-bottom: -120px;
+  margin-top: 30px;
+
+  @media (max-width: 575px) {
+    margin-top: 0;
+  }
+}
+
+.header {
+  min-height: 90px;
+
+  &__logo {
+    text-transform: lowercase;
+    color: $main-red;
+    font-weight: 700;
+    font-size: $xl-font;
+    line-height: 1;
+    span, a {
+      color: $main-red;
+      &:hover {
+        color: darken($main-red, 10%);
+      }
+    }
+  }
+
+  &__menu-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__menu-button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+
+    &:hover, &:focus, &:active {
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+
+      .header__menu-button-line {
+        background-color: $main-red;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  &__menu-button-line {
+    width: 100%;
+    height: 3px;
+    margin-bottom: 4px;
+    display: block;
+    background-color: $main-black;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__adds-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__call-us {
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  &__text-for-call {
+    text-transform: uppercase;
+    margin-right: 0.5rem;
+    color: $main-black;
+  }
+
+  &__back-call {
+    color: $main-black;
+  }
+
+  @media (max-width: 576px) {
+    &__adds-list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  @media (max-width: 767px) {
+    &__logo {
+      text-align: center;
+    }
+  }
+  @media (max-width: 992px) {
+    &__adds-list {
+      justify-content: space-between;
+    }
+  }
+}

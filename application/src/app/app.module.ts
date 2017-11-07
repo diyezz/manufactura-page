@@ -26,7 +26,8 @@ import {
     AboutComponent,
     CareerComponent,
     LocationComponent,
-    ContactsComponent
+    ContactsComponent,
+    ProjectsDetailComponent
 } from './pages/pages';
 
 @NgModule({
@@ -43,7 +44,8 @@ import {
     CareerComponent,
     LocationComponent,
     ContactsComponent,
-    FilterPipe
+    FilterPipe,
+    ProjectsDetailComponent
   ],
   imports: [
     BrowserModule,

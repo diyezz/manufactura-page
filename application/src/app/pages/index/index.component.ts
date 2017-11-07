@@ -16,10 +16,27 @@ export class IndexComponent implements OnInit {
   slideCategoryName:string = 'all';
   selectedItem:number = 0;
 
+  images = [
+      {
+        image: 'http://localhost:4040/assets/img/original/2.jpg',
+        text: {
+          headline: 'Build your dreams',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa perspiciatis repellendus!'
+        }
+      },
+      {
+        image: 'http://localhost:4040/assets/img/original/1.jpg',
+        text: {
+            headline: 'Make your dreams come true',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa perspiciatis repellendus!'
+        }
+      }
+  ];
+
   filters = [
-      {name: 'all'},
-      {name: 'buildings'},
-      {name: 'interiors'}
+    {name: 'all'},
+    {name: 'buildings'},
+    {name: 'interiors'}
   ];
 
   ngOnInit(){

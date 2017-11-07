@@ -1,0 +1,27 @@
+@import "../../../assets/scss/variables";
+
+.top-padding-section {
+  padding-top: 170px;
+}
+
+.info-table {
+  &__headline {
+    font-weight: 600;
+    padding-bottom: 15px;
+  }
+
+  &__list {
+    padding: 15px;
+    background-color: $main-grey;
+
+    li {
+      list-style: none;
+      padding-bottom: 10px;
+
+      span {
+        font-weight: bold;
+        margin-right: 15px;
+      }
+    }
+  }
+}
