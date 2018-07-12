@@ -7,10 +7,10 @@
       "description": "Brand design of small cafe in center of city",
       "link": "",
       "date": "10 December 2016",
-      "cover": "http://localhost:4040/assets/img/original/2.jpg",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg",
       "images": [
-            {"image": "http://localhost:4040/assets/img/original/2.jpg"},
-            {"image": "http://localhost:4040/assets/img/original/1.jpg"}
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg"},
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/1.jpg"}
         ],
       "category": "buildings",
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?"
@@ -22,10 +22,10 @@
       "description": "Brand design of small cafe in center of city",
       "link": "",
       "date": "10.11.2017",
-      "cover": "http://localhost:4040/assets/img/original/1.jpg",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/1.jpg",
       "images": [
-            {"image": "http://localhost:4040/assets/img/original/1.jpg"},
-            {"image": "http://localhost:4040/assets/img/original/6.jpg"}
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/1.jpg"},
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/6.jpg"}
         ],
       "category": "buildings",
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?"
@@ -37,10 +37,10 @@
       "description": "Brand design of small cafe in center of city",
       "link": "",
       "date": "10.11.2017",
-      "cover": "http://localhost:4040/assets/img/original/3.jpg",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/3.jpg",
       "images": [
-            {"image": "http://localhost:4040/assets/img/original/3.jpg"},
-            {"image": "http://localhost:4040/assets/img/original/2.jpg"}
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/3.jpg"},
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg"}
         ],
       "category": "interiors",
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?"
@@ -52,10 +52,10 @@
       "description": "Brand design of small cafe in center of city",
       "link": "",
       "date": "10.11.2017",
-      "cover": "http://localhost:4040/assets/img/original/4.jpg",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/4.jpg",
       "images": [
-            {"image": "http://localhost:4040/assets/img/original/4.jpg"},
-            {"image": "http://localhost:4040/assets/img/original/3.jpg"}
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/4.jpg"},
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/3.jpg"}
         ],
       "category": "interiors",
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?"
@@ -67,10 +67,10 @@
       "description": "Brand design of small cafe in center of city",
       "link": "",
       "date": "10.11.2017",
-      "cover": "http://localhost:4040/assets/img/original/2.jpg",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg",
       "images": [
-            {"image": "http://localhost:4040/assets/img/original/2.jpg"},
-            {"image": "http://localhost:4040/assets/img/original/1.jpg"}
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg"},
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/1.jpg"}
         ],
       "category": "buildings",
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?"
@@ -82,10 +82,10 @@
       "description": "Brand design of small cafe in center of city",
       "link": "",
       "date": "10.11.2017",
-      "cover": "http://localhost:4040/assets/img/original/5.jpg",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/5.jpg",
       "images": [
-            {"image": "http://localhost:4040/assets/img/original/5.jpg"},
-            {"image": "http://localhost:4040/assets/img/original/4.jpg"}
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/5.jpg"},
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/4.jpg"}
         ],
       "category": "interiors",
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?"
@@ -97,10 +97,10 @@
       "description": "Brand design of small cafe in center of city",
       "link": "",
       "date": "10.11.2017",
-      "cover": "http://localhost:4040/assets/img/original/6.jpg",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/6.jpg",
       "images": [
-            {"image": "http://localhost:4040/assets/img/original/6.jpg"},
-            {"image": "http://localhost:4040/assets/img/original/5.jpg"}
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/6.jpg"},
+            {"image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/5.jpg"}
         ],
       "category": "interiors",
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?"

@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import 'particles.js';
+import {environment} from "../../../environments/environment";
 declare let particlesJS: any;
 
 @Component({
@@ -18,14 +19,14 @@ export class IndexComponent implements OnInit {
 
   images = [
       {
-        image: 'http://localhost:4040/assets/img/original/2.jpg',
+        image: `${environment.baseUrl}assets/img/original/2.jpg`,
         text: {
           headline: 'Build your dreams',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa perspiciatis repellendus!'
         }
       },
       {
-        image: 'http://localhost:4040/assets/img/original/1.jpg',
+        image: `${environment.baseUrl}assets/img/original/1.jpg`,
         text: {
             headline: 'Make your dreams come true',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa perspiciatis repellendus!'
