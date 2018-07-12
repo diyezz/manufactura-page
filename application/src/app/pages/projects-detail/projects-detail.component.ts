@@ -1,9 +1,8 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import {DataService} from "../../services/data.service";
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { DataService } from "../../services/data.service";
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
-import 'rxjs/add/operator/map';
-import * as $ from 'jquery';
+import { map } from "rxjs/operators";
 
 @Component({
   selector: 'app-projects-detail',
@@ -22,11 +21,9 @@ export class ProjectsDetailComponent implements OnInit {
   currentProject;
 
   getProject(id: number) {
-      return this.dataService.getProjects()
-          .map(projects => projects['data'].filter(project => project.id === id))
-          .subscribe(data => {
-            this.currentProject = data[0]
-          })
+      return this.dataService.getProjects().pipe(
+          map(projects => projects['data'].filter(project => project.id === id))
+      ).subscribe(data => this.currentProject = data[0]);
   }
 
   getProjectById() {

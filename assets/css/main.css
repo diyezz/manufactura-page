@@ -18,6 +18,7 @@ a:hover {
     list-style: none;
     margin: 0 4px; }
     .slick-dots li button {
+      background-color: #d2d2d2;
       font-size: 0;
       line-height: 0;
       color: transparent;
