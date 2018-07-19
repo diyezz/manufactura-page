@@ -9,6 +9,9 @@ header {
   &.active {
     box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
   }
+  &.hidden {
+    display: none;
+  }
 }
 
 .header-section {
@@ -25,10 +28,36 @@ header {
   &.sticky {
     position: fixed;
     top: 0;
+
+    .header-section__close-btn {
+      top: -6px;
+    }
+  }
+
+  &__close-btn {
+    display: none;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    background-color: transparentize($main-grey, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    outline: none;
+    top: -12px;
+    right: calc((100vw - 568px) / 2);
+    height: 30px;
+    width: 30px;
+    z-index: 101;
   }
 
   @media (max-width: 576px) {
     top: 0;
+  }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    &__close-btn {
+      display: flex;
+    }
   }
 }
 

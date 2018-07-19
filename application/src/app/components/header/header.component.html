@@ -1,9 +1,12 @@
 <section class="header-section" [class.sticky]="isHeaderSticky">
-  <header class="container" [class.active]="isMenuVisible">
+  <button class="header-section__close-btn" (click)="onToggleHeaderButtonClick()">
+    {{isHeaderVisible ? 'X' : '+'}}
+  </button>
+  <header class="container" [class.active]="isMenuVisible" [class.hidden]="!isHeaderVisible">
     <div class="row align-items-center header">
       <div class="col-lg-3 col-md-12 col-10">
         <div class="header__logo">
-          <a routerLink="/">
+          <a routerLink="">
             <span class="logo-cutted">
               manufactura
           </span>
@@ -39,20 +42,20 @@
       <div class="header__menu-content">
         <ul class="header__menu-list">
           <li>Explore us</li>
-          <li><a class="link-more" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" routerLink="">Home</a></li>
-          <li><a class="link-more" routerLinkActive="is-active" routerLink="about">About</a></li>
-          <li><a class="link-more" routerLinkActive="is-active" routerLink="projects-all">All Projects</a></li>
+          <li><a class="link-more" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">Home</a></li>
+          <li><a class="link-more" routerLinkActive="is-active" routerLink="/about">About</a></li>
+          <li><a class="link-more" routerLinkActive="is-active" routerLink="/projects-all">All Projects</a></li>
         </ul>
         <ul class="header__menu-list">
           <li>Contact us</li>
-          <li><a class="link-more" routerLinkActive="is-active" routerLink="contact">Contacts</a></li>
-          <li><a class="link-more" routerLinkActive="is-active" routerLink="location">Our Location</a></li>
+          <li><a class="link-more" routerLinkActive="is-active" routerLink="/contact">Contacts</a></li>
+          <li><a class="link-more" routerLinkActive="is-active" routerLink="/location">Our Location</a></li>
         </ul>
         <ul class="header__menu-list">
           <li>Information</li>
-          <li><a class="link-more" routerLinkActive="is-active" routerLink="career">Career</a></li>
-          <li><a class="link-more" routerLinkActive="is-active" routerLink="help">Help</a></li>
-          <li><a class="link-more" routerLinkActive="is-active" routerLink="privacy-policy">Privacy and policy</a></li>
+          <li><a class="link-more" routerLinkActive="is-active" routerLink="/career">Career</a></li>
+          <li><a class="link-more" routerLinkActive="is-active" routerLink="/help">Help</a></li>
+          <li><a class="link-more" routerLinkActive="is-active" routerLink="/privacy-policy">Privacy and policy</a></li>
         </ul>
       </div>
     </div>

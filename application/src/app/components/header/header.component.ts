@@ -8,6 +8,7 @@ import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
 export class HeaderComponent implements OnInit {
   isMenuVisible: boolean = false;
   isHeaderSticky: boolean = false;
+  isHeaderVisible: boolean = true;
 
   constructor( private headerSection: ElementRef) { }
 
@@ -19,6 +20,13 @@ export class HeaderComponent implements OnInit {
     const windowScrollTopValue = window.scrollY;
     this.setStickyHeaderClass(haderOffsetTopValue, windowScrollTopValue);
   }
+  @HostListener('window:resize', []) onWindowResize() {
+    console.log(window.innerWidth);
+
+    if (window.innerWidth < 576 || window.innerWidth > 768) {
+      this.isHeaderVisible = true;
+    }
+  }
 
   setStickyHeaderClass(headerOffsetTop, windowOffsetTop) {
       this.isHeaderSticky = headerOffsetTop < windowOffsetTop;
@@ -26,6 +34,10 @@ export class HeaderComponent implements OnInit {
 
   onToggleMenuButtonClick() {
     this.isMenuVisible = !this.isMenuVisible;
+  }
+
+  onToggleHeaderButtonClick() {
+    this.isHeaderVisible = !this.isHeaderVisible;
   }
 
 }
