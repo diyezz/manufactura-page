@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-social-list',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./social-list.component.scss']
 })
 export class SocialListComponent implements OnInit {
+
+  @Input('isPositionFooter') isPositionFooter = false;
 
   constructor() { }
 

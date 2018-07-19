@@ -2,8 +2,11 @@
 
 .particles-wrapper {
   position: relative;
+  padding: 60px 0;
   .particles-js {
     position: absolute;
+    bottom: 0;
+    top: 0;
     height: 100%;
     width: 100%;
   }

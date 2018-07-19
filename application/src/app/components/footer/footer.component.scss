@@ -1,7 +1,7 @@
 @import '../../../assets/scss/main';
 
 footer {
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .footer {
@@ -14,11 +14,10 @@ footer {
     }
 
     &.language-switch {
-      @media (max-width: 1200px) {
-
+      @media (max-width: 576px) {
         li {
-          display: inline-block;
-          margin-right: 15px;
+          display: block;
+          text-align: right;
         }
       }
     }
@@ -44,11 +43,9 @@ footer {
     }
   }
   &__copyright {
+    text-align: right;
     line-height: 1.9;
-  }
-
-  &__copyright, &__logo, ul {
-    margin-bottom: 30px;
+    font-size: $xs-font;
   }
 }
 

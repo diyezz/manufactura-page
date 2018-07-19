@@ -14,7 +14,16 @@ export class PartnersSliderComponent implements OnInit {
   slideData: any[];
 
   ngOnInit() {
+    this.getData();
+  }
 
+  getData() {
+      // Make the HTTP request:
+    return this.dataService.getPartners()
+        .subscribe(data => {
+          // Read the result field from the JSON response.
+          this.slideData = data['data'];
+        });
   }
 
 }

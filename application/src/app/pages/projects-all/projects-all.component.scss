@@ -1,0 +1,98 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/components";
+
+.top-padding-section {
+  padding-top: 170px;
+  background-color: lighten($main-grey, 15);
+}
+
+.item {
+  &__content-wrapper {
+    background-color: $main-white;
+    padding: 10px;
+    display: flex;
+    margin-bottom: 20px;
+    &.odd {
+      flex-direction: row-reverse;
+      .item__content {
+        align-items: flex-start;
+        text-align: left;
+        padding-right: 5px;
+        padding-left: 0;
+      }
+    }
+  }
+  &__content {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    text-align: right;
+    padding-left: 5px;
+    .link-button {
+      max-width: 190px;
+      margin-top: auto;
+    }
+  }
+  &__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 360px;
+    display: flex;
+    flex: 0 0 70%;
+  }
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100%;
+    max-width: 100%;
+  }
+  // Has to be with mixins
+  @media (max-width: 992px) {
+    &__image-wrapper {
+      height: 300px;
+      flex: 0 0 66%;
+    }
+  }
+  @media (max-width: 768px) {
+    &__image-wrapper {
+      height: 240px;
+    }
+    h3 {
+      font-size: $middle-font;
+    }
+    &__content {
+      .link-button {
+        max-width: none;
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 540px) {
+    &__image-wrapper {
+      margin-bottom: .5rem;
+    }
+    &__content-wrapper {
+      flex-direction: column;
+      .item__content {
+        padding: 0;
+      }
+      &.odd {
+        flex-direction: column;
+        .item__content {
+          text-align: left;
+          padding: 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 392px) {
+    &__image {
+      min-height: auto;
+      max-width: none;
+      max-height: 100%;
+    }
+  }
+}

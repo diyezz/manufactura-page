@@ -8,7 +8,8 @@ import {
     CareerComponent,
     LocationComponent,
     ContactsComponent,
-    ProjectsDetailComponent
+    ProjectsDetailComponent,
+    ProjectsAllComponent
 } from './pages/pages';
 
 const routes: Routes = [
@@ -35,6 +36,10 @@ const routes: Routes = [
     {
         path: 'project-detail/:id',
         component: ProjectsDetailComponent
+    },
+    {
+        path: 'projects-all',
+        component: ProjectsAllComponent
     },
     {
         path: '**',

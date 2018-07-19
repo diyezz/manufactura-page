@@ -138,7 +138,6 @@
     font-size: $xl-font;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 2px;
     margin: 0;
 
     &--white {
@@ -150,7 +149,15 @@
     &--shadow {
         text-shadow: 0 0 3px rgba(0,0,0,.7);
     }
+    &--spaced {
+        letter-spacing: 2px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: $large-font;
+    }
 }
+
 .city {
     font-size: $small-font;
     font-weight: 600;
@@ -168,11 +175,15 @@
 }
 .description-text {
     font-size: $middle-font;
-    font-weight: 300;
     line-height: 1.2;
     padding: 0;
     margin: 0;
-    text-transform: uppercase;
+    &--uppercase {
+        text-transform: uppercase;
+    }
+    &--light {
+        font-weight: 300;
+    }
 }
 
 .link-to-project {
@@ -210,20 +221,32 @@
 }
 
 .link-button {
-    display: flex;
+    display: inline-flex;
+    justify-content: center;
     padding: 15px 30px;
     text-align: center;
     background-color: $main-black;
     border: solid 1px transparent;
     color: $main-white;
     text-transform: uppercase;
-    transition: all 1s ease;
+    transition: all 0.3s ease;
+
+    &--small {
+        padding: 6px 12px;
+    }
 
     &:hover {
         background-color: $main-white;
         color: $main-red;
         text-decoration: none;
         border-color: $main-grey;
+    }
+
+    @media (max-width: 992px) {
+        padding: 12px 24px;
+    }
+    @media (max-width: 768px) {
+        font-size: $xs-font;
     }
 }
 

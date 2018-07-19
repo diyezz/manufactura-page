@@ -1,5 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+// Custom modules
+import {SlickModule} from "ngx-slick";
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
@@ -26,9 +28,9 @@ import {
     CareerComponent,
     LocationComponent,
     ContactsComponent,
-    ProjectsDetailComponent
+    ProjectsDetailComponent,
+    ProjectsAllComponent
 } from './pages/pages';
-import {SlickModule} from "ngx-slick";
 
 @NgModule({
     declarations: [
@@ -45,7 +47,8 @@ import {SlickModule} from "ngx-slick";
         LocationComponent,
         ContactsComponent,
         FilterPipe,
-        ProjectsDetailComponent
+        ProjectsDetailComponent,
+        ProjectsAllComponent
     ],
     imports: [
         BrowserModule,

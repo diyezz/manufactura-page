@@ -7,8 +7,9 @@
   &__slide {
     width: 100%;
     height: calc(100vh - 15px);
-    min-height: 335px;
     max-height: 642px;
+    //height: 100vh;
+    min-height: 335px;
     background-repeat: no-repeat;
     background-position: 25%;
     background-size: cover;

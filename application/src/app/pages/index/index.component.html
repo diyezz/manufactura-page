@@ -19,10 +19,11 @@
                 <div class="about-us">
                     <div class="about-us__header header-text">
                         <h2>About us</h2>
-                        <a class="link-more" href="javascript:void(0);">More about us</a>
+                        <a class="link-more" routerLink="about">More about us</a>
                     </div>
                     <div class="about-us__text">
-                        <h3 class="headline-text about-us__headline-text">We are <br>
+                        <h3 class="headline-text headline-text--spaced about-us__headline-text">
+                            We are <br>
                             the most <br>
                             dedicated <br>
                             architects</h3>
@@ -33,14 +34,8 @@
                             repellendus?</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cum eum iure?</p>
                     </div>
-                    <div class="about-us__one-of-work">
-                        <img class="about-us__one-of-work-background" src="../../../assets/img/original/1.jpg" alt="">
-                        <a class="link-to-project" href="#">See project</a>
-                    </div>
                     <div class="about-us__team-link">
-                        <a class="link-button" href="javascript:void(0);">
-                            Meet our team
-                        </a>
+                        <a class="link-button" routerLink="about">Meet our team</a>
                     </div>
                 </div>
             </div>
@@ -61,7 +56,7 @@
                                 (click)="changeCategory($event, i)"
                                 [class.is-active]="i == selectedItem">{{ item.name }}</li>
                         </ul>
-                        <a class="link-more" href="javascript:void(0);">View all projects</a>
+                        <a class="link-more" routerLink="projects-all">View all projects</a>
                     </div>
                     <div class="projects__link-to-all-projects"></div>
                 </div>
