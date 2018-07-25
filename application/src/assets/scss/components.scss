@@ -152,6 +152,11 @@
     &--spaced {
         letter-spacing: 2px;
     }
+    &--footer {
+        font-size: $large-font;
+        letter-spacing: 0px;
+        line-height: normal;
+    }
 
     @media (max-width: 576px) {
         font-size: $large-font;

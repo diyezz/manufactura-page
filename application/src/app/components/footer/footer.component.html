@@ -1,51 +1,38 @@
 <section class="footer-background">
   <footer class="retina-size-wrapper footer">
-    <div class="container p-sm-0">
+    <div class="container">
       <div class="row">
-        <div class="col-12">
-          <div class="footer__logo">
-            <span class="logo-cutted">
-                manufactura
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-end mb-5">
-        <div class="col-lg-2 col-md-3 col-sm-5 col-5">
-          <ul>
+        <div class="col-12 col-sm-6 col-md-5 col-lg-4">
+          <h3 class="footer__headline headline-text headline-text--footer">Quick links</h3>
+          <ul class="pb-5">
             <li><a class="link-more" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">Home</a></li>
             <!--<li><a class="link-more" routerLink="sitemap">Site map</a></li>-->
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/projects-all">All projects</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/privacy-policy">Privacy and policy</a></li>
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/help">Help</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-3 col-sm-5 col-5">
-          <ul class="mb-3 mb-lg-auto">
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/location">Our location</a></li>
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/career">Career</a></li>
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/about">About</a></li>
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/contact">Contact</a></li>
           </ul>
         </div>
-        <div class="col-lg-1 col-md-1 col-sm-2 col-2">
-          <ul class="language-switch">
+        <div class="col-12 col-sm-6 col-md-5 col-lg-4">
+          <h3 class="footer__headline headline-text headline-text--footer">Localization</h3>
+          <ul class="language-switch pb-5">
             <li><a class="link-more is-active" routerLink="eng">ENG</a></li>
             <li><a class="link-more" routerLink="ua">UA</a></li>
             <li><a class="link-more" routerLink="ru">RU</a></li>
           </ul>
         </div>
-      </div>
-      <div class="row justify-content-end mb-5">
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-4 pb-5">
+          <h3 class="footer__headline headline-text headline-text--footer">Social links</h3>
           <app-social-list [isPositionFooter]="true"></app-social-list>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
           <div class="footer__copyright">
-            All Right Reserved
-            &copy; Manufactura 2017
+            © Copyright 2010-2018, Manufactura Comp. All Rights Reserved. |
+            <a class="link-more is-active" routerLinkActive="is-active" routerLink="/privacy-policy">Privacy and policy</a>
           </div>
         </div>
       </div>
