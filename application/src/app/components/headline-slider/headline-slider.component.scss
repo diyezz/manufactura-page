@@ -1,6 +1,7 @@
 @import '../../../assets/scss/main';
 
 .slider {
+  position: relative;
   margin-right: -15px;
   margin-left: -15px;
 
@@ -59,5 +60,69 @@
     text-shadow: 0 0 4px $shadow-color;
     text-align: center;
     margin: auto;
+  }
+  &__arrow-btn {
+    display: inline-flex;
+    justify-content: center;
+    padding: 6px 12px;
+    text-align: center;
+    background-color: $main-white;
+    border: solid 1px transparent;
+    color: $main-red;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $secondary-black;
+      color: $main-white;
+      text-decoration: none;
+      border-color: $main-grey;
+    }
+
+    position: absolute;
+    outline: none!important;
+    bottom: 30px;
+    z-index: 1;
+    &--next {
+      right: 30px;
+    }
+    &--previous {
+      right: 75px;
+    }
+    @media (min-width: 576px) {
+      &--next {
+        right: calc((100vw - 540px) / 2);
+      }
+      &--previous {
+        right: calc((100vw - 440px) / 2);
+      }
+    }
+    @media (min-width: 768px) {
+      &--next {
+        right: calc((100vw - 720px) / 2);
+      }
+      &--previous {
+        right: calc((100vw - 630px) / 2);
+      }
+
+    }
+    @media (min-width: 992px) {
+      &--next {
+        right: calc((100vw - 960px) / 2);
+      }
+      &--previous {
+        right: calc((100vw - 870px) / 2);
+      }
+
+    }
+    @media (min-width: 1200px) {
+      &--next {
+        right: calc((100vw - 1140px) / 2);
+      }
+      &--previous {
+        right: calc((100vw - 1050px) / 2);
+      }
+    }
   }
 }

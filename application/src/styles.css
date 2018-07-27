@@ -34,3 +34,6 @@ app-root {
     min-height: 100vh;
     flex-direction: column;
 }
+body.hide-overflow {
+    overflow: hidden;
+}

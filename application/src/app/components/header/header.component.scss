@@ -8,9 +8,17 @@ header {
 
   &.active {
     box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    .header__logo {
+      text-align: center;
+    }
   }
   &.hidden {
     display: none;
+  }
+
+  *::selection {
+    background: transparentize($main-red, 0.2);
+    color: $main-white;
   }
 }
 
@@ -66,7 +74,9 @@ header {
   background-color: $main-white;
 
   &__logo {
+    transition: all 0.7s ease-in-out;
     text-transform: lowercase;
+    text-align: left;
     color: $main-red;
     font-weight: 700;
     font-size: $xl-font;
@@ -191,13 +201,22 @@ header {
   }
 
   &__menu-content {
+    display: flex;
+    flex-wrap: wrap;
     height: 100%;
     overflow: scroll;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
   }
 
   &__menu-list {
     margin-top: 70px;
-    margin-left: 70px;
+    margin-left: 35px;
+    margin-right: 35px;
     transition: all 1.2s ease-out;
     padding: 0;
     opacity: 0;
@@ -208,16 +227,21 @@ header {
       font-weight: 700;
       padding: 0 10px;
       min-width: 180px;
+    }
 
-      &:first-child {
-        color: $secondary-black;
-        font-size: $large-font;
-        font-style: italic;
-        text-transform: capitalize;
-        text-decoration: underline;
-        margin-bottom: 30px;
-        pointer-events: none;
+    h3 {
+      pointer-events: none;
+      padding-bottom: 1rem;
+      padding-left: 10px;
+      color: transparentize($secondary-black, 0.2);
+      &::selection {
+        background-color: $secondary-black;
+        color: $main-white;
       }
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 35px;
     }
   }
 

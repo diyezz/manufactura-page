@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {ReactiveFormsModule} from "@angular/forms";
 // Custom modules
 import {SlickModule} from "ngx-slick";
 
@@ -31,6 +32,7 @@ import {
     ProjectsDetailComponent,
     ProjectsAllComponent
 } from './pages/pages';
+import {ClickOutside} from "./directives/click-outside.directive";
 
 @NgModule({
     declarations: [
@@ -48,12 +50,14 @@ import {
         ContactsComponent,
         FilterPipe,
         ProjectsDetailComponent,
-        ProjectsAllComponent
+        ProjectsAllComponent,
+        ClickOutside
     ],
     imports: [
         BrowserModule,
         HttpClientModule,
         AppRoutingModule,
+        ReactiveFormsModule,
         SlickModule.forRoot()
     ],
     providers: [

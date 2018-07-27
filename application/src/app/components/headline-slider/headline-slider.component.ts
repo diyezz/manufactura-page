@@ -18,13 +18,15 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit {
 
   getSliderSettings() {
       return {
-          arrows: false,
+          arrows: true,
           autoplay: true,
           autoplaySpeed: 3000,
           dots: false,
           infinite: true,
           speed: 1000,
-          slidesToShow: 1
+          slidesToShow: 1,
+          nextArrow: '<button class="slider__arrow-btn slider__arrow-btn--next"> ></button>',
+          prevArrow: '<button class="slider__arrow-btn slider__arrow-btn--previous"> <</button>'
       }
   }
 }

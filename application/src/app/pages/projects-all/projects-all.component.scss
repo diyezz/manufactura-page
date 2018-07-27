@@ -4,6 +4,10 @@
 .top-padding-section {
   padding-top: 170px;
   background-color: lighten($main-grey, 15);
+
+  @media (max-width: 576px) {
+    padding-top: 90px;
+  }
 }
 
 .item {
@@ -60,10 +64,13 @@
     &__image-wrapper {
       height: 240px;
     }
-    h3 {
-      font-size: $middle-font;
-    }
     &__content {
+      .headline-text {
+        font-size: $middle-font;
+      }
+      .description-text {
+        font-size: $main-font;
+      }
       .link-button {
         max-width: none;
         width: 100%;

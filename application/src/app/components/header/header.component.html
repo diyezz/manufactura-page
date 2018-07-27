@@ -1,4 +1,4 @@
-<section class="header-section" [class.sticky]="isHeaderSticky">
+<section class="header-section" [class.sticky]="isHeaderSticky" clickOutside (clickOutside)="onClickOutside($event)">
   <button class="header-section__close-btn" (click)="onToggleHeaderButtonClick()">
     {{isHeaderVisible ? 'X' : '+'}}
   </button>
@@ -17,7 +17,7 @@
         <div class="header__adds-list">
           <div class="header__call-us d-none d-sm-flex">
             <span class="header__text-for-call d-none d-md-inline">Call us:</span>
-            <a class="header__back-call" href="javascript:void(0);">0 (800) 400 500 12</a>
+            <a class="header__back-call" href="javascript:void(0);">+38 (800) 400 500 12</a>
           </div>
 
           <div class="header-delimiter d-none d-md-flex"></div>
@@ -41,21 +41,30 @@
       <div class="header__menu-bubble"></div>
       <div class="header__menu-content">
         <ul class="header__menu-list">
-          <li>Explore us</li>
+          <h3 class="headline-text headline-text--footer">Explore us</h3>
           <li><a class="link-more" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">Home</a></li>
-          <li><a class="link-more" routerLinkActive="is-active" routerLink="/about">About</a></li>
+          <li><a class="link-more" routerLinkActive="is-active" routerLink="/about">About us</a></li>
           <li><a class="link-more" routerLinkActive="is-active" routerLink="/projects-all">All Projects</a></li>
         </ul>
         <ul class="header__menu-list">
-          <li>Contact us</li>
-          <li><a class="link-more" routerLinkActive="is-active" routerLink="/contact">Contacts</a></li>
+          <h3 class="headline-text headline-text--footer">Contact us</h3>
+          <li><a class="link-more" routerLinkActive="is-active" routerLink="/contacts">Contacts</a></li>
           <li><a class="link-more" routerLinkActive="is-active" routerLink="/location">Our Location</a></li>
         </ul>
         <ul class="header__menu-list">
-          <li>Information</li>
+          <h3 class="headline-text headline-text--footer">Information</h3>
           <li><a class="link-more" routerLinkActive="is-active" routerLink="/career">Career</a></li>
           <li><a class="link-more" routerLinkActive="is-active" routerLink="/help">Help</a></li>
           <li><a class="link-more" routerLinkActive="is-active" routerLink="/privacy-policy">Privacy and policy</a></li>
+        </ul>
+        <ul class="header__menu-list">
+          <h3 class="headline-text headline-text--footer">Social</h3>
+          <li><a class="link-more" href="javascript:void(0);">Facebook</a></li>
+          <li><a class="link-more" href="javascript:void(0);">Twitter</a></li>
+          <li><a class="link-more" href="javascript:void(0);">Instagram</a></li>
+          <li><a class="link-more" href="javascript:void(0);">Google +</a></li>
+          <li><a class="link-more" href="javascript:void(0);">Pinterest</a></li>
+          <li><a class="link-more" href="javascript:void(0);">Youtube</a></li>
         </ul>
       </div>
     </div>

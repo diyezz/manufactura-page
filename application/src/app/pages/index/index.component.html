@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="about-us">
-                    <div class="about-us__header header-text">
+                    <div class="about-us__header header-text header-text--spacing">
                         <h2>About us</h2>
                         <a class="link-more" routerLink="/about">More about us</a>
                     </div>
@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="projects">
-                    <div class="projects__header header-text">
+                    <div class="projects__header header-text header-text--spacing">
                         <h2>Latest projects</h2>
                         <ul class="filter__list">
                             <li class="filter__item"
@@ -72,6 +72,12 @@
                 <app-projects-slider [slideCategory]="slideCategoryName"></app-projects-slider>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center mb-5 mt-5">
+                <a routerLink="/projects-all" class="link-button">View all projects</a>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -79,7 +85,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="partners__header header-text">
+                <div class="partners__header header-text header-text--spacing">
                     <h2>Our partners</h2>
                 </div>
                 <app-partners-slider></app-partners-slider>

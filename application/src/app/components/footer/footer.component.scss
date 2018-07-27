@@ -8,6 +8,10 @@ footer {
     color: $main-white;
   }
 
+  @media (max-width: 768px) {
+    padding: 35px 0;
+  }
+
 }
 
 .footer {
@@ -26,7 +30,7 @@ footer {
   }
 
   &__headline {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
 
   &__logo {
@@ -52,6 +56,14 @@ footer {
     text-align: left;
     font-size: $middle-font;
     line-height: $large-font;
+
+    .link-more {
+      line-height: normal;
+    }
+
+    @media (max-width: 576px) {
+      font-size: $main-font;
+    }
   }
 }
 

@@ -1,3 +1,105 @@
-<p>
-  contacts works!
-</p>
+<section class="top-padding-section">
+    <div class="container mb-lg-5">
+        <div class="row justify-content-end">
+            <div class="col-12 col-sm-4 col-lg-4">
+                <div class="header-text pb-5">
+                    <h2>Keep in touch</h2>
+                </div>
+            </div>
+            <div class="col-12 col-sm-8 col-lg-4">
+                <div class="contacts__address-wrapper pb-5">
+                    <h3 class="contacts__city"><span>Odesa</span>, Ukraine</h3>
+                    <h4 class="contacts__adress-string">
+                        Velyka Arnauts'ka St 38, Odesa, 65000, Ukraine
+                    </h4>
+                    <h5 class="contacts__contact-field">
+                        <span>Email: </span>
+                        <a class="link-more" href="mailto:2342342">sales@manufactura.com</a>
+                    </h5>
+                    <h5 class="contacts__contact-field">
+                        <span>Skype: </span>
+                        <a class="link-more" href="mailto:2342342">manufactura.sales</a>
+                    </h5>
+                    <h5 class="contacts__contact-field">
+                        <span>Telegram: </span>
+                        <a class="link-more" href="mailto:2342342">manufactura</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="col-12 col-sm-8 col-lg-4">
+                <div class="contacts__address-wrapper pb-5">
+                    <div class="pb-3">
+                        <p class="text-bold mb-0">Call us directly:</p>
+                        <a href="tel:+3880040050012" class="contacts__phone-number">
+                            <span>+38 (800) 400 500 12</span>
+                        </a>
+                    </div>
+                    <div class="contacts__schedule">
+                        <p class="text-bold mb-0">Work hours:</p>
+                        <p>Monday - Friday: 9.00 - 19.00</p>
+                        <p>Saturday: 9.00 - 17.00. Sunday off work</p>
+                    </div>
+                    <div class="contacts__social-list">
+                        <p class="text-bold">Follow us:</p>
+                        <app-social-list [isPositionFooter]="true"></app-social-list>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-lg-5">
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <div class="header-text pb-5">
+                    <h2>Contact us</h2>
+                </div>
+            </div>
+            <div class="col-12 col-sm-8">
+                <form class="pb-5" [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
+                    <div class="form__group-row">
+                        <div class="form__group">
+                            <input id="firstName" type="text" formControlName="firstName">
+                            <label for="firstName">First Name*</label>
+                        </div>
+                        <div class="form__group">
+                            <input id="lastName" type="text" formControlName="lastName">
+                            <label for="lastName">Last Name</label>
+                        </div>
+                        <div class="form__group">
+                            <input id="email" type="text" formControlName="email">
+                            <label for="email">Email address*</label>
+                        </div>
+                    </div>
+                    <div class="form__group-row">
+                        <div class="form__group">
+                            <input id="companyName" type="text" formControlName="companyName">
+                            <label for="companyName">Company</label>
+                        </div>
+                        <div class="form__group">
+                            <select id="questionTheme" formControlName="theme">
+                                <option value="regular" selected>Regular question</option>
+                            </select>
+                            <label for="questionTheme">Your interest</label>
+                        </div>
+                    </div>
+                    <div class="form__group-row">
+                        <div class="form__group">
+                            <textarea id="description" formControlName="description"></textarea>
+                            <label for="description">Some addition description of your question</label>
+                            <div class="text-area__hint">
+                                {{symbolsCurrentLength <= symbolsMinLength ?
+                                textAreaLengthMinText + symbolsCurrentLength + '/' + symbolsMinLength :
+                                textAreaLengthMaxText + symbolsCurrentLength + '/' + symbolsMaxLength}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__group-row">
+                        <div class="form__group">
+                            <button type="submit" class="link-button">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -33,7 +33,6 @@ export class ProjectsDetailComponent implements OnInit {
 
   ngOnInit() {
     this.getProjectById();
-    window.scrollTo(0,0);
   }
 
   goBack(): void {

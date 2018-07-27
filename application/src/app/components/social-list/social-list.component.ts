@@ -7,7 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class SocialListComponent implements OnInit {
 
-  @Input('isPositionFooter') isPositionFooter = false;
+  @Input('isPositionFooter') isPositionFooter: boolean = false;
+  @Input('isOnlyText') isOnlyText: boolean = false;
 
   constructor() { }
 

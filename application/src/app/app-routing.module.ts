@@ -30,7 +30,7 @@ const routes: Routes = [
         component: LocationComponent
     },
     {
-        path: 'contact',
+        path: 'contacts',
         component: ContactsComponent
     },
     {
