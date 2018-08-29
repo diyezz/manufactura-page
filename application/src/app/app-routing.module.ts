@@ -1,5 +1,6 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from "@angular/core";
+import {Routes, RouterModule} from '@angular/router';
+import {AuthGuard} from "./guards/auth.guard";
 
 // Page components
 import {
@@ -9,7 +10,8 @@ import {
     LocationComponent,
     ContactsComponent,
     ProjectsDetailComponent,
-    ProjectsAllComponent
+    ProjectsAllComponent,
+    LoginComponent
 } from './pages/pages';
 
 const routes: Routes = [
@@ -42,6 +44,15 @@ const routes: Routes = [
         component: ProjectsAllComponent
     },
     {
+        path: 'login',
+        component: LoginComponent
+    },
+    {
+        path: 'edit-content',
+        loadChildren: './modules/edit-content/edit-content.module#EditContentModule',
+        canActivate: [AuthGuard]
+    },
+    {
         path: '**',
         redirectTo: '',
     }
@@ -51,4 +62,5 @@ const routes: Routes = [
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

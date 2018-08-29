@@ -1,8 +1,10 @@
 <ngx-slick #slickModal="slick-modal" class="slider__slides-wrapper" [config]="getSliderSettings()">
   <div ngxSlickItem *ngFor="let slide of images" class="slider__slide" [style.background-image]="'url(' + slide.image + ')'">
-    <div class="slider__slide-content" *ngIf="slide.text">
-      <h2 class="slider__slide-headline">{{slide.text.headline}}</h2>
-      <p class="slider__slide-description">{{slide.text.description}}</p>
+    <div class="slider__slide-content-wrapper">
+      <div class="slider__slide-content" *ngIf="slide.text">
+        <h2 class="slider__slide-headline">{{slide.text.headline}}</h2>
+        <p class="slider__slide-description">{{slide.text.description}}</p>
+      </div>
     </div>
     <img class="slider__slide-background" src="{{slide.image}}" alt="">
   </div>

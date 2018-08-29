@@ -12,6 +12,7 @@
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/career">Career</a></li>
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/location">Our location</a></li>
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/help">Help</a></li>
+            <li><a class="link-more" routerLinkActive="is-active" routerLink="/edit-content">Edit content</a></li>
           </ul>
         </div>
         <div class="col-12 col-sm-6 col-md-5 col-lg-4">
@@ -24,7 +25,7 @@
         </div>
         <div class="col-12 col-sm-12 col-md-8 col-lg-4 pb-5">
           <h3 class="headline-text headline-text--footer pb-3">Social links</h3>
-          <app-social-list [isPositionFooter]="true"></app-social-list>
+          <app-social-list [data]="socialList" className="footer"></app-social-list>
         </div>
       </div>
       <div class="row">

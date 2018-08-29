@@ -7,9 +7,10 @@ import {SlickModule} from "ngx-slick";
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FilterPipe} from "./pipes/filter.pipe";
+import {ClickOutside} from "./directives/click-outside.directive";
 
 // Providers
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 
 // Services
 import {DataService} from "./services/data.service";
@@ -32,7 +33,12 @@ import {
     ProjectsDetailComponent,
     ProjectsAllComponent
 } from './pages/pages';
-import {ClickOutside} from "./directives/click-outside.directive";
+
+import {JwtInterceptor} from "./interceptors/jwt.interceptor";
+import {ErrorInterceptor} from "./interceptors/error.interceptor";
+import {fakeBackendProvider} from "./_helpers/fake-backend";
+import { LoginComponent } from './pages/login/login.component';
+
 
 @NgModule({
     declarations: [
@@ -48,9 +54,10 @@ import {ClickOutside} from "./directives/click-outside.directive";
         CareerComponent,
         LocationComponent,
         ContactsComponent,
-        FilterPipe,
         ProjectsDetailComponent,
         ProjectsAllComponent,
+        LoginComponent,
+        FilterPipe,
         ClickOutside
     ],
     imports: [
@@ -61,7 +68,12 @@ import {ClickOutside} from "./directives/click-outside.directive";
         SlickModule.forRoot()
     ],
     providers: [
-        DataService
+        DataService,
+        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+        // provider used to create fake backend
+        fakeBackendProvider
     ],
     bootstrap: [AppComponent]
 })

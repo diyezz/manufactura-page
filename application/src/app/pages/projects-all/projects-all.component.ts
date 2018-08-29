@@ -17,7 +17,8 @@ export class ProjectsAllComponent implements OnInit {
         private route: ActivatedRoute,
         private location: Location,
         private dataService: DataService
-    ) { }
+    ) {
+    }
 
     ngOnInit() {
         this.getProjectsData();

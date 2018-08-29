@@ -1,6 +1,6 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {FormArray, FormControl, FormGroup, Validators} from "@angular/forms";
-import {Subscription} from "rxjs/Subscription";
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormArray, FormControl, FormGroup, Validators } from "@angular/forms";
+import { Subscription } from "rxjs/Subscription";
 
 interface contactData {
     firstName: string;
@@ -24,6 +24,13 @@ export class ContactsComponent implements OnInit, OnDestroy {
     symbolsMinLength: number = 20;
     symbolsMaxLength: number = 500;
     symbolsCurrentLength: number = 0;
+    socialList = [
+        {'facebook': 'https://www.facebook.com/'},
+        {'twitter': 'https://www.twitter.com/'},
+        {'instagram': 'https://www.instagram.com/'},
+        {'googlePlus': 'https://www.google.com/'},
+        {'youtube': 'https://www.youtube.com/'}
+    ];
 
     constructor() {
     }

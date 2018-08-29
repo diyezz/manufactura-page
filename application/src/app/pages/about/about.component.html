@@ -1,3 +1,104 @@
-<p>
-  about works!
-</p>
+<section class="top-padding-section">
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <div class="header-text pb-5">
+                    <h2>Meet our team</h2>
+                </div>
+            </div>
+            <div class="col-12 col-sm-8">
+                <div class="p">
+                    Manufactura aims to bring the latest trends and best quality products to their customers. There is a
+                    huge emphasis on passing on knowledge and making Manufactura designs a ‘go-to’ for any information
+                    or inspirations for your home or business. To do that, a qualified, enthusiastic, nimble team is a
+                    must.
+                </div>
+            </div>
+        </div>
+        <div class="row flex-md-row-reverse mt-5">
+            <div class="col-12 col-md-8">
+                <div class="about__image-wrapper">
+                    <img src="{{image1}}" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem commodi, consequuntur corporis
+                    distinctio ducimus ea earum, eos, et illo magnam molestiae perferendis qui quisquam quod repellat
+                    repellendus voluptatum. Consequuntur dolores eum exercitationem in laudantium natus nostrum omnis
+                    ratione sed?
+                </p>
+            </div>
+        </div>
+        <section class="about__award">
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="header-text pb-5">
+                        <h2>Awards</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-3" *ngFor="let award of awards">
+                <div class="col-12 col-md-4">
+                    <div class="about__award-year">
+                        {{award.date}},
+                        <span class="place">{{award.place}}</span>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 text-md-right">
+                    <h3 class="about__award-name">
+                        {{award.name}}
+                    </h3>
+                    <div class="about__award-description">{{award.description}}</div>
+                    <div class="about__award-nomination">
+                        <span>Nomination: </span>
+                        <p>{{award.nomination}}</p>
+                    </div>
+                </div>
+                <div class="col-9 col-sm-6 col-md-3">
+                    <img class="about__award-photo" src="{{award.photo}}" alt="">
+                </div>
+            </div>
+        </section>
+
+        <div *ngFor="let person of personsData; let index = index;" class="row mt-5"
+             [class.flex-md-row-reverse]="index % 2 == 0">
+            <div class="col-12 col-md-6 col-lg-5 pb-3">
+                <div class="about__person-desc-wrapper">
+                    <div class="header-text">
+                        <h2>{{person.name}}</h2>
+                    </div>
+                    <p class="about__person-position">{{person.position}}</p>
+                    <p>{{person.description}}</p>
+                    <app-social-list class="about__person-social-list" className="simple"
+                                     [data]="person.social"></app-social-list>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-7 pb-3">
+                <div class="about__image-wrapper">
+                    <img src="{{person.photo}}" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center pb-5 pt-5">
+            <div class="col-12">
+                <div class="text-center mb-5">
+                    <h3 class="about__apply-header">Want to became a part of our team?</h3>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="text-center mb-5">
+                    <p>Manufactura is always looking to the future, so we are always happy to invite to our team young
+                        talented people with aspiration to
+                        development and to realization new architectural projects.</p>
+                    <p>If you are young and creative, and you want to became a part of our team, just apply to contact
+                        form on our career page</p>
+                </div>
+                <div class="text-center">
+                    <a routerLink="/career" class="link-button">Become a part of team</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

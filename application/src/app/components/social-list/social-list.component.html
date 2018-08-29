@@ -1,10 +1,16 @@
-<div class="header__social-list" [class.header__social-list--footer]="isPositionFooter">
-  <ul class="">
-    <li><a href="javascript:void(0);"><i class="icon social-icon icon-facebook"></i></a></li>
-    <li><a href="javascript:void(0);"><i class="icon social-icon icon-twitter"></i></a></li>
-    <li><a href="javascript:void(0);"><i class="icon social-icon icon-instagram"></i></a></li>
-    <li><a href="javascript:void(0);"><i class="icon social-icon icon-google-plus"></i></a></li>
-    <li><a href="javascript:void(0);"><i class="icon social-icon icon-pinterest"></i></a></li>
-    <li><a href="javascript:void(0);"><i class="icon social-icon icon-youtube"></i></a></li>
+<div class="header__social-list header__social-list--{{className}}">
+  <ul *ngIf="!isOnlyText">
+    <li *ngFor="let item of data">
+      <a href="{{item[Object.keys(item)[0]]}}" target="_blank">
+        <i class="icon social-icon {{ 'icon-' + Object.keys(item)[0]}}"></i>
+      </a>
+    </li>
+  </ul>
+  <ul *ngIf="isOnlyText">
+    <li *ngFor="let item of data" [ngStyle]="isOnlyText">
+      <a class="link-more" href="{{item[Object.keys(item)[0]]}}" target="_blank">
+        {{Object.keys(item)[0] | titlecase}}
+      </a>
+    </li>
   </ul>
 </div>

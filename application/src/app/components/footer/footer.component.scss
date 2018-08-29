@@ -23,7 +23,7 @@ footer {
       list-style: none;
 
       a {
-        font-size: $middle-font;
+        font-size: $main-font;
         padding: 10px 0;
       }
     }
@@ -54,8 +54,8 @@ footer {
   }
   &__copyright {
     text-align: left;
-    font-size: $middle-font;
-    line-height: $large-font;
+    font-size: $main-font;
+    line-height: $middle-font;
 
     .link-more {
       line-height: normal;

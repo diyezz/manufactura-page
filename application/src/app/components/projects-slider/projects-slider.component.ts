@@ -1,5 +1,5 @@
-import {Component, ElementRef, HostListener, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import {DataService} from "../../services/data.service";
+import { Component, ElementRef, HostListener, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { DataService } from "../../services/data.service";
 
 @Component({
     selector: 'app-projects-slider',

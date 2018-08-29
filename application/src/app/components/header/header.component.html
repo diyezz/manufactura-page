@@ -22,7 +22,7 @@
 
           <div class="header-delimiter d-none d-md-flex"></div>
 
-          <app-social-list></app-social-list>
+          <app-social-list [data]="socialList"></app-social-list>
         </div>
       </div>
       <div class="col-2 col-md-1">
@@ -59,12 +59,7 @@
         </ul>
         <ul class="header__menu-list">
           <h3 class="headline-text headline-text--footer">Social</h3>
-          <li><a class="link-more" href="javascript:void(0);">Facebook</a></li>
-          <li><a class="link-more" href="javascript:void(0);">Twitter</a></li>
-          <li><a class="link-more" href="javascript:void(0);">Instagram</a></li>
-          <li><a class="link-more" href="javascript:void(0);">Google +</a></li>
-          <li><a class="link-more" href="javascript:void(0);">Pinterest</a></li>
-          <li><a class="link-more" href="javascript:void(0);">Youtube</a></li>
+          <app-social-list [data]="socialList" [isOnlyText]="socialListStyles" className="only-text"></app-social-list>
         </ul>
       </div>
     </div>

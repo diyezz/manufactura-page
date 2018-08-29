@@ -150,13 +150,13 @@ header {
 
   &__call-us {
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: $small-font;
   }
 
   &__text-for-call {
     text-transform: uppercase;
     margin-right: 0.5rem;
-    color: $main-black;
+    color: transparentize($secondary-black, 0.3);
   }
 
   &__back-call {
@@ -223,7 +223,7 @@ header {
 
     li {
       list-style: none;
-      font-size: $large-font;
+      font-size: $middle-font;
       font-weight: 700;
       padding: 0 10px;
       min-width: 180px;

@@ -1,12 +1,12 @@
 .icon {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 14px;
     display: block;
     background-size: cover;
 
-    &-google-plus {
+    &-googlePlus {
         background: url('#{$base-url}/assets/img/svg/google-plus-social-logotype.svg') center no-repeat;
-        background-size: 18px 18px;
+        background-size: 14px 14px;
     }
     &-facebook {
         background-image: url('#{$base-url}/assets/img/svg/facebook-logo.svg');
@@ -158,13 +158,13 @@
         letter-spacing: 2px;
     }
     &--footer {
-        font-size: $large-font;
+        font-size: $middle-font;
         letter-spacing: 0px;
         line-height: normal;
     }
 
     @media (max-width: 576px) {
-        font-size: $large-font;
+        font-size: $middle-font;
     }
 }
 
