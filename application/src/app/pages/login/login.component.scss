@@ -8,3 +8,113 @@
         padding-top: 90px;
     }
 }
+.invalid-feedback {
+    position: absolute;
+    bottom: 0;
+}
+
+.form {
+    &__group-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__group {
+        position: relative;
+        margin-right: 15px;
+        flex: 1 1 auto;
+
+        input, select, textarea {
+            border: solid 1px $main-grey;
+            border-radius: 0;
+            height: 40px;
+            padding: 5px 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            outline: none;
+            width: 100%;
+
+            &.ng-invalid.ng-touched {
+                border-bottom-color: $main-red;
+                & + label {
+                    color: $main-red;
+                    & + .text-area__hint {
+                        color: $main-red;
+                    }
+                }
+            }
+            &.ng-valid.ng-touched {
+                border-bottom-color: $valid-green;
+                & + label {
+                    font-size: $small-font;
+                    top: 0;
+                    left: 0;
+                    & + .text-area__hint {
+                        color: $valid-green;
+                    }
+                }
+            }
+            &.ng-dirty {
+                & + label {
+                    font-size: $small-font;
+                    top: 0;
+                    left: 0;
+                    & + .text-area__hint {
+                        display: block;
+                    }
+                }
+            }
+        }
+        label {
+            font-size: $middle-font;
+            margin-bottom: 0;
+            position: absolute;
+            transition: all 0.2s linear;
+            top: 26px;
+            left: 10px;
+        }
+        input {
+            &:focus + label {
+                font-size: $small-font;
+                top: 0;
+                left: 0;
+            }
+        }
+        select {
+            & + label {
+                font-size: $small-font;
+                top: 0;
+                left: 0;
+            }
+        }
+        textarea {
+            height: 120px;
+            min-height: 120px;
+            max-height: 300px;
+
+            &:focus + label {
+                font-size: $small-font;
+                top: 0;
+                left: 0;
+            }
+        }
+        .text-area__hint {
+            display: none;
+            font-size: $small-font;
+            position: absolute;
+            bottom: 6px;
+        }
+
+        @media (max-width: 992px) {
+            flex: 1 1 100%;
+            margin-right: 0;
+            input, select, textarea {
+                & + label {
+                    font-size: $small-font;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

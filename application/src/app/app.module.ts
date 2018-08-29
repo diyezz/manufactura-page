@@ -1,6 +1,8 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {ReactiveFormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+
 // Custom modules
 import {SlickModule} from "ngx-slick";
 
@@ -62,6 +64,7 @@ import { LoginComponent } from './pages/login/login.component';
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         HttpClientModule,
         AppRoutingModule,
         ReactiveFormsModule,

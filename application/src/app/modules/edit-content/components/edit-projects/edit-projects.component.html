@@ -1,10 +1,62 @@
-<section class="top-padding-section">
+<section class="top-padding-section" xmlns="http://www.w3.org/1999/html">
   <div class="container">
     <div class="row">
       <a [routerLink]="['/login']">Logout</a>
     </div>
     <div class="row">
-      Edit content
+      <div class="col-6">
+        <ul class="">
+          <li *ngFor="let project of allProjects"
+              [class.selected]="project === selectedProject"
+              (click)="onSelect(project)">
+            <span class="badge">{{project.id}}</span> {{project.header}}
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-6">
+        <div *ngIf="selectedProject">
+
+          <h2>{{selectedProject.header | uppercase}} Details</h2>
+          <div><span>id: </span>{{selectedProject.id}}</div>
+          <div>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Name" [(ngModel)]="selectedProject.header">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-select [(value)]="selectedProject.category">
+                <mat-option value="not selected">none</mat-option>
+                <mat-option value="buildings">buildings</mat-option>
+                <mat-option value="interiors">interiors</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <input
+              matInput
+              placeholder="Select date"
+              [min]="minDate"
+              [max]="maxDate"
+              [matDatepicker]="picker3"
+              [value]="deserializeDate(selectedProject.date)">
+              <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+              <mat-datepicker #picker3></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Description" [(ngModel)]="selectedProject.description"></textarea>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Full Description" [(ngModel)]="selectedProject.fullDescription"></textarea>
+            </mat-form-field>
+            <label>Images:
+              <span>{{selectedProject.images | json}}</span>
+            </label>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Link" [(ngModel)]="selectedProject.link">
+            </mat-form-field>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 </section>
