@@ -26,7 +26,7 @@ export class ProjectsSliderComponent implements OnInit {
         return this.dataService.getProjects()
             .subscribe(data => {
                 // Read the result field from the JSON response.
-                this.slideData = data['data'];
+                this.slideData = data;
             });
     }
 

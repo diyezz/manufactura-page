@@ -1,0 +1,247 @@
+{
+  "projects": [
+    {
+      "header": "Jarim coffee",
+      "id": 2,
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of Odessa",
+      "link": "",
+      "date": "10.11.2017",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/1.jpg",
+      "images": [
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/1.jpg"
+        },
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/6.jpg"
+        }
+      ],
+      "category": "buildings",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?"
+    },
+    {
+      "header": "Design of small studio flat",
+      "id": 4,
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of city",
+      "link": "",
+      "date": "04.12.2017",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/4.jpg",
+      "images": [
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/4.jpg"
+        },
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/3.jpg"
+        }
+      ],
+      "category": "interiors",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?"
+    },
+    {
+      "header": "Omega three - Green food cafe",
+      "id": 5,
+      "city": "New York",
+      "description": "Brand design of small cafe in center of city",
+      "link": "",
+      "date": "10.11.2017",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg",
+      "images": [
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg"
+        },
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/1.jpg"
+        }
+      ],
+      "category": "buildings",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?"
+    },
+    {
+      "header": "Consept of modern loft office building",
+      "id": 6,
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of city",
+      "link": "",
+      "date": "03.07.2018",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/5.jpg",
+      "images": [
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/5.jpg"
+        },
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/4.jpg"
+        }
+      ],
+      "category": "interiors",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?"
+    },
+    {
+      "header": "Modern design of bedroom",
+      "id": 7,
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of city",
+      "link": "",
+      "date": "10.11.2017",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/6.jpg",
+      "images": [
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/6.jpg"
+        },
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/5.jpg"
+        }
+      ],
+      "category": "interiors",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?"
+    },
+    {
+      "header": "Test Rename",
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of city. What have done in the best way with highest materials and other cool stuff.",
+      "link": "https",
+      "date": "2018-08-30T12:31:26.751Z",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg",
+      "images": [
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg"
+        },
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/1.jpg"
+        }
+      ],
+      "category": "buildings",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
+      "id": 8
+    },
+    {
+      "header": "New project!",
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of city. What have done in the best way with highest materials and other cool stuff.",
+      "link": "",
+      "date": "2018-08-30T12:37:11.478Z",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg",
+      "images": [
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg"
+        },
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/1.jpg"
+        }
+      ],
+      "category": "buildings",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
+      "id": 9
+    },
+    {
+      "header": "New project!",
+      "city": "Odessa",
+      "description": "Brand design of small cafe in center of city. What have done in the best way with highest materials and other cool stuff.",
+      "link": "",
+      "date": "2018-08-31T13:17:20.229Z",
+      "cover": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg",
+      "images": [
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/2.jpg"
+        },
+        {
+          "image": "https://manufactura-d8bb1.firebaseapp.com/assets/img/original/1.jpg"
+        }
+      ],
+      "category": "buildings",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
+      "id": 10
+    }
+  ],
+  "partners": [
+    {
+      "image": "../../../assets/img/partners/SketchUp.png"
+    },
+    {
+      "image": "../../../assets/img/partners/3dsmax_logo.png"
+    },
+    {
+      "image": "../../../assets/img/partners/sketch-logo.png"
+    },
+    {
+      "image": "../../../assets/img/partners/photoshop-full-logo.png"
+    }
+  ],
+  "team": [
+    {
+      "name": "Denis Braharchuk",
+      "position": "Head architect, Manufactura founder",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem commodi, consequuntur corporis distinctio ducimus ea earum, eos, et illo magnam molestiae perferendis qui quisquam quod repellat repellendus voluptatum. Consequuntur dolores eum exercitationem in laudantium natus nostrum omnis ratione sed?",
+      "photo": "/assets/img/team-photos/denis.jpg",
+      "social": [
+        {
+          "facebook": "https://www.facebook.com/"
+        },
+        {
+          "twitter": "https://www.twitter.com/"
+        },
+        {
+          "instagram": "https://www.instagram.com/denis_bragarchuk/"
+        },
+        {
+          "googlePlus": "https://www.google.com/"
+        },
+        {
+          "youtube": "https://www.youtube.com/"
+        }
+      ]
+    },
+    {
+      "name": "Deborah Somersby",
+      "position": "Lead architect",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem commodi, consequuntur corporis distinctio ducimus ea earum, eos, et illo magnam molestiae perferendis qui quisquam quod repellat repellendus voluptatum. Consequuntur dolores eum exercitationem in laudantium natus nostrum omnis ratione sed?",
+      "photo": "/assets/img/team-photos/woman-architect-example.jpg",
+      "social": [
+        {
+          "facebook": "https://www.facebook.com/"
+        },
+        {
+          "instagram": "https://www.instagram.com/"
+        }
+      ]
+    },
+    {
+      "name": "Cristoph Smith",
+      "position": "Interior designer, architect",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem commodi, consequuntur corporis distinctio ducimus ea earum, eos, et illo magnam molestiae perferendis qui quisquam quod repellat repellendus voluptatum. Consequuntur dolores eum exercitationem in laudantium natus nostrum omnis ratione sed?",
+      "photo": "/assets/img/team-photos/man-architect-example.jpg",
+      "social": [
+        {
+          "facebook": "https://www.facebook.com/"
+        },
+        {
+          "twitter": "https://www.twitter.com/"
+        },
+        {
+          "instagram": "https://www.instagram.com/"
+        },
+        {
+          "googlePlus": "https://www.google.com/"
+        }
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "name": "Vira Urkaine!",
+      "description": "Architectural and construction forum",
+      "place": "Odessa, Ukraine",
+      "nomination": "Public interior",
+      "date": "2016",
+      "photo": "https://instagram.fiev15-1.fna.fbcdn.net/vp/070393440e30a4bf3bbb996b934f5d69/5C13DAAF/t51.2885-15/e35/12826007_830290587117616_984226766_n.jpg"
+    },
+    {
+      "name": "Architect Forum",
+      "description": "Very famous architect forum",
+      "place": "Kyiv, Ukraine",
+      "nomination": "Public interior",
+      "date": "2017",
+      "photo": "https://instagram.fiev15-1.fna.fbcdn.net/vp/070393440e30a4bf3bbb996b934f5d69/5C13DAAF/t51.2885-15/e35/12826007_830290587117616_984226766_n.jpg"
+    }
+  ]
+}

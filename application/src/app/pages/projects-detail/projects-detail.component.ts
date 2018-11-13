@@ -22,7 +22,7 @@ export class ProjectsDetailComponent implements OnInit {
 
   getProject(id: number) {
       return this.dataService.getProjects().pipe(
-          map(projects => projects['data'].filter(project => project.id === id))
+          map(projects => projects.filter(project => project.id === id))
       ).subscribe(data => this.currentProject = data[0]);
   }
 

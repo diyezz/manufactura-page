@@ -2,11 +2,16 @@
 @import "../../../assets/scss/components";
 
 .top-padding-section {
-  padding-top: 200px;
+  padding-top: 70px;
 
   @media (max-width: 576px) {
     padding-top: 90px;
   }
+}
+
+agm-map {
+  height: 600px;
+  width: 100%;
 }
 
 .contacts {

@@ -4,7 +4,7 @@
             <div class="col-12">
                 <div class="slider">
                     <div class="slider__header"></div>
-                    <app-headline-slider [images]="images"></app-headline-slider>
+                    <app-headline-slider [images]="images" [fullHeightProp]="true"></app-headline-slider>
                 </div>
             </div>
         </div>
@@ -33,6 +33,15 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur in nam neque officiis
                             repellendus?</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cum eum iure?</p>
+                    </div>
+                    <div class="about-us__one-of-work">
+                        <img class="about-us__one-of-work-background" src="{{defaultEnvironment.baseUrl}}/assets/img/sketch.png" alt="">
+                        <div class="about-us__exp-badge text-headline">
+                            We have
+                            <span class="counter">{{dateCounter('years')}}</span> years and
+                            <span class="counter">{{dateCounter('days')}}</span> days
+                            of working experience
+                        </div>
                     </div>
                     <div class="about-us__team-link">
                         <a class="link-button" routerLink="/about">Meet our team</a>

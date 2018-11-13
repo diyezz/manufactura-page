@@ -1,4 +1,5 @@
 export class Project {
+    header: string;
     category: string;
     city: string;
     cover: string;

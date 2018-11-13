@@ -12,6 +12,7 @@ declare let particlesJS: any;
 })
 
 export class IndexComponent implements OnInit {
+    defaultEnvironment = environment;
 
     constructor() {
     }
@@ -49,5 +50,26 @@ export class IndexComponent implements OnInit {
     changeCategory(event, newValue) {
         this.slideCategoryName = event.target.innerText.toLowerCase();
         this.selectedItem = newValue;
+    }
+
+    dateCounter(type) {
+        const startDate = new Date(2014, 9, 7);
+        const currentDate = new Date();
+
+        let diff = Math.floor(currentDate.getTime() - startDate.getTime());
+        const day = 1000 * 60 * 60 * 24;
+        const month = 1000 * 60 * 60 * 24 * 29.82;
+        const year = 1000 * 60 * 60 * 24 * 29.82 * 12;
+
+        let days = Math.floor(diff/day);
+        let months = Math.floor(diff/month);
+        let years = Math.floor(diff/year);
+        let diffInDays = Math.floor((diff-(year * years))/day);
+
+        if (type === 'years') {
+            return years
+        } else if (type === 'days') {
+            return diffInDays
+        }
     }
 }

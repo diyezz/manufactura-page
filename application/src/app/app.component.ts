@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from "@angular/router";
+import {TranslateService} from "./translate.service";
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,11 @@ import {NavigationEnd, Router} from "@angular/router";
 })
 export class AppComponent implements OnInit{
   title = 'app';
-  constructor (private router: Router) {}
+  constructor (
+    private router: Router,
+    private translate: TranslateService
+  ) {
+  }
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
@@ -16,7 +21,6 @@ export class AppComponent implements OnInit{
             return;
         }
         window.scrollTo(0, 0)
-    })
+    });
   }
-
 }

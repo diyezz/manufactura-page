@@ -23,7 +23,7 @@ export class PartnersSliderComponent implements OnInit {
         return this.dataService.getPartners()
             .subscribe(data => {
                 // Read the result field from the JSON response.
-                this.slideData = data['data'];
+                this.slideData = data;
             });
     }
 

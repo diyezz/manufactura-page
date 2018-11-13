@@ -1,8 +1,9 @@
 .icon {
     width: 15px;
-    height: 14px;
+    height: 15px;
     display: block;
     background-size: cover;
+    transition: all 0.3s ease-in-out;
 
     &-googlePlus {
         background: url('#{$base-url}/assets/img/svg/google-plus-social-logotype.svg') center no-repeat;
@@ -22,6 +23,22 @@
     }
     &-youtube {
         background-image: url('#{$base-url}/assets/img/svg/youtube-symbol.svg');
+    }
+    &-maximize {
+        background: url('#{$base-url}/assets/img/maximize.svg') center no-repeat;
+        background-size: 30px 30px;
+        cursor: pointer;
+        outline: none;
+        height: 30px;
+        width: 30px;
+    }
+    &-minimize {
+        background: url('#{$base-url}/assets/img/minimize.svg') center no-repeat;
+        background-size: 30px 30px;
+        cursor: pointer;
+        outline: none;
+        height: 30px;
+        width: 30px;
     }
 }
 .logo-cutted {
@@ -156,6 +173,7 @@
     }
     &--spaced {
         letter-spacing: 2px;
+        margin-bottom: 1rem;
     }
     &--footer {
         font-size: $middle-font;
@@ -245,6 +263,10 @@
 
     &--small {
         padding: 6px 12px;
+    }
+
+    &--accent-red {
+        background-color: $main-red;
     }
 
     &:hover {

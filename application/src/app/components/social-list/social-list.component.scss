@@ -10,6 +10,7 @@
         justify-content: space-around;
 
         li {
+          display: flex;
           list-style: none;
           background-color: transparentize($main-grey, 0.7);
           border-radius: 50%;

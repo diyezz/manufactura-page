@@ -4,14 +4,20 @@ import {CommonModule} from '@angular/common';
 import {EditContentRoutingModule} from './edit-content-routing.module';
 import {EditProjectsComponent} from './components/edit-projects/edit-projects.component';
 import {EditProjectsService} from "./services/edit-projects.service";
+import {DataService} from "../../services/data.service";
 import {FormsModule} from "@angular/forms";
 import {
     MatDatepickerModule,
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatListModule,
+    MatIconModule, MatProgressSpinnerModule, MatCardModule, MatButtonModule
 } from "@angular/material";
+
+import {EditContentMainPageComponent} from './components/edit-content-main-page/edit-content-main-page.component';
+import {EditContentNavbarComponent} from './components/edit-content-navbar/edit-content-navbar.component';
 
 @NgModule({
     imports: [
@@ -22,13 +28,21 @@ import {
         MatNativeDateModule,
         MatInputModule,
         MatFormFieldModule,
-        MatSelectModule
+        MatSelectModule,
+        MatListModule,
+        MatIconModule,
+        MatProgressSpinnerModule,
+        MatCardModule,
+        MatButtonModule
     ],
     declarations: [
-        EditProjectsComponent
+        EditProjectsComponent,
+        EditContentMainPageComponent,
+        EditContentNavbarComponent
     ],
     providers: [
-        EditProjectsService
+        EditProjectsService,
+        DataService
     ]
 })
 export class EditContentModule {

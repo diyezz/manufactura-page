@@ -2,6 +2,7 @@ import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular
 import { NavigationEnd, Router } from "@angular/router";
 import { filter } from 'rxjs/operators';
 import { ClickOutside } from "app/directives/click-outside.directive";
+import {environment} from "../../../environments/environment";
 
 @Component({
     selector: 'app-header',
@@ -10,9 +11,11 @@ import { ClickOutside } from "app/directives/click-outside.directive";
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+    defaultEnvironment = environment;
     isMenuVisible: boolean = false;
     isHeaderSticky: boolean = false;
     isHeaderVisible: boolean = true;
+    isHeaderTransparent: boolean = false;
     bodyHideOverflowClass: string = 'hide-overflow';
     socialList = [
         {'facebook': 'https://www.facebook.com/'},
@@ -23,6 +26,8 @@ export class HeaderComponent implements OnInit {
         {'pinterest': 'https://www.pinterest.com/'}
     ];
     socialListStyles = {
+        'display': 'flex',
+        'align-items': 'center',
         'list-style': 'none',
         'font-size': '1.125rem',
         'font-weight': '700',
@@ -45,6 +50,7 @@ export class HeaderComponent implements OnInit {
             .subscribe(() => {
                 this.isMenuVisible = false;
                 this.renderer.removeClass(document.body, this.bodyHideOverflowClass);
+                this.setTransparencyClass();
             });
     }
 
@@ -62,6 +68,14 @@ export class HeaderComponent implements OnInit {
 
     setStickyHeaderClass(headerOffsetTop, windowOffsetTop) {
         this.isHeaderSticky = headerOffsetTop < windowOffsetTop;
+    }
+
+    setTransparencyClass() {
+        if (this.router.url.includes('/project-detail') || this.router.url === '/') {
+            this.isHeaderTransparent = true;
+        } else {
+            this.isHeaderTransparent = false;
+        }
     }
 
     onToggleMenuButtonClick() {

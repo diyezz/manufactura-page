@@ -8,6 +8,7 @@
   </ul>
   <ul *ngIf="isOnlyText">
     <li *ngFor="let item of data" [ngStyle]="isOnlyText">
+      <i class="icon social-icon {{ 'icon-' + Object.keys(item)[0]}} mr-2"></i>
       <a class="link-more" href="{{item[Object.keys(item)[0]]}}" target="_blank">
         {{Object.keys(item)[0] | titlecase}}
       </a>

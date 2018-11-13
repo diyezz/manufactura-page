@@ -23,8 +23,13 @@ footer {
       list-style: none;
 
       a {
+        cursor: pointer;
         font-size: $main-font;
         padding: 10px 0;
+
+        &:hover {
+          color: $main-red;
+        }
       }
     }
   }

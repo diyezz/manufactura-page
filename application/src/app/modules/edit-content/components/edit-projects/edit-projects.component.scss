@@ -12,3 +12,10 @@
 .example-full-width {
   width: 100%;
 }
+
+h4 {
+  cursor: pointer;
+  &:hover {
+    color: $main-red;
+  }
+}

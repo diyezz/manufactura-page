@@ -28,7 +28,7 @@ export class ProjectsAllComponent implements OnInit {
         return this.dataService.getProjects()
             .subscribe(data => {
                 // Read the result field from the JSON response.
-                this.allProjects = data['data'];
+                this.allProjects = data;
             });
     }
 

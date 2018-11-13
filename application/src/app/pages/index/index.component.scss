@@ -3,6 +3,7 @@
 .particles-wrapper {
   position: relative;
   padding: 60px 0;
+  overflow: hidden;
   .particles-js {
     position: absolute;
     bottom: 0;

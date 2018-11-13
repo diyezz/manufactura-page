@@ -1,15 +1,16 @@
 <section class="header-section" [class.sticky]="isHeaderSticky" clickOutside (clickOutside)="onClickOutside($event)">
-  <button class="header-section__close-btn" (click)="onToggleHeaderButtonClick()">
+  <button class="header-section__close-btn d-none" (click)="onToggleHeaderButtonClick()">
     {{isHeaderVisible ? 'X' : '+'}}
   </button>
-  <header class="container" [class.active]="isMenuVisible" [class.hidden]="!isHeaderVisible">
+  <header class="container" [class.active]="isMenuVisible" [class.hidden]="!isHeaderVisible" [class.transparent]="!isMenuVisible && !isHeaderSticky && isHeaderTransparent">
     <div class="row align-items-center header">
       <div class="col-lg-3 col-md-12 col-10">
         <div class="header__logo">
           <a routerLink="">
             <span class="logo-cutted">
               manufactura
-          </span>
+            </span>
+            <!--<img class="logo-image" src="{{defaultEnvironment.baseUrl}}assets/img/manufactura-logo.jpg" alt="">-->
           </a>
         </div>
       </div>
@@ -22,7 +23,7 @@
 
           <div class="header-delimiter d-none d-md-flex"></div>
 
-          <app-social-list [data]="socialList"></app-social-list>
+          <app-social-list [data]="socialList" [className]="!isMenuVisible && !isHeaderSticky && isHeaderTransparent ? 'footer' : 'regular'"></app-social-list>
         </div>
       </div>
       <div class="col-2 col-md-1">
@@ -61,6 +62,12 @@
           <h3 class="headline-text headline-text--footer">Social</h3>
           <app-social-list [data]="socialList" [isOnlyText]="socialListStyles" className="only-text"></app-social-list>
         </ul>
+        <div class="header__reserved-info">
+          <div class="footer__copyright">
+            © Copyright 2010-2018, Manufactura Comp. All Rights Reserved. |
+            <a class="link-more is-active" routerLinkActive="is-active" routerLink="/privacy-policy">Privacy and policy</a>
+          </div>
+        </div>
       </div>
     </div>
   </header>

@@ -9,7 +9,8 @@ import { Component, OnInit, AfterContentInit, ViewEncapsulation, Input } from '@
 export class HeadlineSliderComponent implements OnInit, AfterContentInit {
 
     @Input() images;
-    @Input() isInfinite: boolean = true;
+    @Input() isInfinite: boolean = false;
+    @Input() fullHeightProp: boolean = false;
 
     constructor() {
     }
@@ -22,10 +23,11 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit {
 
     getSliderSettings() {
         return {
-            arrows: true,
+            arrows: false,
             autoplay: true,
             autoplaySpeed: 3000,
-            dots: false,
+            dots: true,
+            dotsClass: 'slick-dots container',
             infinite: this.isInfinite,
             speed: 500,
             // fade: true,
@@ -34,5 +36,9 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit {
             nextArrow: '<button class="slider__arrow-btn slider__arrow-btn--next"> ></button>',
             prevArrow: '<button class="slider__arrow-btn slider__arrow-btn--previous"> <</button>'
         }
+    }
+
+    toggleSliderHeight() {
+        this.fullHeightProp = !this.fullHeightProp;
     }
 }

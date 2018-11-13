@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import {ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
@@ -39,8 +39,17 @@ import {
 import {JwtInterceptor} from "./interceptors/jwt.interceptor";
 import {ErrorInterceptor} from "./interceptors/error.interceptor";
 import {fakeBackendProvider} from "./_helpers/fake-backend";
-import { LoginComponent } from './pages/login/login.component';
+import {LoginComponent} from './pages/login/login.component';
+import {MatIconModule, MatProgressSpinnerModule} from "@angular/material";
+import {AgmCoreModule} from "@agm/core";
+import {TranslateService} from "./translate.service";
+import { TranslatePipe } from './translate.pipe';
 
+
+export function setupTranslateFactory(
+    service: TranslateService): Function {
+    return () => service.use();
+}
 
 @NgModule({
     declarations: [
@@ -60,7 +69,8 @@ import { LoginComponent } from './pages/login/login.component';
         ProjectsAllComponent,
         LoginComponent,
         FilterPipe,
-        ClickOutside
+        ClickOutside,
+        TranslatePipe
     ],
     imports: [
         BrowserModule,
@@ -68,15 +78,29 @@ import { LoginComponent } from './pages/login/login.component';
         HttpClientModule,
         AppRoutingModule,
         ReactiveFormsModule,
-        SlickModule.forRoot()
+        MatIconModule,
+        MatProgressSpinnerModule,
+        SlickModule.forRoot(),
+        AgmCoreModule.forRoot(
+            {
+                apiKey: 'AIzaSyDLKDCwRSdQrWwwbhHyxnFaKR0ojm8tTwk'
+            }
+        )
     ],
     providers: [
         DataService,
-        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+        {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+        {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
 
         // provider used to create fake backend
-        fakeBackendProvider
+        fakeBackendProvider,
+        TranslateService,
+        {
+            provide: APP_INITIALIZER,
+            useFactory: setupTranslateFactory,
+            deps: [ TranslateService ],
+            multi: true
+        }
     ],
     bootstrap: [AppComponent]
 })

@@ -1,3 +1,17 @@
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <agm-map
+                    [latitude]="46.472764"
+                    [longitude]="30.7398178"
+                    [zoom]="14" [zoomControl]="false"
+                    [scrollwheel]="false"
+                    [styles]="googleMapsStyles">
+                <agm-marker [latitude]="46.472764" [longitude]="30.740365"></agm-marker>
+            </agm-map>
+        </div>
+    </div>
+</section>
 <section class="top-padding-section">
     <div class="container pb-lg-5">
         <div class="row justify-content-end">
@@ -95,7 +109,7 @@
                     </div>
                     <div class="form__group-row">
                         <div class="form__group">
-                            <button type="submit" class="link-button">Send Message</button>
+                            <button type="submit" class="link-button link-button--accent-red">Send Message</button>
                         </div>
                     </div>
                 </form>

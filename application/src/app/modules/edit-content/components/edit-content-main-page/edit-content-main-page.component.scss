@@ -1,0 +1,10 @@
+@import "../../../../../assets/scss/variables";
+@import "../../../../../assets/scss/components";
+
+.top-padding-section {
+  padding-top: 170px;
+
+  @media (max-width: 576px) {
+    padding-top: 90px;
+  }
+}

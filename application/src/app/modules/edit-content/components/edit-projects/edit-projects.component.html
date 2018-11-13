@@ -1,24 +1,40 @@
-<section class="top-padding-section" xmlns="http://www.w3.org/1999/html">
+<section class="top-padding-section">
   <div class="container">
     <div class="row">
-      <a [routerLink]="['/login']">Logout</a>
+      <app-edit-content-navbar></app-edit-content-navbar>
     </div>
-    <div class="row">
-      <div class="col-6">
-        <ul class="">
-          <li *ngFor="let project of allProjects"
-              [class.selected]="project === selectedProject"
-              (click)="onSelect(project)">
-            <span class="badge">{{project.id}}</span> {{project.header}}
-          </li>
-        </ul>
+    <div class="row pt-3">
+      <div class="col-12 col-md-6 mb-3">
+        <mat-card>
+          <mat-list>
+            <h3 matSubheader>Projects list: </h3>
+
+            <mat-progress-spinner class="m-auto" *ngIf="!allProjects" mode="indeterminate"></mat-progress-spinner>
+
+            <mat-list-item *ngFor="let project of allProjects">
+              <mat-icon matListIcon [color]="project === selectedProject ? 'warn' : ''">note</mat-icon>
+              <h4 matLine (click)="onSelect(project)"> {{project.header}}</h4>
+              <p matLine class="demo-2">id: {{project.id}}, category: {{project.category}}</p>
+              <button mat-button color="warn" class="ml-auto" (click)="removeProject(project.id)">
+                <mat-icon>close</mat-icon>
+              </button>
+              <mat-divider></mat-divider>
+            </mat-list-item>
+          </mat-list>
+
+          <button mat-button class="mt-3" color="primary" (click)="createNewProject()">Add new project</button>
+        </mat-card>
       </div>
 
-      <div class="col-6">
-        <div *ngIf="selectedProject">
+      <div class="col-12 col-md-6 mb-3">
+        <mat-card *ngIf="selectedProject">
 
-          <h2>{{selectedProject.header | uppercase}} Details</h2>
-          <div><span>id: </span>{{selectedProject.id}}</div>
+          <mat-card-header>
+            <img mat-card-avatar [src]="selectedProject.images[0].image">
+            <mat-card-title>{{selectedProject.header | uppercase}}</mat-card-title>
+            <mat-card-subtitle>id: {{selectedProject.id}}</mat-card-subtitle>
+          </mat-card-header>
+
           <div>
             <mat-form-field class="example-full-width">
               <input matInput placeholder="Name" [(ngModel)]="selectedProject.header">
@@ -53,9 +69,11 @@
             <mat-form-field class="example-full-width">
               <input matInput placeholder="Link" [(ngModel)]="selectedProject.link">
             </mat-form-field>
+
+            <button mat-button class="mt-3" color="primary" (click)="updateProject(selectedProject)">update</button>
           </div>
 
-        </div>
+        </mat-card>
       </div>
     </div>
   </div>

@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="row pb-3" *ngFor="let award of awards">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-5">
                     <div class="about__award-year">
                         {{award.date}},
                         <span class="place">{{award.place}}</span>
@@ -61,7 +61,7 @@
             </div>
         </section>
 
-        <div *ngFor="let person of personsData; let index = index;" class="row mt-5"
+        <div *ngFor="let person of personsData; let index = index;" class="row flex-column-reverse flex-md-row mt-5"
              [class.flex-md-row-reverse]="index % 2 == 0">
             <div class="col-12 col-md-6 col-lg-5 pb-3">
                 <div class="about__person-desc-wrapper">

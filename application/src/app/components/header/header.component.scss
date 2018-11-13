@@ -20,6 +20,42 @@ header {
     background: transparentize($main-red, 0.2);
     color: $main-white;
   }
+
+  &.transparent {
+    .header-section {
+      &__close-btn {
+        background-color: $main-white;
+      }
+    }
+    .header {
+      background-color: transparent;
+      &__logo {
+        color: $main-white;
+        span, a {
+          color: $main-white;
+          &:hover {
+            color: $main-red;
+          }
+        }
+
+        .logo-cutted {
+          &:before, &:after {
+            background-color: transparent;
+          }
+        }
+      }
+      &__text-for-call {
+        color: transparentize($main-white, 0.3);
+      }
+
+      &__back-call {
+        color: $main-white
+      }
+      &__menu-button-line {
+        background-color: $main-white;
+      }
+    }
+  }
 }
 
 .header-section {
@@ -81,11 +117,17 @@ header {
     font-weight: 700;
     font-size: $xl-font;
     line-height: 1;
+    padding: 10px 20px;
     span, a {
       color: $main-red;
       &:hover {
         color: darken($main-red, 10%);
       }
+    }
+
+    .logo-image {
+      max-width: 220px;
+      width: 100%;
     }
   }
 
@@ -155,12 +197,14 @@ header {
 
   &__text-for-call {
     text-transform: uppercase;
+    font-weight: 700;
     margin-right: 0.5rem;
     color: transparentize($secondary-black, 0.3);
   }
 
   &__back-call {
     color: $main-black;
+    font-weight: 600;
   }
 
   &__container {
@@ -203,8 +247,9 @@ header {
   &__menu-content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
     width: 100%;
 
     @media (max-width: 768px) {
@@ -215,8 +260,8 @@ header {
 
   &__menu-list {
     margin-top: 70px;
-    margin-left: 35px;
-    margin-right: 35px;
+    margin-left: 24px;
+    margin-right: 24px;
     transition: all 1.2s ease-out;
     padding: 0;
     opacity: 0;
@@ -243,6 +288,12 @@ header {
     @media (max-width: 768px) {
       margin-top: 35px;
     }
+  }
+  &__reserved-info {
+    align-self: flex-end;
+    flex: 1 1 100%;
+    font-size: $small-font;
+    margin: 24px;
   }
 
   @media (max-width: 576px) {

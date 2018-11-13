@@ -3,36 +3,36 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-sm-6 col-md-5 col-lg-4">
-          <h3 class="headline-text headline-text--footer  pb-3">Quick links</h3>
+          <h3 class="headline-text headline-text--footer  pb-3">{{'QuickLinks' | translate}}</h3>
           <ul class="pb-2 pb-sm-5">
-            <li><a class="link-more" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">Home</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/about">About us</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/projects-all">All projects</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/contacts">Contacts</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/career">Career</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/location">Our location</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/help">Help</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/edit-content">Edit content</a></li>
+            <li><a class="link-more" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">{{'Home' | translate}}</a></li>
+            <li><a class="link-more" routerLinkActive="is-active" routerLink="/about">{{'AboutUs' | translate}}</a></li>
+            <li><a class="link-more" routerLinkActive="is-active" routerLink="/projects-all">{{'AllProjects' | translate}}</a></li>
+            <li><a class="link-more" routerLinkActive="is-active" routerLink="/contacts">{{'Contacts' | translate}}</a></li>
+            <li><a class="link-more" routerLinkActive="is-active" routerLink="/career">{{'Career' | translate}}</a></li>
+            <li><a class="link-more" routerLinkActive="is-active" routerLink="/location">{{'OurLocation' | translate}}</a></li>
+            <li><a class="link-more" routerLinkActive="is-active" routerLink="/help">{{'Help' | translate}}</a></li>
+            <li><a class="link-more" routerLinkActive="is-active" routerLink="/edit-content">{{'EditContent' | translate}}</a></li>
           </ul>
         </div>
         <div class="col-12 col-sm-6 col-md-5 col-lg-4">
-          <h3 class="headline-text headline-text--footer pb-3">Localization</h3>
+          <h3 class="headline-text headline-text--footer pb-3">{{'Localization' | translate}}</h3>
           <ul class="language-switch pb-2 pb-sm-5">
-            <li><a class="link-more is-active" routerLink="eng">ENG</a></li>
-            <li><a class="link-more" routerLink="ua">UA</a></li>
-            <li><a class="link-more" routerLink="ru">RU</a></li>
+            <li><a class="link-more" [class.is-active]="checkCurrentLang('en')" (click)="setLang('en')">ENG</a></li>
+            <li><a class="link-more" [class.is-active]="checkCurrentLang('ua')" (click)="setLang('ua')">UA</a></li>
+            <li><a class="link-more" [class.is-active]="checkCurrentLang('ru')" (click)="setLang('ru')">RU</a></li>
           </ul>
         </div>
         <div class="col-12 col-sm-12 col-md-8 col-lg-4 pb-5">
-          <h3 class="headline-text headline-text--footer pb-3">Social links</h3>
+          <h3 class="headline-text headline-text--footer pb-3">{{'SocialLinks' | translate}}</h3>
           <app-social-list [data]="socialList" className="footer"></app-social-list>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
           <div class="footer__copyright">
-            © Copyright 2010-2018, Manufactura Comp. All Rights Reserved. |
-            <a class="link-more is-active" routerLinkActive="is-active" routerLink="/privacy-policy">Privacy and policy</a>
+            © Copyright 2010-2018, {{'CopyrightDescription' | translate}} |
+            <a class="link-more is-active" routerLinkActive="is-active" routerLink="/privacy-policy">{{'PrivacyPolicy' | translate}}</a>
           </div>
         </div>
       </div>

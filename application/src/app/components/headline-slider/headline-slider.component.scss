@@ -8,7 +8,6 @@
   &__slide {
     width: 100%;
     //height: calc(100vh - 15px);
-    max-height: 642px;
     height: 100vh;
     min-height: 335px;
     background-repeat: no-repeat;
@@ -16,6 +15,15 @@
     background-size: cover;
     display: block;
     outline: none;
+    transition: height 0.3s ease;
+
+    &--setMaxWidth {
+      max-height: 642px;
+
+      @media (max-width: 767.98) {
+
+      }
+    }
   }
 
   &__slide-content-wrapper {
@@ -25,6 +33,20 @@
     position: relative;
     height: 100%;
     width: 100%;
+  }
+  &__slide-height-toggle-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: 30px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &__slide-height-toggle {
+
   }
 
   &__slide-content {

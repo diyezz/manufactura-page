@@ -1,6 +1,6 @@
 <ngx-slick class="projects__slider"
-                    #slickModal="slick-modal"
-                    [config]="getSliderSettings()">
+            #slickModal="slick-modal"
+            [config]="getSliderSettings()">
   <div ngxSlickItem *ngFor="let slide of slideData | filterByCategory: 'category' : slideCategory : 'all'" class="slide">
     <div class="projects__slide">
       <div class="projects__image-wrapper" [style.background-image]="'url(' + slide.cover +')'">
