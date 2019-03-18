@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {NavigationEnd, Router} from "@angular/router";
-import {TranslateService} from "./translate.service";
+import {NavigationEnd, Router} from '@angular/router';
+import {TranslateService} from './services/translate.service';
 
 @Component({
   selector: 'app-root',

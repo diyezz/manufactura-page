@@ -1,10 +1,10 @@
 .slick {
   &-dots {
-    display: flex;
-    margin: 30px 0;
-    padding: 0;
-    justify-content: center;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 0;
     position: absolute;
     width: 100%;
 
@@ -16,20 +16,30 @@
       margin: 0 4px;
 
       button {
-        background-color: $main-grey;
+        background-color: transparentize($main-grey, 0.7);
+        border-radius: 50%;
         font-size: 0;
         line-height: 0;
         color: transparent;
         border: none;
-        border-radius: 2px;
         outline: none;
-        width: 16px;
-        height: 16px;
+        padding: 1px 6px;
+        width: 12px;
+        height: 12px;
         &:hover {
           cursor: pointer;
         }
       }
 
+      &.slick-active {
+        button {
+          background-color: $main-white;
+        }
+      }
+    }
+  }
+  &-dots--red {
+    li {
       &.slick-active {
         button {
           background-color: $main-red;
@@ -61,14 +71,14 @@
 .slider__slides-wrapper {
   .slick {
     &-dots {
-      bottom: 0;
+      bottom: 1px;
       left: 0;
       right: 0;
       margin-left: auto;
       margin-right: auto;
       padding-right: 15px;
       Padding-left: 15px;
-      justify-content: flex-end;
+      justify-content: center;
     }
   }
 }

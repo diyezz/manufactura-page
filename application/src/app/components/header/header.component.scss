@@ -3,11 +3,10 @@
 header {
   overflow: hidden;
   position: absolute;
-  transition: box-shadow 0.7s ease-out;
   z-index: 100;
 
   &.active {
-    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: -41px 44px 20px -37px rgba(0, 0, 0, 0.04), 41px 44px 20px -37px rgba(0, 0, 0, 0.04);
     .header__logo {
       text-align: center;
     }
@@ -52,7 +51,8 @@ header {
         color: $main-white
       }
       &__menu-button-line {
-        background-color: $main-white;
+        //background-color: $main-white;
+        background-color: $main-black;
       }
     }
   }
@@ -70,11 +70,30 @@ header {
   z-index: 10;
 
   &.sticky {
+    box-shadow: 0 3px 20px rgba(0,0,0,.04);
     position: fixed;
+    background-color: $main-white;
+    height: 70px;
     top: 0;
 
     .header-section__close-btn {
       top: -6px;
+    }
+    header {
+      &.active {
+        .header {
+          position: relative;
+          &:after {
+            content: '';
+            background-color: $main-grey;
+            height: 1px;
+            position: absolute;
+            left: 15px;
+            right: 15px;
+            bottom: 0;
+          }
+        }
+      }
     }
   }
 
@@ -197,7 +216,7 @@ header {
 
   &__text-for-call {
     text-transform: uppercase;
-    font-weight: 700;
+    //font-weight: 700;
     margin-right: 0.5rem;
     color: transparentize($secondary-black, 0.3);
   }
@@ -259,7 +278,7 @@ header {
   }
 
   &__menu-list {
-    margin-top: 70px;
+    margin-top: 80px;
     margin-left: 24px;
     margin-right: 24px;
     transition: all 1.2s ease-out;
@@ -287,6 +306,38 @@ header {
 
     @media (max-width: 768px) {
       margin-top: 35px;
+    }
+  }
+  &__language-switcher {
+    background-color: $main-white;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    .language-switch {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 70px;
+      padding: 0 24px;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-left: 24px;
+        a {
+          cursor: pointer;
+
+          &:hover {
+            color: $main-red;
+          }
+        }
+      }
+      @media (max-width: 768px) {
+        height: 35px;
+      }
     }
   }
   &__reserved-info {

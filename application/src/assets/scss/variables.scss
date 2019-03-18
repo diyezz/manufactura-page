@@ -1,24 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,latin-ext');
 
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-a:hover {
-  text-decoration: none;
-}
 //Base url
 $base-url: 'https://manufactura-d8bb1.firebaseapp.com';
 
 //Colors
-$main-black: #262626;
-$main-red: #e41e1b;
-$main-grey: #d2d2d2;
-$main-white: #ffffff;
-
-$secondary-black: #3D3D3D;
-$valid-green: #cee002;
+//$main-black: #262626; //
+//$main-red: #e41e1b;
+//$main-grey: #d2d2d2; //
+//$main-white: #ffffff; //
+//
+//$secondary-black: #3D3D3D; //
+//$third-black: #1b1e21;
+//$valid-green: #cee002;
 
 $shadow-color: rgba(0,0,0,.7);
+
+// Inverted colors
+$main-black: #ffffff; //#262626
+$main-red: #e41e1b;
+$main-grey: #3D3D3D; //#d2d2d2
+$main-white: #1a1a1a; //#1a1a1a
+
+$secondary-black: #d2d2d2; //#3D3D3D
+$third-black: #1b1e21;
+$valid-green: #cee002;
 
 //Font-sizes
 $xs-font: 0.75rem;   //12px
@@ -29,6 +34,14 @@ $large-font: 1.5rem;    //24px
 $xl-font: 2rem;         //32px
 $huge-font: 3rem;   //48px
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $main-white!important;
+  color: $main-black;
+}
+a:hover {
+  text-decoration: none;
+}
 // Typography
 .text-headline {
   font-weight: 800;

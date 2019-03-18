@@ -1,8 +1,10 @@
 import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { NavigationEnd, Router } from "@angular/router";
 import { filter } from 'rxjs/operators';
-import { ClickOutside } from "app/directives/click-outside.directive";
+import { ClickOutside } from "../../directives/click-outside.directive";
 import {environment} from "../../../environments/environment";
+import {TranslateService} from "../../services/translate.service";
+import {DataService} from "../../services/data.service";
 
 @Component({
     selector: 'app-header',
@@ -17,14 +19,7 @@ export class HeaderComponent implements OnInit {
     isHeaderVisible: boolean = true;
     isHeaderTransparent: boolean = false;
     bodyHideOverflowClass: string = 'hide-overflow';
-    socialList = [
-        {'facebook': 'https://www.facebook.com/'},
-        {'twitter': 'https://www.twitter.com/'},
-        {'instagram': 'https://www.instagram.com/'},
-        {'googlePlus': 'https://www.google.com/'},
-        {'youtube': 'https://www.youtube.com/'},
-        {'pinterest': 'https://www.pinterest.com/'}
-    ];
+    socialList: Array<any>;
     socialListStyles = {
         'display': 'flex',
         'align-items': 'center',
@@ -38,9 +33,10 @@ export class HeaderComponent implements OnInit {
     constructor(
         private headerSection: ElementRef,
         private router: Router,
-        private renderer: Renderer2
-    ) {
-    }
+        private renderer: Renderer2,
+        private translate: TranslateService,
+        private dataService: DataService
+    ) { }
 
     ngOnInit() {
         this.router.events
@@ -52,7 +48,9 @@ export class HeaderComponent implements OnInit {
                 this.renderer.removeClass(document.body, this.bodyHideOverflowClass);
                 this.setTransparencyClass();
             });
+        this.getCompanySocialListData();
     }
+
 
     @HostListener('window:scroll', []) onWindowScroll() {
         const haderOffsetTopValue = this.headerSection.nativeElement.children[0].offsetTop;
@@ -64,6 +62,12 @@ export class HeaderComponent implements OnInit {
         if (window.innerWidth < 576 || window.innerWidth > 768) {
             this.isHeaderVisible = true;
         }
+    }
+
+    getCompanySocialListData() {
+        return this.dataService.getCompanySocialList().subscribe((data) => {
+            this.socialList = data;
+        });
     }
 
     setStickyHeaderClass(headerOffsetTop, windowOffsetTop) {
@@ -98,4 +102,11 @@ export class HeaderComponent implements OnInit {
         }
     }
 
+    setLang(lang: string) {
+        this.translate.use(lang);
+    }
+
+    checkCurrentLang(lang) {
+        return this.translate.currentLang === lang;
+    }
 }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient } from '@angular/common/http';
+import { Subject } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ export class TranslateService {
   defaultAppLang: string = 'en';
   currentLang: string;
   langData: any = {};
+  languageChangeSubscription: Subject<any> = new Subject();
 
   constructor(private http: HttpClient) { }
 
@@ -30,6 +32,7 @@ export class TranslateService {
             this.http.get<{}>(langPath).subscribe(
                 translation => {
                     this.langData = Object.assign({}, translation || {});
+                    this.languageChangeSubscription.next(true);
                     resolve(this.langData);
                 },
                 error => {

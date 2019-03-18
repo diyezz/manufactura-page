@@ -6,7 +6,7 @@
                     [longitude]="30.7398178"
                     [zoom]="14" [zoomControl]="false"
                     [scrollwheel]="false"
-                    [styles]="googleMapsStyles">
+                    [styles]="locationService.googleMapsStyles">
                 <agm-marker [latitude]="46.472764" [longitude]="30.740365"></agm-marker>
             </agm-map>
         </div>
@@ -17,7 +17,7 @@
         <div class="row justify-content-end">
             <div class="col-12 col-sm-4 col-lg-4">
                 <div class="header-text pb-5">
-                    <h2>Keep in touch</h2>
+                    <h2>{{'KeepInTouch' | translate}}</h2>
                 </div>
             </div>
             <div class="col-12 col-sm-8 col-lg-4">
@@ -43,18 +43,18 @@
             <div class="col-12 col-sm-8 col-lg-4">
                 <div class="contacts__address-wrapper pb-5">
                     <div class="pb-3">
-                        <p class="text-bold mb-0">Call us directly:</p>
+                        <p class="text-bold mb-0">{{'CallUsDirectly' | translate}}:</p>
                         <a href="tel:+3880040050012" class="contacts__phone-number">
                             <span>+38 (800) 400 500 12</span>
                         </a>
                     </div>
                     <div class="contacts__schedule">
-                        <p class="text-bold mb-0">Work hours:</p>
-                        <p>Monday - Friday: 9.00 - 19.00</p>
-                        <p>Saturday: 9.00 - 17.00. Sunday off work</p>
+                        <p class="text-bold mb-0">{{'WorkHours' | translate}}:</p>
+                        <p>{{'Monday' | translate}} - {{'Friday' | translate}}: 9.00 - 19.00</p>
+                        <p>{{'Saturday' | translate}}: 9.00 - 17.00. {{'SundayDayOff' | translate}}</p>
                     </div>
                     <div class="contacts__social-list">
-                        <p class="text-bold">Follow us:</p>
+                        <p class="text-bold">{{'FollowUs' | translate}}:</p>
                         <app-social-list className="simple" [data]="socialList"></app-social-list>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
         <div class="row">
             <div class="col-12 col-sm-4">
                 <div class="header-text pb-5">
-                    <h2>Contact us</h2>
+                    <h2>{{'ContactUs' | translate}}</h2>
                 </div>
             </div>
             <div class="col-12 col-sm-8">
@@ -73,33 +73,33 @@
                     <div class="form__group-row">
                         <div class="form__group">
                             <input id="firstName" type="text" formControlName="firstName">
-                            <label for="firstName">First Name*</label>
+                            <label for="firstName">{{'FirstName' | translate}}*</label>
                         </div>
                         <div class="form__group">
                             <input id="lastName" type="text" formControlName="lastName">
-                            <label for="lastName">Last Name</label>
+                            <label for="lastName">{{'LastName' | translate}}</label>
                         </div>
                         <div class="form__group">
                             <input id="email" type="text" formControlName="email">
-                            <label for="email">Email address*</label>
+                            <label for="email">{{'Email' | translate}}*</label>
                         </div>
                     </div>
                     <div class="form__group-row">
                         <div class="form__group">
                             <input id="companyName" type="text" formControlName="companyName">
-                            <label for="companyName">Company</label>
+                            <label for="companyName">{{'Company' | translate}}</label>
                         </div>
                         <div class="form__group">
                             <select id="questionTheme" formControlName="theme">
                                 <option value="regular" selected>Regular question</option>
                             </select>
-                            <label for="questionTheme">Your interest</label>
+                            <label for="questionTheme">{{'YourInterest' | translate}}</label>
                         </div>
                     </div>
                     <div class="form__group-row">
                         <div class="form__group">
                             <textarea id="description" formControlName="description"></textarea>
-                            <label for="description">Some addition description of your question</label>
+                            <label for="description">{{'QuestionDescription' | translate}}</label>
                             <div class="text-area__hint">
                                 {{symbolsCurrentLength <= symbolsMinLength ?
                                 textAreaLengthMinText + symbolsCurrentLength + '/' + symbolsMinLength :
@@ -109,7 +109,7 @@
                     </div>
                     <div class="form__group-row">
                         <div class="form__group">
-                            <button type="submit" class="link-button link-button--accent-red">Send Message</button>
+                            <button type="submit" class="link-button link-button--accent-red">{{'SendMessage' | translate}}</button>
                         </div>
                     </div>
                 </form>

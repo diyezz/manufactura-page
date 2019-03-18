@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import { DataService } from "../../services/data.service";
 
 @Component({
@@ -10,6 +10,7 @@ import { DataService } from "../../services/data.service";
 })
 export class ProjectsSliderComponent implements OnInit {
     @Input() slideCategory: string;
+    @ViewChild('slickModal') slick;
     slideData: any[];
 
     constructor(
@@ -30,19 +31,25 @@ export class ProjectsSliderComponent implements OnInit {
             });
     }
 
+    afterChange(event) {
+        console.log(event);
+        // this.slick.unslick();
+    }
+
     getSliderSettings() {
         return {
             "arrows": false,
             "autoplay": true,
             "autoplaySpeed": 3000,
             "dots": true,
+            "dotsClass": 'slick-dots slick-dots--red',
             "infinite": false,
-            "speed": 1000,
+            "speed": 300,
             "slidesToShow": 4,
             "slidesToScroll": 2,
             "responsive": [
                 {
-                    "breakpoint": 1025,
+                    "breakpoint": "1025",
                     "settings": {
                         "slidesToShow": 3,
                         "slidesToScroll": 2,
@@ -51,7 +58,7 @@ export class ProjectsSliderComponent implements OnInit {
                     }
                 },
                 {
-                    "breakpoint": 769,
+                    "breakpoint": "769",
                     "settings": {
                         "slidesToShow": 2,
                         "slidesToScroll": 2,
@@ -60,7 +67,7 @@ export class ProjectsSliderComponent implements OnInit {
                     }
                 },
                 {
-                    "breakpoint": 576,
+                    "breakpoint": "576",
                     "settings": {
                         "slidesToShow": 1,
                         "slidesToScroll": 1,

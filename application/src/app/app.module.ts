@@ -1,21 +1,21 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {APP_INITIALIZER, NgModule} from '@angular/core';
-import {ReactiveFormsModule} from "@angular/forms";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 // Custom modules
-import {SlickModule} from "ngx-slick";
+import {SlickModule} from 'ngx-slick';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import {FilterPipe} from "./pipes/filter.pipe";
-import {ClickOutside} from "./directives/click-outside.directive";
+import {FilterPipe} from './pipes/filter.pipe';
+import {ClickOutside} from './directives/click-outside.directive';
 
 // Providers
-import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 // Services
-import {DataService} from "./services/data.service";
+import {DataService} from './services/data.service';
 
 // Components
 import {HeaderComponent} from './components/header/header.component';
@@ -36,14 +36,22 @@ import {
     ProjectsAllComponent
 } from './pages/pages';
 
-import {JwtInterceptor} from "./interceptors/jwt.interceptor";
-import {ErrorInterceptor} from "./interceptors/error.interceptor";
-import {fakeBackendProvider} from "./_helpers/fake-backend";
+import {JwtInterceptor} from './interceptors/jwt.interceptor';
+import {ErrorInterceptor} from './interceptors/error.interceptor';
+import {fakeBackendProvider} from './_helpers/fake-backend';
 import {LoginComponent} from './pages/login/login.component';
-import {MatIconModule, MatProgressSpinnerModule} from "@angular/material";
-import {AgmCoreModule} from "@agm/core";
-import {TranslateService} from "./translate.service";
-import { TranslatePipe } from './translate.pipe';
+import {
+    MatIconModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatButtonModule,
+    MatTooltipModule
+} from '@angular/material';
+import {AgmCoreModule} from '@agm/core';
+import {TranslateService} from './services/translate.service';
+import {TranslatePipe} from './pipes/translate.pipe';
+import { LoadingComponent } from './components/loading/loading.component';
+import { TypeLettersPipe } from './pipes/type-letters.pipe';
 
 
 export function setupTranslateFactory(
@@ -70,7 +78,9 @@ export function setupTranslateFactory(
         LoginComponent,
         FilterPipe,
         ClickOutside,
-        TranslatePipe
+        TranslatePipe,
+        LoadingComponent,
+        TypeLettersPipe
     ],
     imports: [
         BrowserModule,
@@ -79,6 +89,9 @@ export function setupTranslateFactory(
         AppRoutingModule,
         ReactiveFormsModule,
         MatIconModule,
+        MatButtonModule,
+        MatTooltipModule,
+        MatProgressBarModule,
         MatProgressSpinnerModule,
         SlickModule.forRoot(),
         AgmCoreModule.forRoot(
@@ -98,7 +111,7 @@ export function setupTranslateFactory(
         {
             provide: APP_INITIALIZER,
             useFactory: setupTranslateFactory,
-            deps: [ TranslateService ],
+            deps: [TranslateService],
             multi: true
         }
     ],

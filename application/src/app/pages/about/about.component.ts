@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from "environments/environment";
-import {DataService} from "../../services/data.service";
+import { environment } from 'environments/environment';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-about',

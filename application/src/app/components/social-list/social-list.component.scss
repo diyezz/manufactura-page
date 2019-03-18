@@ -16,7 +16,7 @@
           border-radius: 50%;
           flex: 0 0 auto;
           margin: 0 .5rem;
-          transition: all 0.3s linear;
+          transition: all 0.15s linear;
           height: 36px;
           width: 36px;
 
@@ -27,7 +27,29 @@
             margin-right: 0;
           }
           &:hover {
-            background-color: $main-grey;
+            .icon {
+              &-googlePlus {
+                @include icon-google-plus($main-red);
+              }
+              &-facebook {
+                @include icon-facebook($main-red);
+              }
+              &-twitter {
+                @include icon-twitter($main-red);
+              }
+              &-instagram {
+                @include icon-instagram($main-red);
+              }
+              &-pinterest {
+                @include icon-pinterest($main-red);
+              }
+              &-behance {
+                @include icon-behance($main-red);
+              }
+              &-youtube {
+                @include icon-youtube($main-red);
+              }
+            }
           }
 
           a {
@@ -43,12 +65,10 @@
     }
 
     &--footer {
+      overflow: auto;
       ul {
         li {
           background-color: $main-white;
-          &:hover {
-            background-color: transparentize($main-white, 0.7);
-          }
         }
       }
     }

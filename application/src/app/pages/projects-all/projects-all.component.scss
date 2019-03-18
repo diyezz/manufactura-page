@@ -1,10 +1,24 @@
 @import "../../../assets/scss/variables";
 @import "../../../assets/scss/components";
 
-.top-padding-section {
-  padding-top: 170px;
-  background-color: lighten($main-grey, 15);
+:host {
+  display: flex;
+  flex: 1 1 100%;
+}
 
+.top-padding-section {
+  background-color: lighten($main-grey, 15);
+  padding-top: 120px;
+  width: 100%;
+
+  .active {
+    color: $main-red;
+  }
+  button {
+    &:focus {
+      outline: none;
+    }
+  }
   @media (max-width: 576px) {
     padding-top: 90px;
   }
@@ -25,6 +39,41 @@
         padding-left: 0;
       }
     }
+    &--alt {
+      flex-direction: column;
+      &.odd {
+        flex-direction: column;
+        .item__content {
+          padding-right: 50px;
+          padding-left: 50px;
+        }
+      }
+
+      &:hover {
+        .item__content {
+          visibility: visible;
+          transition: all .3s ease;
+        }
+        .item__image-wrapper {
+          .item__image {
+            opacity: .5;
+            transition: all .3s ease;
+          }
+        }
+      }
+      .item__content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 50px;
+        visibility: hidden;
+        .link-button {
+          transition: none;
+        }
+      }
+    }
   }
   &__content {
     align-items: flex-end;
@@ -34,6 +83,7 @@
     text-align: right;
     padding-left: 5px;
     .link-button {
+      padding: 15px;
       max-width: 190px;
       margin-top: auto;
     }
@@ -84,13 +134,13 @@
     &__content-wrapper {
       flex-direction: column;
       .item__content {
-        padding: 0;
+        padding: 20px 50px 50px;
       }
       &.odd {
         flex-direction: column;
         .item__content {
           text-align: left;
-          padding: 0;
+          padding: 20px 50px 50px;
         }
       }
     }

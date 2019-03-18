@@ -1,5 +1,32 @@
 @import "../../../assets/scss/variables";
 
+:host(.empty) {
+  display: flex;
+  flex: 1 1 100%;
+  height: 100%;
+}
+:host {
+  &.empty {
+    display: flex;
+    flex: 1 1 100%;
+    height: 100%;
+  }
+
+  .retina-size-wrapper {
+    background-color: $main-grey;
+  }
+}
+
+agm-map {
+  height: 300px;
+  width: 100%;
+}
+
+.loading-wrapper {
+  display: flex;
+  padding: 6rem 0;
+}
+
 .info-table {
   &__headline {
     font-weight: 600;
@@ -19,5 +46,15 @@
         margin-right: 15px;
       }
     }
+  }
+}
+
+.location-info {
+  &__headline {
+    font-weight: 600;
+    padding-bottom: 15px;
+  }
+  &__map {
+    background-color: $main-grey;
   }
 }

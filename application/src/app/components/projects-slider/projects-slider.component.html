@@ -1,20 +1,22 @@
 <ngx-slick class="projects__slider"
             #slickModal="slick-modal"
-            [config]="getSliderSettings()">
+            [config]="getSliderSettings()" (afterChange)="afterChange($event)">
   <div ngxSlickItem *ngFor="let slide of slideData | filterByCategory: 'category' : slideCategory : 'all'" class="slide">
-    <div class="projects__slide">
-      <div class="projects__image-wrapper" [style.background-image]="'url(' + slide.cover +')'">
-        <div class="projects__description">
-          <div class="projects__name">
-            <p class="date">{{slide.date}}</p>
-            <h3 class="headline-text">
-              {{slide.header}}
-            </h3>
-            <p class="city">{{slide.city}}</p>
+    <div>
+      <div class="projects__slide">
+        <div class="projects__image-wrapper" [style.background-image]="'url(' + slide.cover +')'">
+          <div class="projects__description">
+            <div class="projects__name">
+              <p class="date">{{slide.date}}</p>
+              <h3 class="headline-text">
+                {{slide.header}}
+              </h3>
+              <p class="city">{{slide.city}}</p>
+            </div>
+            <a class="projects__button link-button link-button--small" [routerLink]="['/project-detail', slide.id]">{{'SeeProject' | translate}}</a>
           </div>
-          <a class="projects__button link-button link-button--small" [routerLink]="['/project-detail', slide.id]">See project</a>
+          <img class="projects__slide-background" src="{{slide.cover}}" alt="">
         </div>
-        <img class="projects__slide-background" src="{{slide.cover}}" alt="">
       </div>
     </div>
   </div>

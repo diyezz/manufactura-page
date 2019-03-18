@@ -1,9 +1,21 @@
 
 <section class="top-padding-section">
     <div class="container p-sm-0">
+        <div class="row pb-3">
+            <div class="col-auto mr-auto"></div>
+            <div class="col-auto">
+                <button [class.active]="view === 'view_module'" mat-icon-button (click)="switchView($event)">
+                    <mat-icon>view_module</mat-icon>
+                </button>
+                <button [class.active]="view === 'view_list'" mat-icon-button (click)="switchView($event)">
+                    <mat-icon>view_list</mat-icon>
+                </button>
+            </div>
+        </div>
         <div class="row">
-            <div class="col-12" *ngFor="let project of allProjects; let i = index">
-                <div class="item__content-wrapper" [class.odd]="i % 2 == 0 ">
+            <app-loading *ngIf="!allProjects || allProjects.length === 0"></app-loading>
+            <div [className]="view === 'view_list' ? 'col-12' : 'col-12 col-md-6'" *ngFor="let project of allProjects; let i = index">
+                <div class="item__content-wrapper" [class.item__content-wrapper--alt]="view !== 'view_list'" [class.odd]="i % 2 == 0 ">
                     <a class="item__image-wrapper" [routerLink]="['/project-detail', project.id]">
                         <img src="{{project.cover}}" alt="" class="item__image">
                     </a>
@@ -11,7 +23,7 @@
                         <h3 class="headline-text">{{project.header}}</h3>
                         <h6 class="date mb-2">{{project.city}}</h6>
                         <p class="description-text mb-2">{{project.description}}</p>
-                        <a class="link-button" [routerLink]="['/project-detail', project.id]">View project</a>
+                        <a class="link-button" [routerLink]="['/project-detail', project.id]">{{'ViewProject' | translate}}</a>
                     </div>
                 </div>
             </div>

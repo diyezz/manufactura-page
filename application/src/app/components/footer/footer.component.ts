@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {TranslateService} from "../../translate.service";
+import {Component, OnInit} from '@angular/core';
+import {TranslateService} from "../../services/translate.service";
+import {environment} from "../../../environments/environment";
+import {DataService} from "../../services/data.service";
 
 @Component({
     selector: 'app-footer',
@@ -7,23 +9,26 @@ import {TranslateService} from "../../translate.service";
     styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-    socialList = [
-        {'facebook': 'https://www.facebook.com/'},
-        {'twitter': 'https://www.twitter.com/'},
-        {'instagram': 'https://www.instagram.com/'},
-        {'googlePlus': 'https://www.google.com/'},
-        {'youtube': 'https://www.youtube.com/'},
-        {'pinterest': 'https://www.pinterest.com/'}
-    ];
+    defaultEnvironment = environment;
+    socialList: Array<any>;
 
-    constructor(private translate: TranslateService) {
+    constructor(
+        private translate: TranslateService,
+        private dataService: DataService) {
     }
 
     ngOnInit() {
+        this.getCompanySocialListData();
     }
 
     setLang(lang: string) {
         this.translate.use(lang);
+    }
+
+    getCompanySocialListData() {
+        return this.dataService.getCompanySocialList().subscribe((data) => {
+            this.socialList = data;
+        })
     }
 
     checkCurrentLang(lang) {

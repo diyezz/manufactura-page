@@ -1,6 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from "@angular/forms";
-import { Subscription } from "rxjs/Subscription";
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {FormArray, FormControl, FormGroup, Validators} from "@angular/forms";
+import {Subscription} from "rxjs/Subscription";
+import {LocationService} from "../../services/location.service";
+import {DataService} from "../../services/data.service";
 
 interface contactData {
     firstName: string;
@@ -24,66 +26,23 @@ export class ContactsComponent implements OnInit, OnDestroy {
     symbolsMinLength: number = 20;
     symbolsMaxLength: number = 500;
     symbolsCurrentLength: number = 0;
-    socialList = [
-        {'facebook': 'https://www.facebook.com/'},
-        {'twitter': 'https://www.twitter.com/'},
-        {'instagram': 'https://www.instagram.com/'},
-        {'googlePlus': 'https://www.google.com/'},
-        {'youtube': 'https://www.youtube.com/'}
-    ];
-    googleMapsStyles = [
-        {
-            "featureType": "poi",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#cb0000"
-                }
-            ]
-        },
-        {
-            "featureType": "poi.business",
-            "elementType": "labels.icon",
-            "stylers": [
-                {
-                    "hue": "#ff0000"
-                }
-            ]
-        },
-        {
-            "featureType": "road",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "hue": "#ff0000"
-                }
-            ]
-        },
-        {
-            "featureType": "water",
-            "elementType": "geometry.fill",
-            "stylers": [
-                {
-                    "color": "#cdcdcd"
-                }
-            ]
-        },
-        {
-            "featureType": "water",
-            "elementType": "labels.text.fill",
-            "stylers": [
-                {
-                    "color": "#5a5a5a"
-                }
-            ]
-        }
-    ];
+    socialList: Array<any>;
 
-    constructor() {
+    constructor(
+        public locationService: LocationService,
+        private dataService: DataService
+    ) {
     }
 
     ngOnInit() {
         this.initForm();
+        this.getCompanySocialListData();
+    }
+
+    getCompanySocialListData() {
+        return this.dataService.getCompanySocialList().subscribe((data) => {
+            this.socialList = data;
+        });
     }
 
     initForm() {

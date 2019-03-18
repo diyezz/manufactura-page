@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, OnInit, Renderer2, ViewEncapsulation} from '@angular/core';
 import { DataService } from "../../services/data.service";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -12,6 +12,7 @@ import { Location } from '@angular/common';
 export class ProjectsAllComponent implements OnInit {
     allProjects;
     slideCategory: string = 'all';
+    view: string = 'view_list';
 
     constructor(
         private route: ActivatedRoute,
@@ -34,6 +35,10 @@ export class ProjectsAllComponent implements OnInit {
 
     goBack(): void {
         this.location.back();
+    }
+
+    switchView(event) {
+        this.view = event.srcElement.innerText;
     }
 
     changeCategory() {

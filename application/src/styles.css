@@ -8,6 +8,30 @@ app-root {
     min-height: 100vh;
     flex-direction: column;
 }
+
+body {
+
+}
+
+body {
+    /*Dark theme*/
+    background-color: #1a1a1a;
+    color: white;
+    /*Light theme*/
+    /*background-color: white;*/
+    /*color: inherit;*/
+}
+
+app-projects-all {
+    display: flex;
+    flex: 1 1 100%;
+}
+
+app-footer {
+    margin-top: auto;
+}
+
+
 @media (max-width: 992px) {
     body.hide-overflow {
         overflow: hidden;

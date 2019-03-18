@@ -4,7 +4,12 @@
             <div class="col-12">
                 <div class="slider">
                     <div class="slider__header"></div>
-                    <app-headline-slider [images]="images" [fullHeightProp]="true"></app-headline-slider>
+                    <app-headline-slider
+                        [images]="images"
+                        [fullHeightProp]="true"
+                        [isSlideFaded]="true"
+                        [isSlideCovered]="true">
+                    </app-headline-slider>
                 </div>
             </div>
         </div>
@@ -18,33 +23,25 @@
             <div class="col-12">
                 <div class="about-us">
                     <div class="about-us__header header-text header-text--spacing">
-                        <h2>About us</h2>
-                        <a class="link-more" routerLink="/about">More about us</a>
+                        <h2>{{'AboutUs' | translate}}</h2>
+                        <a class="link-more" routerLink="/about">{{'MoreAboutUs' | translate}}</a>
                     </div>
                     <div class="about-us__text">
                         <h3 class="headline-text headline-text--spaced about-us__headline-text">
-                            We are <br>
-                            the most <br>
-                            dedicated <br>
-                            architects</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi cum ipsa perferendis
-                            quis sunt totam. Autem cum dolor enim facilis harum illum saepe sunt suscipit. Delectus enim
-                            error temporibus!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur in nam neque officiis
-                            repellendus?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cum eum iure?</p>
+                            {{texts.title[translateService.currentLang]}}
+                        </h3>
+                        <p>{{texts.fullText[translateService.currentLang]}}</p>
                     </div>
                     <div class="about-us__one-of-work">
                         <img class="about-us__one-of-work-background" src="{{defaultEnvironment.baseUrl}}/assets/img/sketch.png" alt="">
                         <div class="about-us__exp-badge text-headline">
-                            We have
-                            <span class="counter">{{dateCounter('years')}}</span> years and
-                            <span class="counter">{{dateCounter('days')}}</span> days
-                            of working experience
+                            {{'WeHave' | translate}}
+                            <span class="counter">{{dateCounter('years')}}</span> {{'YearsAnd' | translate}}
+                            <span class="counter">{{dateCounter('days')}}</span> {{'DaysOfExp' | translate}}
                         </div>
                     </div>
                     <div class="about-us__team-link">
-                        <a class="link-button" routerLink="/about">Meet our team</a>
+                        <a class="link-button" routerLink="/about">{{'MeetOurTeam' | translate}}</a>
                     </div>
                 </div>
             </div>
@@ -58,14 +55,14 @@
             <div class="col-12">
                 <div class="projects">
                     <div class="projects__header header-text header-text--spacing">
-                        <h2>Latest projects</h2>
+                        <h2>{{'LatestProjects' | translate}}</h2>
                         <ul class="filter__list">
                             <li class="filter__item"
                                 *ngFor="let item of filters; let i = index"
                                 (click)="changeCategory($event, i)"
-                                [class.is-active]="i == selectedItem">{{ item.name }}</li>
+                                [class.is-active]="i == selectedItem">{{ item.name | translate }}</li>
                         </ul>
-                        <a class="link-more" routerLink="/projects-all">View all projects</a>
+                        <a class="link-more" routerLink="/projects-all">{{'ViewAllProjects' | translate}}</a>
                     </div>
                     <div class="projects__link-to-all-projects"></div>
                 </div>
@@ -84,7 +81,98 @@
 
         <div class="row">
             <div class="col-12 d-flex justify-content-center mb-5 mt-5">
-                <a routerLink="/projects-all" class="link-button">View all projects</a>
+                <a routerLink="/projects-all" class="link-button">{{'ViewAllProjects' | translate}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="services">
+                    <div class="services__header header-text header-text--spacing">
+                        <h2>{{'OurServices' | translate}}</h2>
+                        <a class="link-more" routerLink="/contacts">{{'AllServices' | translate}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <div class="services__content text-center">
+                    <img class="services__image" src="./../../../assets/img/compass-BJtKoiN74.svg" alt="">
+                    <h5 class="headline-text headline-text--footer">Architectural Design</h5>
+                    <p class="">description of architectural design</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="services__content text-center">
+                    <img class="services__image" src="./../../../assets/img/pencil-HkNcsoNQ4.svg" alt="">
+                    <h5 class="headline-text headline-text--footer">Interior design</h5>
+                    <p class="">Interior design description</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="services__content text-center">
+                    <img class="services__image" src="./../../../assets/img/architect-SknxjoV74.svg" alt="">
+                    <h5 class="headline-text headline-text--footer">Planning Applications</h5>
+                    <p class="">plannig description</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="services__content text-center">
+                    <img class="services__image" src="./../../../assets/img/family-SJxTos4X4.svg" alt="">
+                    <h5 class="headline-text headline-text--footer">Create & Construct</h5>
+                    <p class="">some more information</p>
+                </div>
+            </div>
+            <div class="col-12"></div>
+            <div class="col-12 col-md-9 mx-auto mt-5">
+                <div class="services__content-description">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dicta ducimus explicabo fuga illum impedit maxime sint voluptates. Adipisci amet aspernatur debitis delectus ea exercitationem, fuga fugiat illum in ipsum laboriosam natus odio pariatur qui, quidem suscipit totam velit vitae?</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cumque odit porro possimus
+                            tempore vel voluptas?</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus doloremque libero
+                            non quas, quibusdam reprehenderit? Ab autem eum itaque voluptatum.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center mb-5 mt-5">
+                <a routerLink="/contacts" class="link-button">{{'ViewAllServices' | translate}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="clients-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="partners__header header-text header-text--spacing">
+                    <h2>{{'OurClients' | translate}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row clients">
+            <div class="col-6 col-sm-4 col-md-2">
+                <div class="clients__content">
+                    <img class="clients__image clients__image--add-padding" src="./../../../assets/img/512x512bb.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <div class="clients__content">
+                    <img class="clients__image" src="./../../../assets/img/pizza_steak.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+                <div class="clients__content">
+                    <img class="clients__image clients__image--add-padding clients__image--circle" src="./../../../assets/img/zharim-kofe-square.jpg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -95,7 +183,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="partners__header header-text header-text--spacing">
-                    <h2>Our partners</h2>
+                    <h2>{{'OurPartners' | translate}}</h2>
                 </div>
                 <app-partners-slider></app-partners-slider>
             </div>

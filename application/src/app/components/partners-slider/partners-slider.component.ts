@@ -14,6 +14,11 @@ export class PartnersSliderComponent implements OnInit {
 
     slideData: any[];
 
+    partnersUrls = [
+        'https://kvadratum.com.ua/',
+        'https://m-svet.com.ua/'
+    ];
+
     ngOnInit() {
         this.getData();
     }

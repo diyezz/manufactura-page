@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, isDevMode} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {Observable, throwError} from "rxjs";
@@ -9,18 +9,6 @@ import {Project} from "../models/project";
 export class DataService {
 
     constructor(private httpClient: HttpClient) {
-    }
-
-    getProjects(): Observable<Project[]> {
-        const url: string = 'http://localhost:3000/projects';
-        return this.httpClient.get(url).pipe(
-            map((res) => this.extractData(res)),
-            catchError(error => this.handleError(error))
-        );
-        /*
-        * Solution for production with not working save/edit
-        */
-        // return this.productionApiRequest('projects');
     }
 
     //Create project
@@ -56,42 +44,84 @@ export class DataService {
         );
     }
 
-
+    getProjects(): Observable<Project[]> {
+        if (isDevMode()) {
+            const url: string = 'http://localhost:3000/projects';
+            return this.httpClient.get(url).pipe(
+                map((res) => this.extractData(res)),
+                catchError(error => this.handleError(error))
+            );
+        } else {
+            return this.productionApiRequest('projects');
+        }
+    }
     getPartners() {
-        const url: string = 'http://localhost:3000/partners';
-        return this.httpClient.get(url).pipe(
-            map((res) => this.extractData(res)),
-            catchError(error => this.handleError(error))
-        );
-        /*
-        * Solution for production with not working save/edit
-        */
-        // return this.productionApiRequest('partners');
+        if (isDevMode()) {
+            const url: string = 'http://localhost:3000/partners';
+            return this.httpClient.get(url).pipe(
+                map((res) => this.extractData(res)),
+                catchError(error => this.handleError(error))
+            );
+        } else {
+            return this.productionApiRequest('partners');
+        }
     }
-
     getAllTeam() {
-        const url: string = 'http://localhost:3000/team';
-        return this.httpClient.get(url).pipe(
-            map((res) => this.extractData(res)),
-            catchError(error => this.handleError(error))
-        );
-        /*
-        * Solution for production with not working save/edit
-        */
-        // return this.productionApiRequest('team');
+        if (isDevMode()) {
+            const url: string = 'http://localhost:3000/team';
+            return this.httpClient.get(url).pipe(
+                map((res) => this.extractData(res)),
+                catchError(error => this.handleError(error))
+            );
+        } else {
+            return this.productionApiRequest('team');
+        }
+
+    }
+    getAwards() {
+        if (isDevMode()) {
+            const url: string = 'http://localhost:3000/awards';
+            return this.httpClient.get(url).pipe(
+                map((res) => this.extractData(res)),
+                catchError(error => this.handleError(error))
+            );
+        } else {
+            return this.productionApiRequest('awards');
+        }
+
+    }
+    getCompanySocialList() {
+        if (isDevMode()) {
+            const url: string = 'http://localhost:3000/companySocialList';
+            return this.httpClient.get(url).pipe(
+                map((res) => this.extractData(res)),
+                catchError(error => this.handleError(error))
+            );
+        } else {
+            return this.productionApiRequest('companySocialList');
+        }
     }
 
-    getAwards() {
-        const url: string = 'http://localhost:3000/awards';
-        return this.httpClient.get(url).pipe(
-            map((res) => this.extractData(res)),
-            catchError(error => this.handleError(error))
-        );
-        /*
-        * Solution for production with not working save/edit
-        */
-        // return this.productionApiRequest('awards');
-    }
+    /**
+     * Uncomment for prod version.
+     * NOT NEEDED ANYMORE
+     */
+    // getProjects(): Observable<any[]> {
+    //     return this.productionApiRequest('projects');
+    // }
+    // getPartners() {
+    //     return this.productionApiRequest('partners');
+    // }
+    // getAllTeam() {
+    //     return this.productionApiRequest('team');
+    // }
+    // getAwards() {
+    //     return this.productionApiRequest('awards');
+    // }
+    // getCompanySocialList() {
+    //     return this.productionApiRequest('companySocialList');
+    // }
+
 
     private extractData(res: Response | any) {
         let body = res;

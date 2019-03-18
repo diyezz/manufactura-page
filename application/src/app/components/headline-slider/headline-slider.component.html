@@ -1,16 +1,22 @@
 <ngx-slick #slickModal="slick-modal" class="slider__slides-wrapper" [config]="getSliderSettings()">
   <div ngxSlickItem *ngFor="let slide of images" class="slider__slide" [style.background-image]="'url(' + slide.image + ')'"
-   [class.slider__slide--setMaxWidth]="!fullHeightProp">
+   [class.slider__slide--setMaxWidth]="!fullHeightProp" [class.slider__slide--faded]="isSlideFaded" [class.slider__slide--cover]="isSlideCovered">
     <div class="slider__slide-content-wrapper">
       <div class="slider__slide-content" *ngIf="slide.text">
-        <h2 class="slider__slide-headline">{{slide.text.headline}}</h2>
-        <p class="slider__slide-description">{{slide.text.description}}</p>
+        <h2 #animatedText class="slider__slide-headline">{{slide.text.headline[translateService.currentLang]}}</h2>
+        <p class="slider__slide-description">{{slide.text.description[translateService.currentLang]}}</p>
       </div>
     </div>
-    <img class="slider__slide-background" src="{{slide.image}}" alt="">
+    <img class="slider__slide-background" src="{{slide.image}}" alt="" (load)="onLoad($event)">
   </div>
 </ngx-slick>
 
+<div class="container slider__slide-loading-wrapper">
+  <app-loading *ngIf="isLoading"></app-loading>
+</div>
+
 <div class="container slider__slide-height-toggle-wrapper">
-  <div (click)="toggleSliderHeight()" class="slider__slide-height-toggle icon icon-maximize" [class.icon-minimize]="fullHeightProp"></div>
+  <button class="btn-toggle" (click)="toggleSliderHeight()" matTooltip="{{'ExpandTooltip' | translate}}">
+    <i class="icon icon-expand"></i>
+  </button>
 </div>

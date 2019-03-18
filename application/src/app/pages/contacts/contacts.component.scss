@@ -59,6 +59,7 @@ agm-map {
   }
 
   &__group {
+    color: $main-white;
     position: relative;
     margin-right: 15px;
     flex: 1 1 auto;
@@ -95,9 +96,18 @@ agm-map {
       }
       &.ng-dirty {
         & + label {
+          color: $main-black;
           font-size: $small-font;
           top: 0;
           left: 0;
+          & + .text-area__hint {
+            display: block;
+          }
+        }
+      }
+      &.ng-pristine {
+        & + label {
+          color: $main-white;
           & + .text-area__hint {
             display: block;
           }

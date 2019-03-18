@@ -12,3 +12,34 @@
     width: 100%;
   }
 }
+
+.services-section {
+  padding-top: 40px;
+}
+
+.services {
+  &__content {}
+  &__image {
+    width: 150px;
+  }
+}
+
+.clients-section {
+  padding-bottom: 100px;
+  padding-top: 40px;
+}
+
+.clients {
+  &__content {
+  }
+  &__image {
+    width: 100%;
+
+    &--add-padding {
+      padding: 18px;
+    }
+    &--circle {
+      border-radius: 50%;
+    }
+  }
+}

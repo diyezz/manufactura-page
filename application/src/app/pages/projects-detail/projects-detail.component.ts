@@ -1,41 +1,51 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { DataService } from "../../services/data.service";
-import { ActivatedRoute, ParamMap } from '@angular/router';
-import { Location } from '@angular/common';
-import { map } from "rxjs/operators";
+import {Component, HostBinding, OnInit, ViewEncapsulation} from '@angular/core';
+import {DataService} from "../../services/data.service";
+import {ActivatedRoute, ParamMap} from '@angular/router';
+import {Location} from '@angular/common';
+import {map} from "rxjs/operators";
+import {LocationService} from "../../services/location.service";
+import {LoadingService} from "../../services/loading.service";
 
 @Component({
-  selector: 'app-projects-detail',
-  templateUrl: './projects-detail.component.html',
-  styleUrls: ['./projects-detail.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+    selector: 'app-projects-detail',
+    templateUrl: './projects-detail.component.html',
+    styleUrls: ['./projects-detail.component.scss'],
+    encapsulation: ViewEncapsulation.None,
 })
 export class ProjectsDetailComponent implements OnInit {
 
-  constructor(
-      private route: ActivatedRoute,
-      private location: Location,
-      private dataService: DataService
-  ) { }
+    @HostBinding('class.empty') emptyComponentClass: boolean = true;
 
-  currentProject;
+    constructor(
+        private route: ActivatedRoute,
+        private location: Location,
+        private dataService: DataService,
+        public locationService: LocationService
+    ) {
+    }
 
-  getProject(id: number) {
-      return this.dataService.getProjects().pipe(
-          map(projects => projects.filter(project => project.id === id))
-      ).subscribe(data => this.currentProject = data[0]);
-  }
+    currentProject;
 
-  getProjectById() {
-      this.route.paramMap
-          .subscribe((params: ParamMap) => this.getProject(+params.get('id')));
-  }
+    getProject(id: number) {
+        return this.dataService.getProjects().pipe(
+            map(projects => projects.filter(project => project.id === id))
+        ).subscribe(data => {
+            this.currentProject = data[0];
+            this.emptyComponentClass = !this.currentProject;
+            }
+        );
+    }
 
-  ngOnInit() {
-    this.getProjectById();
-  }
+    getProjectById() {
+        this.route.paramMap
+            .subscribe((params: ParamMap) => this.getProject(+params.get('id')));
+    }
 
-  goBack(): void {
-      this.location.back();
-  }
+    ngOnInit() {
+        this.getProjectById();
+    }
+
+    goBack(): void {
+        this.location.back();
+    }
 }

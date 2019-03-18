@@ -1,4 +1,11 @@
+@import './mixins';
 @import './variables';
 @import './slick.custom';
 @import './components';
 @import './header/about-us';
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
