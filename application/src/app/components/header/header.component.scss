@@ -44,11 +44,11 @@ header {
         }
       }
       &__text-for-call {
-        color: transparentize($main-white, 0.3);
+        color: transparentize($static-main-white, 0.3);
       }
 
       &__back-call {
-        color: $main-white
+        color: $static-main-white;
       }
       &__menu-button-line {
         //background-color: $main-white;
@@ -145,7 +145,7 @@ header {
     }
 
     .logo-image {
-      max-width: 220px;
+      max-width: 190px;
       width: 100%;
     }
   }
@@ -211,7 +211,7 @@ header {
 
   &__call-us {
     font-weight: 500;
-    font-size: $small-font;
+    font-size: $xs-font;
   }
 
   &__text-for-call {

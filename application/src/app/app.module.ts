@@ -33,7 +33,8 @@ import {
     LocationComponent,
     ContactsComponent,
     ProjectsDetailComponent,
-    ProjectsAllComponent
+    ProjectsAllComponent,
+    ServicesComponent
 } from './pages/pages';
 
 import {JwtInterceptor} from './interceptors/jwt.interceptor';
@@ -47,11 +48,13 @@ import {
     MatButtonModule,
     MatTooltipModule
 } from '@angular/material';
+import {DeviceDetectorModule} from "ngx-device-detector";
 import {AgmCoreModule} from '@agm/core';
 import {TranslateService} from './services/translate.service';
 import {TranslatePipe} from './pipes/translate.pipe';
-import { LoadingComponent } from './components/loading/loading.component';
-import { TypeLettersPipe } from './pipes/type-letters.pipe';
+import {LoadingComponent} from './components/loading/loading.component';
+import {TypeLettersPipe} from './pipes/type-letters.pipe';
+import { TranslateDynamicPipe } from './pipes/translate-dynamic.pipe';
 
 
 export function setupTranslateFactory(
@@ -76,11 +79,14 @@ export function setupTranslateFactory(
         ProjectsDetailComponent,
         ProjectsAllComponent,
         LoginComponent,
-        FilterPipe,
         ClickOutside,
-        TranslatePipe,
         LoadingComponent,
-        TypeLettersPipe
+        ServicesComponent,
+
+        FilterPipe,
+        TypeLettersPipe,
+        TranslatePipe,
+        TranslateDynamicPipe
     ],
     imports: [
         BrowserModule,
@@ -93,6 +99,7 @@ export function setupTranslateFactory(
         MatTooltipModule,
         MatProgressBarModule,
         MatProgressSpinnerModule,
+        DeviceDetectorModule.forRoot(),
         SlickModule.forRoot(),
         AgmCoreModule.forRoot(
             {

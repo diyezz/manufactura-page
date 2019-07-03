@@ -10,7 +10,7 @@ export class TranslateService {
   defaultAppLang: string = 'en';
   currentLang: string;
   langData: any = {};
-  languageChangeSubscription: Subject<any> = new Subject();
+  languageChangeSubscription: Subject<string> = new Subject();
 
   constructor(private http: HttpClient) { }
 
@@ -32,7 +32,7 @@ export class TranslateService {
             this.http.get<{}>(langPath).subscribe(
                 translation => {
                     this.langData = Object.assign({}, translation || {});
-                    this.languageChangeSubscription.next(true);
+                    this.languageChangeSubscription.next(this.currentLang);
                     resolve(this.langData);
                 },
                 error => {

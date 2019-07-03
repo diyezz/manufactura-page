@@ -57,6 +57,11 @@ footer {
       }
     }
   }
+  &__logos-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
   &__copyright {
     text-align: left;
     font-size: $main-font;
@@ -69,6 +74,11 @@ footer {
     @media (max-width: 576px) {
       font-size: $main-font;
     }
+  }
+
+  .logo-image {
+    width: 190px;
+    height: 100%;
   }
 }
 

@@ -1,10 +1,10 @@
-import {Component, HostBinding, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, HostBinding, HostListener, OnInit, ViewEncapsulation} from '@angular/core';
 import {DataService} from "../../services/data.service";
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {Location} from '@angular/common';
 import {map} from "rxjs/operators";
 import {LocationService} from "../../services/location.service";
-import {LoadingService} from "../../services/loading.service";
+import {DeviceDetectorService} from "ngx-device-detector";
 
 @Component({
     selector: 'app-projects-detail',
@@ -15,11 +15,17 @@ import {LoadingService} from "../../services/loading.service";
 export class ProjectsDetailComponent implements OnInit {
 
     @HostBinding('class.empty') emptyComponentClass: boolean = true;
+    isMobileDevice: boolean;
+
+    @HostListener('window:resize', []) onWindowResize() {
+        this.checkCurrentDeviceInfo();
+    }
 
     constructor(
         private route: ActivatedRoute,
         private location: Location,
         private dataService: DataService,
+        private deviceDetectorService: DeviceDetectorService,
         public locationService: LocationService
     ) {
     }
@@ -30,8 +36,8 @@ export class ProjectsDetailComponent implements OnInit {
         return this.dataService.getProjects().pipe(
             map(projects => projects.filter(project => project.id === id))
         ).subscribe(data => {
-            this.currentProject = data[0];
-            this.emptyComponentClass = !this.currentProject;
+                this.currentProject = data[0];
+                this.emptyComponentClass = !this.currentProject;
             }
         );
     }
@@ -41,11 +47,16 @@ export class ProjectsDetailComponent implements OnInit {
             .subscribe((params: ParamMap) => this.getProject(+params.get('id')));
     }
 
-    ngOnInit() {
-        this.getProjectById();
+    checkCurrentDeviceInfo() {
+        this.isMobileDevice = !this.deviceDetectorService.isDesktop();
     }
 
     goBack(): void {
         this.location.back();
+    }
+
+    ngOnInit() {
+        this.getProjectById();
+        this.checkCurrentDeviceInfo();
     }
 }

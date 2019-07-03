@@ -8,12 +8,11 @@ $base-url: 'https://manufactura-d8bb1.firebaseapp.com';
 //$main-red: #e41e1b;
 //$main-grey: #d2d2d2; //
 //$main-white: #ffffff; //
-//
+
 //$secondary-black: #3D3D3D; //
 //$third-black: #1b1e21;
 //$valid-green: #cee002;
 
-$shadow-color: rgba(0,0,0,.7);
 
 // Inverted colors
 $main-black: #ffffff; //#262626
@@ -24,6 +23,12 @@ $main-white: #1a1a1a; //#1a1a1a
 $secondary-black: #d2d2d2; //#3D3D3D
 $third-black: #1b1e21;
 $valid-green: #cee002;
+
+
+//Common colors
+$shadow-color: rgba(0,0,0,.7);
+$static-main-black: #262626;
+$static-main-white: #ffffff;
 
 //Font-sizes
 $xs-font: 0.75rem;   //12px

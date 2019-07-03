@@ -11,7 +11,7 @@ import {
     ContactsComponent,
     ProjectsDetailComponent,
     ProjectsAllComponent,
-    LoginComponent
+    LoginComponent, ServicesComponent
 } from './pages/pages';
 
 const routes: Routes = [
@@ -42,6 +42,10 @@ const routes: Routes = [
     {
         path: 'projects-all',
         component: ProjectsAllComponent
+    },
+    {
+        path: 'services',
+        component: ServicesComponent
     },
     {
         path: 'login',

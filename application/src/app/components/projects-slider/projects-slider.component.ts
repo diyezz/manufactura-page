@@ -32,7 +32,7 @@ export class ProjectsSliderComponent implements OnInit {
     }
 
     afterChange(event) {
-        console.log(event);
+        // console.log(event);
         // this.slick.unslick();
     }
 

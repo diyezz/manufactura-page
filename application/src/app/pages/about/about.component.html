@@ -8,10 +8,7 @@
             </div>
             <div class="col-12 col-sm-8">
                 <div class="p">
-                    Manufactura aims to bring the latest trends and best quality products to their customers. There is a
-                    huge emphasis on passing on knowledge and making Manufactura designs a ‘go-to’ for any information
-                    or inspirations for your home or business. To do that, a qualified, enthusiastic, nimble team is a
-                    must.
+                    {{currentLangText.aboutUsHeadText.firstString }}
                 </div>
             </div>
         </div>
@@ -23,10 +20,7 @@
             </div>
             <div class="col-12 col-md-4">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem commodi, consequuntur corporis
-                    distinctio ducimus ea earum, eos, et illo magnam molestiae perferendis qui quisquam quod repellat
-                    repellendus voluptatum. Consequuntur dolores eum exercitationem in laudantium natus nostrum omnis
-                    ratione sed?
+                    {{currentLangText.aboutUsHeadText.secondString}}
                 </p>
             </div>
         </div>
@@ -90,6 +84,9 @@
             <div *ngFor="let person of personsData; let index = index;" class="col-12 col-md-4 col-lg-3 mb-3"
             [class.offset-lg-3]="index % 3 === 0 && index !== 0">
                 <div class="about__person-wrapper">
+                    <button class="about__mobile-info-btn" type="button">
+                        <mat-icon>info</mat-icon>
+                    </button>
                     <div class="about__person-desc-wrapper visible-on-hover">
                         <div class="header-text">
                             <h2>{{person.name}}</h2>
@@ -109,19 +106,16 @@
         <div class="row justify-content-center pb-5 pt-5">
             <div class="col-12">
                 <div class="text-center mb-5">
-                    <h3 class="about__apply-header">Want to became a part of our team?</h3>
+                    <h3 class="about__apply-header">{{currentLangText.becomePartOfTeam.headline}}</h3>
                 </div>
             </div>
             <div class="col-9">
                 <div class="text-center mb-5">
-                    <p>Manufactura is always looking to the future, so we are always happy to invite to our team young
-                        talented people with aspiration to
-                        development and to realization new architectural projects.</p>
-                    <p>If you are young and creative, and you want to became a part of our team, just apply to contact
-                        form on our career page</p>
+                    <p>{{currentLangText.becomePartOfTeam.firstString}}</p>
+                    <p>{{currentLangText.becomePartOfTeam.secondString}}</p>
                 </div>
                 <div class="text-center">
-                    <a routerLink="/career" class="link-button">{{'BecomePartOfTeam' | translate}}</a>
+                    <a routerLink="/contacts" class="link-button">{{'BecomePartOfTeam' | translate}}</a>
                 </div>
             </div>
         </div>

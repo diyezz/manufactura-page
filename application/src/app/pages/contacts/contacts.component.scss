@@ -66,6 +66,7 @@ agm-map {
 
     input, select, textarea {
       border: solid 1px $main-grey;
+      border-bottom-width: 2px;
       border-radius: 0;
       height: 40px;
       padding: 5px 10px;
@@ -86,6 +87,7 @@ agm-map {
       &.ng-valid.ng-touched {
         border-bottom-color: $valid-green;
         & + label {
+          color: $main-black;
           font-size: $small-font;
           top: 0;
           left: 0;
@@ -122,8 +124,9 @@ agm-map {
       top: 26px;
       left: 10px;
     }
-    input {
+    input, select, textarea {
       &:focus + label {
+        color: $main-black;
         font-size: $small-font;
         top: 0;
         left: 0;
@@ -131,9 +134,18 @@ agm-map {
     }
     select {
       & + label {
+        color: $main-black;
         font-size: $small-font;
         top: 0;
         left: 0;
+      }
+      &.ng-pristine {
+        & + label {
+          color: $main-black;
+          & + .text-area__hint {
+            display: block;
+          }
+        }
       }
     }
     textarea {

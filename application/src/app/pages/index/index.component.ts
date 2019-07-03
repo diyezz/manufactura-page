@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import 'particles.js';
 import {environment} from "../../../environments/environment";
 import {TranslateService} from "../../services/translate.service";
@@ -8,8 +8,7 @@ declare let particlesJS: any;
 @Component({
     selector: 'app-index',
     templateUrl: './index.component.html',
-    styleUrls: ['./index.component.scss'],
-    encapsulation: ViewEncapsulation.None,
+    styleUrls: ['./index.component.scss']
 })
 
 export class IndexComponent implements OnInit {
@@ -33,9 +32,9 @@ export class IndexComponent implements OnInit {
                     ua: 'Створюйте все, що бажаєте'
                 },
                 description: {
-                    en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa perspiciatis repellendus!',
-                    ru: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.',
-                    ua: 'Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. '
+                    en: 'We are ready to help you implement all your ideas.',
+                    ru: 'Мы готовы помочь вам осуществить все ваши идеи',
+                    ua: 'Ми готові допомогти вам здійснити всі ваші ідеї'
                 }
             },
         },
@@ -48,9 +47,9 @@ export class IndexComponent implements OnInit {
                     ua: 'Побудуйте вашу мрію'
                 },
                 description: {
-                    en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa perspiciatis repellendus!',
-                    ru: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.',
-                    ua: 'Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. '
+                    en: 'To realize a dream, the most important thing is to start.',
+                    ru: 'Чтобы реализовать мечту необходимо самое главное - начать',
+                    ua: 'Щоб реалізувати мрію необхідно найголовніше - почати'
                 }
             }
         },
@@ -63,9 +62,9 @@ export class IndexComponent implements OnInit {
                     ua: 'Не бійтесь експерементувати'
                 },
                 description: {
-                    en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa perspiciatis repellendus!',
-                    ru: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.',
-                    ua: 'Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. '
+                    en: 'Innovations come in experiments',
+                    ru: 'Инновации приходят в экспериментах',
+                    ua: 'Інновації приходять в експериментах'
                 }
             }
         }
@@ -78,14 +77,9 @@ export class IndexComponent implements OnInit {
             ua: 'Ми\n найбільш\n віддани\n архітектори'
         },
         fullText: {
-            en: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi cum ipsa perferendis\n ' +
-                'quis sunt totam. Autem cum dolor enim facilis harum illum saepe sunt suscipit. Delectus enim\n' +
-                'error temporibus! \n' +
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur in nam neque officiis\n' +
-                'repellendus?\n' +
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cum eum iure?',
-            ru: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.',
-            ua: 'Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів. "Риба" не тільки успішно пережила п\'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною.'
+            en: 'Our goal is to help you create the most comfortable space for your business or for you personally, which will be maximally functional, and in the meantime match your taste and requirements. We are eager to create and implement the most unusual projects.',
+            ru: 'Наша цель помочь Вам создать максимально комфортное пространство для вашего бизнеса или же лично для Вас, которое будет максисмально функциональным, и тем временем соответсвовать вашему вкусу и требованиям. Мы горим желанием создавать и воплощать в жизнь самые необычные проекты.',
+            ua: 'Наша мета допомогти Вам створити максимально комфортний простір для вашого бізнесу або ж особисто для Вас, яке буде максісмально функціональним, і тим часом відповідати вашому смаку і вимогам. Ми горимо бажанням створювати і втілювати в життя самі незвичайні проекти.'
         }
     };
 

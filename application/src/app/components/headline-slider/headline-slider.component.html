@@ -16,7 +16,32 @@
 </div>
 
 <div class="container slider__slide-height-toggle-wrapper">
-  <button class="btn-toggle" (click)="toggleSliderHeight()" matTooltip="{{'ExpandTooltip' | translate}}">
+  <button *ngIf="isDesktop" class="btn-toggle" (click)="toggleSliderHeight()" matTooltip="{{'ExpandTooltip' | translate}}">
     <i class="icon icon-expand"></i>
   </button>
+  <button *ngIf="isPopupAvailable" class="btn-toggle ml-2" (click)="toggleImageModal(false)" matTooltip="{{'ExpandTooltip' | translate}}">
+    <i class="icon icon-open-in-modal"></i>
+  </button>
+</div>
+
+<!-- Modal -->
+<div #imageModal class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" (click)="toggleImageModal(true, $event)">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title" id="exampleModalLongTitle">{{projectTitle}}</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span data-dismiss="modal" aria-label="Close" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" *ngIf="isModalShowed">
+        <ng-container *ngFor="let slide of images">
+          <img class="modal-content__image" src="{{slide.image}}" alt="">
+        </ng-container>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="link-button" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

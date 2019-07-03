@@ -66,5 +66,20 @@
   "ContactUs": "Contact us",
   "Information":"Information",
   "Social": "Social",
-  "CallUs": "Call us"
+  "CallUs": "Call us",
+
+  "____OUR_SERVICES": "",
+  "ArchitecturalDesign": "Architectural design",
+  "InteriorDesign": "Interior Design",
+  "PlanningApplication": "Planning application",
+  "CreateAndConstruct": "Create & Construct",
+  "InteriorDesignDescription": "for residential and public places",
+  "ArchitecturalDesignDescription": "detailed preparation of projects of any complexity",
+  "PlanningApplicationDescription": "development of a construction plan",
+  "CreateAndConstructDescription": "full project implementation",
+  "FirstDescription": "Competent redevelopment, reconstruction or overhaul of the apartment can not be done without a detailed project.",
+  "SecondDescription": "The project is being developed in stages.",
+  "ThirdDescription": "Each stage is a complete cycle, according to the results of which certain decisions are made and corrections are made."
+
+
 }

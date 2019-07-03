@@ -7,6 +7,7 @@
                     <app-headline-slider
                         [images]="images"
                         [fullHeightProp]="true"
+                        [isPopupAvailable]="false"
                         [isSlideFaded]="true"
                         [isSlideCovered]="true">
                     </app-headline-slider>
@@ -94,7 +95,7 @@
                 <div class="services">
                     <div class="services__header header-text header-text--spacing">
                         <h2>{{'OurServices' | translate}}</h2>
-                        <a class="link-more" routerLink="/contacts">{{'AllServices' | translate}}</a>
+                        <a class="link-more" routerLink="/services">{{'AllServices' | translate}}</a>
                     </div>
                 </div>
             </div>
@@ -102,48 +103,46 @@
         <div class="row">
             <div class="col-6 col-md-3">
                 <div class="services__content text-center">
-                    <img class="services__image" src="./../../../assets/img/compass-BJtKoiN74.svg" alt="">
-                    <h5 class="headline-text headline-text--footer">Architectural Design</h5>
-                    <p class="">description of architectural design</p>
+                    <img class="services__image" src="./../../../assets/img/compass-Syf7d46vV.svg" alt="">
+                    <h5 class="headline-text headline-text--footer">{{'ArchitecturalDesign' | translate}}</h5>
+                    <p class="">{{'ArchitecturalDesignDescription' | translate }}</p>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="services__content text-center">
-                    <img class="services__image" src="./../../../assets/img/pencil-HkNcsoNQ4.svg" alt="">
-                    <h5 class="headline-text headline-text--footer">Interior design</h5>
-                    <p class="">Interior design description</p>
+                    <img class="services__image" src="./../../../assets/img/pencil-H1COcNpDV.svg" alt="">
+                    <h5 class="headline-text headline-text--footer" [class.mx-md-5]="translateService.currentLang !== 'en'">{{'InteriorDesign' | translate}}</h5>
+                    <p class="">{{'InteriorDesignDescription' | translate}}</p>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="services__content text-center">
-                    <img class="services__image" src="./../../../assets/img/architect-SknxjoV74.svg" alt="">
-                    <h5 class="headline-text headline-text--footer">Planning Applications</h5>
-                    <p class="">plannig description</p>
+                    <img class="services__image" src="./../../../assets/img/architect-HyJA5N6w4.svg" alt="">
+                    <h5 class="headline-text headline-text--footer">{{'PlanningApplication' | translate}}</h5>
+                    <p class="">{{'PlanningApplicationDescription' | translate}}</p>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="services__content text-center">
-                    <img class="services__image" src="./../../../assets/img/family-SJxTos4X4.svg" alt="">
-                    <h5 class="headline-text headline-text--footer">Create & Construct</h5>
-                    <p class="">some more information</p>
+                    <img class="services__image" src="./../../../assets/img/family-By_bs4TwN.svg" alt="">
+                    <h5 class="headline-text headline-text--footer">{{'CreateAndConstruct' | translate}}</h5>
+                    <p class="">{{'CreateAndConstructDescription' | translate}}</p>
                 </div>
             </div>
             <div class="col-12"></div>
             <div class="col-12 col-md-9 mx-auto mt-5">
                 <div class="services__content-description">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dicta ducimus explicabo fuga illum impedit maxime sint voluptates. Adipisci amet aspernatur debitis delectus ea exercitationem, fuga fugiat illum in ipsum laboriosam natus odio pariatur qui, quidem suscipit totam velit vitae?</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium cumque odit porro possimus
-                            tempore vel voluptas?</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate delectus doloremque libero
-                            non quas, quibusdam reprehenderit? Ab autem eum itaque voluptatum.</li>
+                        <li>{{'FirstDescription' | translate}}</li>
+                        <li>{{'SecondDescription' | translate}}</li>
+                        <li>{{'ThirdDescription' | translate}}</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12 d-flex justify-content-center mb-5 mt-5">
-                <a routerLink="/contacts" class="link-button">{{'ViewAllServices' | translate}}</a>
+                <a routerLink="/services" class="link-button">{{'ViewAllServices' | translate}}</a>
             </div>
         </div>
     </div>
@@ -182,7 +181,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="partners__header header-text header-text--spacing">
+                <div class="partners__header header-text header-text--spacing header-text--black">
                     <h2>{{'OurPartners' | translate}}</h2>
                 </div>
                 <app-partners-slider></app-partners-slider>

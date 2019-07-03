@@ -12,7 +12,7 @@
                 </button>
             </div>
         </div>
-        <div class="row">
+        <div class="row pb-5">
             <app-loading *ngIf="!allProjects || allProjects.length === 0"></app-loading>
             <div [className]="view === 'view_list' ? 'col-12' : 'col-12 col-md-6'" *ngFor="let project of allProjects; let i = index">
                 <div class="item__content-wrapper" [class.item__content-wrapper--alt]="view !== 'view_list'" [class.odd]="i % 2 == 0 ">

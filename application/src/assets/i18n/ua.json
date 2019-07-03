@@ -66,5 +66,18 @@
   "ContactUs": "Звяжіться з нами",
   "Information":"Інформація",
   "Social": "Ми в соцмережах",
-  "CallUs": "Телефон"
+  "CallUs": "Телефон",
+
+  "____OUR_SERVICES": "",
+  "ArchitecturalDesign": "Архітектурне планування",
+  "InteriorDesign": "Дизайн \n інтер'єрів",
+  "PlanningApplication": "Проектно-будівничі роботи",
+  "CreateAndConstruct": "Створення та ведення проекту",
+  "InteriorDesignDescription": "для жилих та громадських приміщень",
+  "ArchitecturalDesignDescription": "детальна підготовка проектів будь-якої складності",
+  "PlanningApplicationDescription": "розробка плану проведення будівничих робот",
+  "CreateAndConstructDescription": "реализація проекту \"під ключ\"",
+  "FirstDescription": "Грамотне перепланування, реконструкцію або капітальний ремонт квартири неможливо здійснити без детально опрацьованого проекту.",
+  "SecondDescription": "Розробка проекту йде поетапно.",
+  "ThirdDescription": "Кожен етап - закінчений цикл, за підсумками якого приймаються ті чи інші рішення і вносяться корективи."
 }

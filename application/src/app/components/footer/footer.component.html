@@ -8,10 +8,11 @@
             <li><a class="link-more" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">{{'Home' | translate}}</a></li>
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/about">{{'AboutUs' | translate}}</a></li>
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/projects-all">{{'AllProjects' | translate}}</a></li>
+            <li><a class="link-more" routerLinkActive="is-active" routerLink="/services">{{'OurServices' | translate}}</a></li>
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/contacts">{{'Contacts' | translate}}</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/career">{{'Career' | translate}}</a></li>
+            <!--<li><a class="link-more" routerLinkActive="is-active" routerLink="/career">{{'Career' | translate}}</a></li>-->
             <li><a class="link-more" routerLinkActive="is-active" routerLink="/help">{{'Help' | translate}}</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/edit-content">{{'EditContent' | translate}}</a></li>
+            <!--<li><a class="link-more" routerLinkActive="is-active" routerLink="/edit-content">{{'EditContent' | translate}}</a></li>-->
           </ul>
         </div>
         <div class="col-12 col-sm-6 col-md-5 col-lg-4">
@@ -26,13 +27,17 @@
             <h3 class="headline-text headline-text--footer pb-3">{{'SocialLinks' | translate}}</h3>
             <app-social-list [data]="socialList" className="footer"></app-social-list>
 
-            <img class="logo-image pt-5" width="220px" src="{{defaultEnvironment.baseUrl}}assets/img/manufactura-logo.png" alt="">
+            <div class="footer__logos-wrapper pt-5">
+              <img [matTooltip]="'Designed by Manufactura Architects'" class="logo-image" src="{{defaultEnvironment.baseUrl}}assets/img/manufactura-logo.png" alt="">
+
+              <img [matTooltip]="'Developed by Dmitriy Pro'" src="{{defaultEnvironment.baseUrl}}assets/img/logo_d-pro_white.svg" alt="">
+            </div>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
           <div class="footer__copyright">
-            © 2010-2018, {{'CopyrightDescription' | translate}} |
+            © 2010-{{currentYear}}, {{'CopyrightDescription' | translate}} |
             <a class="link-more is-active" routerLinkActive="is-active" routerLink="/privacy-policy">{{'PrivacyPolicy' | translate}}</a>
           </div>
         </div>

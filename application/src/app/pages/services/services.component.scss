@@ -1,0 +1,23 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/components";
+
+.top-padding-section {
+  padding-top: 200px;
+
+  @media (max-width: 576px) {
+    padding-top: 90px;
+  }
+}
+
+.services {
+  &__service-icon {
+    width: 150px;
+  }
+  &__download-link {
+    color: $main-red;
+
+    &:hover {
+      color: lighten($main-red, 20);
+    }
+  }
+}

@@ -69,7 +69,7 @@
     margin: 30px auto;
 
     .btn-toggle {
-      display: flex;
+      display: inline-flex;
       cursor: pointer;
       outline: none;
       justify-content: center;
@@ -88,6 +88,11 @@
         .icon {
           &-expand {
             @include icon-expand($main-red);
+          }
+        }
+        .icon {
+          &-open-in-modal {
+            @include icon-open-in-modal($main-red);
           }
         }
       }
@@ -241,6 +246,37 @@
       &--previous {
         right: calc((100vw - 1020px) / 2);
       }
+    }
+  }
+}
+
+
+.modal {
+  overflow: scroll;
+  background-color: $shadow-color;
+
+  &.show {
+    display: block;
+  }
+
+  &-header {
+    border-color: $main-grey;
+    .close {
+      color: $main-black;
+    }
+  }
+  &-footer {
+    border-color: $main-grey;
+  }
+  &-body {
+    text-align: center;
+  }
+  &-content {
+    background-color: $main-white;
+
+    &__image {
+      max-width: 100%;
+      max-height: 100vh;
     }
   }
 }

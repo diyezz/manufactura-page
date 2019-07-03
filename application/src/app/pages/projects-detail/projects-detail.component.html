@@ -4,7 +4,14 @@
       <div class="col-12">
         <div class="slider">
           <div class="slider__header"></div>
-          <app-headline-slider *ngIf="currentProject" [images]="currentProject.images" [isInfinite]="false"></app-headline-slider>
+          <app-headline-slider
+            *ngIf="currentProject"
+            [projectTitle]="currentProject.header"
+            [images]="currentProject.images"
+            [isPopupAvailable]="true"
+            [isInfinite]="false">
+
+          </app-headline-slider>
         </div>
       </div>
     </div>
@@ -44,13 +51,13 @@
           <h4 class="location-info__headline">{{'Location' | translate}}</h4>
           <div class="location-info__map">
             <agm-map
-                    [latitude]="46.472764"
-                    [longitude]="30.7398178"
+                    [latitude]="currentProject.position ? currentProject.position.latitude : 46.472764"
+                    [longitude]="currentProject.position ? currentProject.position.longitude : 30.7398178"
                     [zoom]="14"
                     [zoomControl]="false"
                     [scrollwheel]="false"
                     [styles]="locationService.googleMapsStyles">
-              <agm-marker [latitude]="46.472764" [longitude]="30.740365"></agm-marker>
+              <agm-marker [latitude]="currentProject.position ? currentProject.position.latitude : 46.472764" [longitude]="currentProject.position ? currentProject.position.longitude : 30.7398178"></agm-marker>
             </agm-map>
           </div>
         </div>

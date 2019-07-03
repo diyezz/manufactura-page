@@ -11,6 +11,7 @@ import {DataService} from "../../services/data.service";
 export class FooterComponent implements OnInit {
     defaultEnvironment = environment;
     socialList: Array<any>;
+    currentYear: number = new Date().getFullYear();
 
     constructor(
         private translate: TranslateService,

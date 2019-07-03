@@ -44,14 +44,32 @@
       "date": "10.11.2017",
       "cover": "../../../assets/img/projects/omegathree/omegathree1.jpg",
       "images": [
-        {"image": "../../../assets/img/projects/omegathree/omegathree8.png"},
-        {"image": "../../../assets/img/projects/omegathree/omegathree1.jpg"},
-        {"image": "../../../assets/img/projects/omegathree/omegathree5.jpg"},
-        {"image": "../../../assets/img/projects/omegathree/omegathree11.png"},
-        {"image": "../../../assets/img/projects/omegathree/omegathree4.jpg"},
-        {"image": "../../../assets/img/projects/omegathree/omegathree7.png"},
-        {"image": "../../../assets/img/projects/omegathree/omegathree9.png"}
+        {
+          "image": "../../../assets/img/projects/omegathree/omegathree8.png"
+        },
+        {
+          "image": "../../../assets/img/projects/omegathree/omegathree1.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/omegathree/omegathree5.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/omegathree/omegathree11.png"
+        },
+        {
+          "image": "../../../assets/img/projects/omegathree/omegathree4.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/omegathree/omegathree7.png"
+        },
+        {
+          "image": "../../../assets/img/projects/omegathree/omegathree9.png"
+        }
       ],
+      "position": {
+        "longitude": 30.743637,
+        "latitude": 46.484798
+      },
       "category": "buildings",
       "client": "Josph Cautington",
       "projectType": "Cafe, Small business, Franchising",
@@ -67,12 +85,20 @@
       "date": "10.11.2017",
       "cover": "../../../assets/img/projects/4.jpg",
       "images": [
-        {"image": "../../../assets/img/projects/1.jpg"},
-        {"image": "../../../assets/img/projects/2.jpg"},
-        {"image": "../../../assets/img/projects/3.jpg"},
-        {"image": "../../../assets/img/projects/4.jpg"}
+        {
+          "image": "../../../assets/img/projects/1.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/2.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/3.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/4.jpg"
+        }
       ],
-      "category": "buildings",
+      "category": "interiors",
       "client": "Josph Cautington",
       "projectType": "Cafe, Small business, Franchising",
       "architects": "Denis Braharchuk"
@@ -87,12 +113,20 @@
       "date": "10.11.2017",
       "cover": "../../../assets/img/projects/8.jpg",
       "images": [
-        {"image": "../../../assets/img/projects/5.jpg"},
-        {"image": "../../../assets/img/projects/6.jpg"},
-        {"image": "../../../assets/img/projects/7.jpg"},
-        {"image": "../../../assets/img/projects/8.jpg"}
+        {
+          "image": "../../../assets/img/projects/5.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/6.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/7.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/8.jpg"
+        }
       ],
-      "category": "buildings",
+      "category": "interiors",
       "client": "Josph Cautington",
       "projectType": "Cafe, Small business, Franchising",
       "architects": "Denis Braharchuk"
@@ -107,12 +141,20 @@
       "date": "10.11.2017",
       "cover": "../../../assets/img/projects/9.jpg",
       "images": [
-        {"image": "../../../assets/img/projects/9.jpg"},
-        {"image": "../../../assets/img/projects/10.jpg"},
-        {"image": "../../../assets/img/projects/11.jpg"},
-        {"image": "../../../assets/img/projects/12.jpg"}
+        {
+          "image": "../../../assets/img/projects/9.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/10.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/11.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/12.jpg"
+        }
       ],
-      "category": "buildings",
+      "category": "interiors",
       "client": "Josph Cautington",
       "projectType": "Cafe, Small business, Franchising",
       "architects": "Denis Braharchuk"
@@ -135,104 +177,38 @@
   "team": [
     {
       "name": "Denis Braharchuk",
-      "position": "Head architect, CEO founder",
+      "position": "Head architect, Founder & CEO",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem commodi, consequuntur corporis distinctio ducimus ea earum, eos, et illo magnam molestiae perferendis qui quisquam quod repellat repellendus voluptatum. Consequuntur dolores eum exercitationem in laudantium natus nostrum omnis ratione sed?",
       "photo": "/assets/img/team-photos/denis.jpg",
       "social": [
         {
-          "facebook": "https://www.facebook.com/"
-        },
-        {
-          "twitter": "https://www.twitter.com/"
+          "facebook": "https://www.facebook.com/denis.bragarchuk"
         },
         {
           "instagram": "https://www.instagram.com/denis_bragarchuk/"
         },
         {
-          "googlePlus": "https://www.google.com/"
-        },
-        {
-          "youtube": "https://www.youtube.com/"
-        },
-        {
-          "behance": "https://www.behance.net/"
+          "behance": "https://www.behance.net/manufactura_studio"
         }
       ]
     },
     {
-      "name": "Deborah Somersby",
-      "position": "Lead architect",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem commodi, consequuntur corporis distinctio ducimus ea earum, eos, et illo magnam molestiae perferendis qui quisquam quod repellat repellendus voluptatum. Consequuntur dolores eum exercitationem in laudantium natus nostrum omnis ratione sed?",
-      "photo": "/assets/img/team-photos/denis.jpg",
+      "name": "Dmitriy Prokudin",
+      "position": "Web developer",
+      "description": "Experienced web developer in Perception Box company",
+      "photo": "/assets/img/team-photos/prokudin.png",
       "social": [
         {
-          "facebook": "https://www.facebook.com/"
+          "facebook": "https://www.facebook.com/dprokudin"
         },
         {
-          "instagram": "https://www.instagram.com/"
-        }
-      ]
-    },
-    {
-      "name": "Cristoph Smith",
-      "position": "Interior designer, architect",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem commodi, consequuntur corporis distinctio ducimus ea earum, eos, et illo magnam molestiae perferendis qui quisquam quod repellat repellendus voluptatum. Consequuntur dolores eum exercitationem in laudantium natus nostrum omnis ratione sed?",
-      "photo": "/assets/img/team-photos/denis.jpg",
-      "social": [
-        {
-          "facebook": "https://www.facebook.com/"
+          "instagram": "https://www.instagram.com/prodiyezz/"
         },
         {
-          "twitter": "https://www.twitter.com/"
+          "twitter": "https://twitter.com/pro_diyezz"
         },
         {
-          "instagram": "https://www.instagram.com/"
-        },
-        {
-          "googlePlus": "https://www.google.com/"
-        }
-      ]
-    },
-    {
-      "name": "Cristoph Smith",
-      "position": "Interior designer, architect",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem commodi, consequuntur corporis distinctio ducimus ea earum, eos, et illo magnam molestiae perferendis qui quisquam quod repellat repellendus voluptatum. Consequuntur dolores eum exercitationem in laudantium natus nostrum omnis ratione sed?",
-      "photo": "/assets/img/team-photos/denis.jpg",
-      "social": [
-        {
-          "facebook": "https://www.facebook.com/"
-        },
-        {
-          "twitter": "https://www.twitter.com/"
-        },
-        {
-          "instagram": "https://www.instagram.com/"
-        },
-        {
-          "googlePlus": "https://www.google.com/"
-        }
-      ]
-    },
-    {
-      "name": "Denis Braharchuk",
-      "position": "Head architect, CEO founder",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem commodi, consequuntur corporis distinctio ducimus ea earum, eos, et illo magnam molestiae perferendis qui quisquam quod repellat repellendus voluptatum. Consequuntur dolores eum exercitationem in laudantium natus nostrum omnis ratione sed?",
-      "photo": "/assets/img/team-photos/denis.jpg",
-      "social": [
-        {
-          "facebook": "https://www.facebook.com/"
-        },
-        {
-          "twitter": "https://www.twitter.com/"
-        },
-        {
-          "instagram": "https://www.instagram.com/denis_bragarchuk/"
-        },
-        {
-          "googlePlus": "https://www.google.com/"
-        },
-        {
-          "youtube": "https://www.youtube.com/"
+          "youtube": "https://www.youtube.com/channel/UCyUqoUj57A4jCg85WNdAHhw"
         }
       ]
     }
@@ -260,10 +236,7 @@
       "facebook": "https://www.facebook.com/denis.bragarchuk"
     },
     {
-      "twitter": "https://www.twitter.com/"
-    },
-    {
-      "instagram": "https://www.instagram.com/"
+      "instagram": "https://www.instagram.com/denis_bragarchuk/"
     },
     {
       "youtube": "https://www.youtube.com/"

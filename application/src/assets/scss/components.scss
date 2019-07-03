@@ -31,6 +31,9 @@
     &-expand {
         @include icon-expand($main-black);
     }
+    &-open-in-modal {
+        @include icon-open-in-modal($main-black);
+    }
 }
 .logo-cutted {
     display: inline-block;
@@ -117,6 +120,10 @@
     &--spacing {
         margin-top: 60px;
         margin-bottom: 60px;
+    }
+
+    &--black {
+        color: $static-main-black;
     }
 
     @media (max-width: 576px) {

@@ -6,9 +6,10 @@ import {
     Input,
     ViewChildren,
     AfterViewInit,
-    QueryList
+    QueryList, ViewChild, ElementRef, Renderer2, OnDestroy
 } from '@angular/core';
 import {TranslateService} from "../../services/translate.service";
+import {DeviceDetectorService} from "ngx-device-detector";
 
 @Component({
     selector: 'app-headline-slider',
@@ -16,22 +17,30 @@ import {TranslateService} from "../../services/translate.service";
     styleUrls: ['./headline-slider.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
-export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterViewInit {
+export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterViewInit, OnDestroy {
 
     @Input() images;
-    @Input() isInfinite: boolean = false;
+    @Input() projectTitle: string = 'Project images';
     @Input() fullHeightProp: boolean = false;
+    @Input() isInfinite: boolean = false;
     @Input() isSlideFaded: boolean = false;
     @Input() isSlideCovered: boolean = false;
+    @Input() isPopupAvailable: boolean = true;
+    @Input() isDesktop: boolean = false;
+    @ViewChild('imageModal') imageModal: ElementRef;
     @ViewChildren('animatedText') animatedText: QueryList<any>;
     isLoading: boolean;
+    isModalShowed: boolean;
 
     constructor(
-        public translateService: TranslateService
+        public translateService: TranslateService,
+        private renderer: Renderer2,
+        private deviceDetectionService: DeviceDetectorService
     ) {}
 
     ngOnInit() {
         this.isLoading = true;
+        this.isDesktop = this.deviceDetectionService.isDesktop();
     }
 
     ngAfterContentInit() {
@@ -39,8 +48,12 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
 
     ngAfterViewInit() {
         this.animatedText.changes.subscribe((data) => {
-            console.log(data);
+            // console.log(data);
         })
+    }
+
+    ngOnDestroy() {
+        this.isModalShowed = false;
     }
 
     startAnimatedText() {
@@ -52,9 +65,9 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
             "arrows": true,
             "autoplay": false,
             "autoplaySpeed": 5000,
-            "dots": true,
+            "dots": !this.isPopupAvailable,
             "dotsClass": 'slick-dots container',
-            "infinite": this.isInfinite,
+            "infinite": this.isInfinite || !this.isDesktop,
             "speed": 500,
             // "fade": true,
             // "cssEase": 'linear',
@@ -73,7 +86,11 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
     }
 
     toggleSliderHeight() {
-        this.fullHeightProp = !this.fullHeightProp;
+        if (this.isPopupAvailable && !this.isDesktop) {
+            this.toggleImageModal(false);
+        } else {
+            this.fullHeightProp = !this.fullHeightProp;
+        }
     }
 
     onLoad(event) {
@@ -81,7 +98,6 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
     }
 
     animation(elementRef) {
-        console.log(elementRef);
             // array with texts to type in typewriter
             let textValue = elementRef.innerText;
 
@@ -122,5 +138,24 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
 
             // start the text animation
             StartTextAnimation(0);
+    }
+
+    toggleImageModal(closeOnly, event?) {
+        if (closeOnly) {
+            if (event && (event.target.classList.contains('modal') || event.target.getAttribute('data-dismiss'))) {
+                this.renderer.removeClass(this.imageModal.nativeElement, 'show');
+                this.isModalShowed = false;
+            } else {
+                return;
+            }
+        } else {
+            if (this.isModalShowed) {
+                this.renderer.removeClass(this.imageModal.nativeElement, 'show');
+                this.isModalShowed = false;
+            } else {
+                this.renderer.addClass(this.imageModal.nativeElement, 'show');
+                this.isModalShowed = true;
+            }
+        }
     }
 }
