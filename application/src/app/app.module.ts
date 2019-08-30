@@ -48,7 +48,7 @@ import {
     MatButtonModule,
     MatTooltipModule
 } from '@angular/material';
-import {DeviceDetectorModule} from "ngx-device-detector";
+import {DeviceDetectorModule} from 'ngx-device-detector';
 import {AgmCoreModule} from '@agm/core';
 import {TranslateService} from './services/translate.service';
 import {TranslatePipe} from './pipes/translate.pipe';

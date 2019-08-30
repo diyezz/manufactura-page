@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {TranslateService} from "../../services/translate.service";
-import {environment} from "../../../environments/environment";
-import {DataService} from "../../services/data.service";
+import {TranslateService} from '../../services/translate.service';
+import {environment} from '../../../environments/environment';
+import {DataService} from '../../services/data.service';
 
 @Component({
     selector: 'app-footer',
@@ -29,7 +29,7 @@ export class FooterComponent implements OnInit {
     getCompanySocialListData() {
         return this.dataService.getCompanySocialList().subscribe((data) => {
             this.socialList = data;
-        })
+        });
     }
 
     checkCurrentLang(lang) {

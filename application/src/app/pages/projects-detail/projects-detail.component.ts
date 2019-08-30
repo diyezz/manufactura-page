@@ -1,10 +1,10 @@
 import {Component, HostBinding, HostListener, OnInit, ViewEncapsulation} from '@angular/core';
-import {DataService} from "../../services/data.service";
+import {DataService} from '../../services/data.service';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {Location} from '@angular/common';
-import {map} from "rxjs/operators";
-import {LocationService} from "../../services/location.service";
-import {DeviceDetectorService} from "ngx-device-detector";
+import {map} from 'rxjs/operators';
+import {LocationService} from '../../services/location.service';
+import {DeviceDetectorService} from 'ngx-device-detector';
 
 @Component({
     selector: 'app-projects-detail',
@@ -14,7 +14,7 @@ import {DeviceDetectorService} from "ngx-device-detector";
 })
 export class ProjectsDetailComponent implements OnInit {
 
-    @HostBinding('class.empty') emptyComponentClass: boolean = true;
+    @HostBinding('class.empty') emptyComponentClass = true;
     isMobileDevice: boolean;
 
     @HostListener('window:resize', []) onWindowResize() {

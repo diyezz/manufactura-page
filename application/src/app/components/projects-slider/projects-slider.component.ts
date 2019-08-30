@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
-import { DataService } from "../../services/data.service";
+import { DataService } from '../../services/data.service';
 
 @Component({
     selector: 'app-projects-slider',
@@ -38,45 +38,45 @@ export class ProjectsSliderComponent implements OnInit {
 
     getSliderSettings() {
         return {
-            "arrows": false,
-            "autoplay": true,
-            "autoplaySpeed": 3000,
-            "dots": true,
-            "dotsClass": 'slick-dots slick-dots--red',
-            "infinite": false,
-            "speed": 300,
-            "slidesToShow": 4,
-            "slidesToScroll": 2,
-            "responsive": [
+            'arrows': false,
+            'autoplay': true,
+            'autoplaySpeed': 3000,
+            'dots': true,
+            'dotsClass': 'slick-dots slick-dots--red',
+            'infinite': false,
+            'speed': 300,
+            'slidesToShow': 4,
+            'slidesToScroll': 2,
+            'responsive': [
                 {
-                    "breakpoint": "1025",
-                    "settings": {
-                        "slidesToShow": 3,
-                        "slidesToScroll": 2,
-                        "infinite": true,
-                        "dots": true
+                    'breakpoint': '1025',
+                    'settings': {
+                        'slidesToShow': 3,
+                        'slidesToScroll': 2,
+                        'infinite': true,
+                        'dots': true
                     }
                 },
                 {
-                    "breakpoint": "769",
-                    "settings": {
-                        "slidesToShow": 2,
-                        "slidesToScroll": 2,
-                        "infinite": true,
-                        "dots": true
+                    'breakpoint': '769',
+                    'settings': {
+                        'slidesToShow': 2,
+                        'slidesToScroll': 2,
+                        'infinite': true,
+                        'dots': true
                     }
                 },
                 {
-                    "breakpoint": "576",
-                    "settings": {
-                        "slidesToShow": 1,
-                        "slidesToScroll": 1,
-                        "infinite": true,
-                        "dots": true
+                    'breakpoint': '576',
+                    'settings': {
+                        'slidesToShow': 1,
+                        'slidesToScroll': 1,
+                        'infinite': true,
+                        'dots': true
                     }
                 },
             ]
-        }
+        };
     }
 
 }

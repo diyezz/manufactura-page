@@ -1,16 +1,16 @@
 {
   "data": [
     {
-      "image": "../../../assets/img/partners/SketchUp.png"
+      "image": "./assets/img/partners/SketchUP.png"
     },
     {
-      "image": "../../../assets/img/partners/3dsmax_logo.png"
+      "image": "./../../../assets/img/partners/3dsmax_logo.png"
     },
     {
-      "image": "../../../assets/img/partners/sketch-logo.png"
+      "image": "./../../../assets/img/partners/sketch-logo.png"
     },
     {
-      "image": "../../../assets/img/partners/photoshop-full-logo.png"
+      "image": "./../../../assets/img/partners/photoshop-full-logo.png"
     }
   ]
 }

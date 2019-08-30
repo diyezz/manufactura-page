@@ -1,5 +1,5 @@
 import {Component, OnInit, Renderer2, ViewEncapsulation} from '@angular/core';
-import { DataService } from "../../services/data.service";
+import { DataService } from '../../services/data.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -11,8 +11,8 @@ import { Location } from '@angular/common';
 })
 export class ProjectsAllComponent implements OnInit {
     allProjects;
-    slideCategory: string = 'all';
-    view: string = 'view_list';
+    slideCategory = 'all';
+    view = 'view_list';
 
     constructor(
         private route: ActivatedRoute,

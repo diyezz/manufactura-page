@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Subject } from "rxjs";
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TranslateService {
-  localStorageLangKeyName:string = 'currentLanguage';
-  defaultAppLang: string = 'en';
+  localStorageLangKeyName = 'currentLanguage';
+  defaultAppLang = 'en';
   currentLang: string;
   langData: any = {};
   languageChangeSubscription: Subject<string> = new Subject();

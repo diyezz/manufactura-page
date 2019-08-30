@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {FormArray, FormControl, FormGroup, Validators} from "@angular/forms";
-import {Subscription} from "rxjs/Subscription";
-import {LocationService} from "../../services/location.service";
-import {DataService} from "../../services/data.service";
+import {FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
+import {Subscription} from 'rxjs/Subscription';
+import {LocationService} from '../../services/location.service';
+import {DataService} from '../../services/data.service';
 
 interface contactData {
     firstName: string;
@@ -21,11 +21,11 @@ interface contactData {
 export class ContactsComponent implements OnInit, OnDestroy {
     contactForm: FormGroup;
     textChangesSubscription: Subscription;
-    textAreaLengthMinText: string = 'Minimum is required: ';
-    textAreaLengthMaxText: string = 'Max available message length: ';
-    symbolsMinLength: number = 20;
-    symbolsMaxLength: number = 500;
-    symbolsCurrentLength: number = 0;
+    textAreaLengthMinText = 'Minimum is required: ';
+    textAreaLengthMaxText = 'Max available message length: ';
+    symbolsMinLength = 20;
+    symbolsMaxLength = 500;
+    symbolsCurrentLength = 0;
     socialList: Array<any>;
 
     constructor(

@@ -1,10 +1,10 @@
 import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
-import { NavigationEnd, Router } from "@angular/router";
+import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { ClickOutside } from "../../directives/click-outside.directive";
-import {environment} from "../../../environments/environment";
-import {TranslateService} from "../../services/translate.service";
-import {DataService} from "../../services/data.service";
+import { ClickOutside } from '../../directives/click-outside.directive';
+import {environment} from '../../../environments/environment';
+import {TranslateService} from '../../services/translate.service';
+import {DataService} from '../../services/data.service';
 
 @Component({
     selector: 'app-header',
@@ -14,11 +14,11 @@ import {DataService} from "../../services/data.service";
 })
 export class HeaderComponent implements OnInit {
     defaultEnvironment = environment;
-    isMenuVisible: boolean = false;
-    isHeaderSticky: boolean = false;
-    isHeaderVisible: boolean = true;
-    isHeaderTransparent: boolean = false;
-    bodyHideOverflowClass: string = 'hide-overflow';
+    isMenuVisible = false;
+    isHeaderSticky = false;
+    isHeaderVisible = true;
+    isHeaderTransparent = false;
+    bodyHideOverflowClass = 'hide-overflow';
     socialList: Array<any>;
     socialListStyles = {
         'display': 'flex',

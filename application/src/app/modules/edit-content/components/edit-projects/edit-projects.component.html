@@ -12,7 +12,7 @@
             <mat-progress-spinner class="m-auto" *ngIf="!allProjects" mode="indeterminate"></mat-progress-spinner>
 
             <mat-list-item *ngFor="let project of allProjects">
-              <mat-icon matListIcon [color]="project === selectedProject ? 'warn' : ''">note</mat-icon>
+              <mat-icon matListIcon [color]="setIconColor(project)">note</mat-icon>
               <h4 matLine (click)="onSelect(project)"> {{project.header}}</h4>
               <p matLine class="demo-2">id: {{project.id}}, category: {{project.category}}</p>
               <button mat-button color="warn" class="ml-auto" (click)="removeProject(project.id)">
@@ -48,12 +48,12 @@
             </mat-form-field>
             <mat-form-field>
               <input
-              matInput
-              placeholder="Select date"
-              [min]="minDate"
-              [max]="maxDate"
-              [matDatepicker]="picker3"
-              [value]="deserializeDate(selectedProject.date)">
+                matInput
+                placeholder="Select date"
+                [min]="minDate"
+                [max]="maxDate"
+                [matDatepicker]="picker3"
+                [value]="deserializeDate(selectedProject.date)">
               <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
               <mat-datepicker #picker3></mat-datepicker>
             </mat-form-field>
@@ -61,7 +61,8 @@
               <textarea matInput placeholder="Description" [(ngModel)]="selectedProject.description"></textarea>
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <textarea matInput placeholder="Full Description" [(ngModel)]="selectedProject.fullDescription"></textarea>
+              <textarea matInput placeholder="Full Description"
+                        [(ngModel)]="selectedProject.fullDescription"></textarea>
             </mat-form-field>
             <label>Images:
               <span>{{selectedProject.images | json}}</span>

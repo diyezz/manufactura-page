@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SocialListComponent implements OnInit {
     @Input('isOnlyText') isOnlyText: any;
-    @Input('className') className: string = 'regular';
+    @Input('className') className = 'regular';
     @Input('data') data = [];
     Object = Object;
 

@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class LoadingComponent implements OnInit {
   @Input('isLoading') isLoading: boolean;
-  @Input('color') color: string = 'warn';
+  @Input('color') color = 'warn';
 
   constructor() { }
 

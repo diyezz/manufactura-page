@@ -1,9 +1,9 @@
 import {Injectable, isDevMode} from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {environment} from "../../environments/environment";
-import {Observable, throwError} from "rxjs";
-import {catchError, map} from "rxjs/operators";
-import {Project} from "../models/project";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {environment} from '../../environments/environment';
+import {Observable, throwError} from 'rxjs';
+import {catchError, map} from 'rxjs/operators';
+import {Project} from '../models/project';
 
 @Injectable()
 export class DataService {
@@ -13,9 +13,9 @@ export class DataService {
 
     //Create project
     createProject(project: Project): Observable<any> {
-        const url: string = 'http://localhost:3000/projects';
-        let cpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
-        let options = {headers: cpHeaders};
+        const url = 'http://localhost:3004/projects';
+        const cpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+        const options = {headers: cpHeaders};
         return this.httpClient.post<Project>(url, project, options).pipe(
             map(success => console.log(success)),
             catchError(this.handleError)
@@ -24,10 +24,10 @@ export class DataService {
 
     //Update article
     updateProject(project: Project): Observable<number> {
-        const url: string = 'http://localhost:3000/projects';
-        let cpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
-        let options = {headers: cpHeaders};
-        return this.httpClient.put(url + "/" + project.id, project, options).pipe(
+        const url = 'http://localhost:3004/projects';
+        const cpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+        const options = {headers: cpHeaders};
+        return this.httpClient.put(url + '/' + project.id, project, options).pipe(
             map(success => success['status']),
             catchError(this.handleError)
         );
@@ -35,10 +35,10 @@ export class DataService {
 
     //Delete project by id
     deleteProjectById(projectId: string): Observable<number> {
-        const url: string = 'http://localhost:3000/projects';
-        let cpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
-        let options = {headers: cpHeaders};
-        return this.httpClient.delete(url + "/" + projectId).pipe(
+        const url = 'http://localhost:3004/projects';
+        const cpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
+        const options = {headers: cpHeaders};
+        return this.httpClient.delete(url + '/' + projectId).pipe(
             map(success => success['status']),
             catchError(this.handleError)
         );
@@ -46,7 +46,7 @@ export class DataService {
 
     getProjects(): Observable<Project[]> {
         if (isDevMode()) {
-            const url: string = 'http://localhost:3000/projects';
+            const url = 'http://localhost:3004/projects';
             return this.httpClient.get(url).pipe(
                 map((res) => this.extractData(res)),
                 catchError(error => this.handleError(error))
@@ -57,7 +57,7 @@ export class DataService {
     }
     getPartners() {
         if (isDevMode()) {
-            const url: string = 'http://localhost:3000/partners';
+            const url = 'http://localhost:3004/partners';
             return this.httpClient.get(url).pipe(
                 map((res) => this.extractData(res)),
                 catchError(error => this.handleError(error))
@@ -68,7 +68,7 @@ export class DataService {
     }
     getAllTeam() {
         if (isDevMode()) {
-            const url: string = 'http://localhost:3000/team';
+            const url = 'http://localhost:3004/team';
             return this.httpClient.get(url).pipe(
                 map((res) => this.extractData(res)),
                 catchError(error => this.handleError(error))
@@ -80,7 +80,7 @@ export class DataService {
     }
     getAwards() {
         if (isDevMode()) {
-            const url: string = 'http://localhost:3000/awards';
+            const url = 'http://localhost:3004/awards';
             return this.httpClient.get(url).pipe(
                 map((res) => this.extractData(res)),
                 catchError(error => this.handleError(error))
@@ -92,7 +92,7 @@ export class DataService {
     }
     getCompanySocialList() {
         if (isDevMode()) {
-            const url: string = 'http://localhost:3000/companySocialList';
+            const url = 'http://localhost:3004/companySocialList';
             return this.httpClient.get(url).pipe(
                 map((res) => this.extractData(res)),
                 catchError(error => this.handleError(error))
@@ -124,7 +124,7 @@ export class DataService {
 
 
     private extractData(res: Response | any) {
-        let body = res;
+        const body = res;
         return body;
     }
 
@@ -134,7 +134,7 @@ export class DataService {
     }
 
     private productionApiRequest(apiName: string): Observable<any> {
-        const url: string = `${environment.baseUrl}assets/mock-data/db.json`;
+        const url = `${environment.baseUrl}assets/mock-data/db.json`;
 
         return this.httpClient.get(url).pipe(
             map((res) => this.extractData(res[apiName])),

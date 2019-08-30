@@ -8,8 +8,8 @@ import {
     AfterViewInit,
     QueryList, ViewChild, ElementRef, Renderer2, OnDestroy
 } from '@angular/core';
-import {TranslateService} from "../../services/translate.service";
-import {DeviceDetectorService} from "ngx-device-detector";
+import {TranslateService} from '../../services/translate.service';
+import {DeviceDetectorService} from 'ngx-device-detector';
 
 @Component({
     selector: 'app-headline-slider',
@@ -20,13 +20,13 @@ import {DeviceDetectorService} from "ngx-device-detector";
 export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterViewInit, OnDestroy {
 
     @Input() images;
-    @Input() projectTitle: string = 'Project images';
-    @Input() fullHeightProp: boolean = false;
-    @Input() isInfinite: boolean = false;
-    @Input() isSlideFaded: boolean = false;
-    @Input() isSlideCovered: boolean = false;
-    @Input() isPopupAvailable: boolean = true;
-    @Input() isDesktop: boolean = false;
+    @Input() projectTitle = 'Project images';
+    @Input() fullHeightProp = false;
+    @Input() isInfinite = false;
+    @Input() isSlideFaded = false;
+    @Input() isSlideCovered = false;
+    @Input() isPopupAvailable = true;
+    @Input() isDesktop = false;
     @ViewChild('imageModal') imageModal: ElementRef;
     @ViewChildren('animatedText') animatedText: QueryList<any>;
     isLoading: boolean;
@@ -49,7 +49,7 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
     ngAfterViewInit() {
         this.animatedText.changes.subscribe((data) => {
             // console.log(data);
-        })
+        });
     }
 
     ngOnDestroy() {
@@ -62,18 +62,18 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
 
     getSliderSettings() {
         return {
-            "arrows": true,
-            "autoplay": false,
-            "autoplaySpeed": 5000,
-            "dots": !this.isPopupAvailable,
-            "dotsClass": 'slick-dots container',
-            "infinite": this.isInfinite || !this.isDesktop,
-            "speed": 500,
+            'arrows': true,
+            'autoplay': false,
+            'autoplaySpeed': 5000,
+            'dots': !this.isPopupAvailable,
+            'dotsClass': 'slick-dots container',
+            'infinite': this.isInfinite || !this.isDesktop,
+            'speed': 500,
             // "fade": true,
             // "cssEase": 'linear',
-            "slidesToShow": 1,
-            "nextArrow": '<button class="slider__arrow-btn slider__arrow-btn--next">></button>',
-            "prevArrow": '<button class="slider__arrow-btn slider__arrow-btn--previous"><</button>',
+            'slidesToShow': 1,
+            'nextArrow': '<button class="slider__arrow-btn slider__arrow-btn--next">></button>',
+            'prevArrow': '<button class="slider__arrow-btn slider__arrow-btn--previous"><</button>',
             // "responsive": [
             //     {
             //         "breakpoint": "576",
@@ -82,7 +82,7 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
             //         }
             //     },
             // ]
-        }
+        };
     }
 
     toggleSliderHeight() {
@@ -99,7 +99,7 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
 
     animation(elementRef) {
             // array with texts to type in typewriter
-            let textValue = elementRef.innerText;
+            const textValue = elementRef.innerText;
 
             // type one text in the typwriter
             // keeps calling itself until the text is finished
@@ -107,11 +107,11 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
                 // check if text isn't finished yet
                 if (i < (text.length)) {
                     // add next character to h1
-                    elementRef.innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+                    elementRef.innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
 
                     // wait for a while and call this function again for next character
                     setTimeout(function() {
-                        typeWriter(text, i + 1, fnCallback)
+                        typeWriter(text, i + 1, fnCallback);
                     }, 300);
                 }
                 // text finished, call callback if there is a callback function

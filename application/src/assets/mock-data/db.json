@@ -29,7 +29,7 @@
           "image": "../../../assets/img/projects/21.jpg"
         }
       ],
-      "category": "buildings",
+      "category": "not selected",
       "client": "Josph Cautington",
       "projectType": "Cafe, Small business, Franchising",
       "architects": "Denis Braharchuk"
@@ -162,16 +162,16 @@
   ],
   "partners": [
     {
-      "image": "../../../assets/img/partners/SketchUp.png"
+      "image": "./assets/img/partners/SketchUP.png"
     },
     {
-      "image": "../../../assets/img/partners/3dsmax_logo.png"
+      "image": "./assets/img/partners/3dsmax_logo.png"
     },
     {
-      "image": "../../../assets/img/partners/sketch-logo.png"
+      "image": "./assets/img/partners/sketch-logo.png"
     },
     {
-      "image": "../../../assets/img/partners/photoshop-full-logo.png"
+      "image": "./assets/img/partners/photoshop-full-logo.png"
     }
   ],
   "team": [

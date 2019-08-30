@@ -1,15 +1,15 @@
 import { Directive, OnInit, OnDestroy, Output, EventEmitter, ElementRef } from '@angular/core';
-import { delay, tap } from "rxjs/operators";
-import { fromEvent } from "rxjs/observable/fromEvent";
-import { Subscription } from "rxjs/Subscription";
-import { Observable } from "rxjs/Observable";
+import { delay, tap } from 'rxjs/operators';
+import { fromEvent } from 'rxjs/observable/fromEvent';
+import { Subscription } from 'rxjs/Subscription';
+import { Observable } from 'rxjs/Observable';
 
 @Directive({
     selector: '[clickOutside]'
 })
 
 export class ClickOutside implements OnInit, OnDestroy {
-    private listening: boolean = true;
+    private listening = true;
     private globalClick: Observable<any>;
     private globalClickSubscription: Subscription;
 

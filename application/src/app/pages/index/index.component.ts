@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import 'particles.js';
-import {environment} from "../../../environments/environment";
-import {TranslateService} from "../../services/translate.service";
+import {environment} from '../../../environments/environment';
+import {TranslateService} from '../../services/translate.service';
 
 declare let particlesJS: any;
 
@@ -19,8 +19,8 @@ export class IndexComponent implements OnInit {
     ) {
     }
 
-    slideCategoryName: string = 'all';
-    selectedItem: number = 0;
+    slideCategoryName = 'all';
+    selectedItem = 0;
 
     images = [
         {
@@ -103,20 +103,20 @@ export class IndexComponent implements OnInit {
         const startDate = new Date(2014, 9, 7);
         const currentDate = new Date();
 
-        let diff = Math.floor(currentDate.getTime() - startDate.getTime());
+        const diff = Math.floor(currentDate.getTime() - startDate.getTime());
         const day = 1000 * 60 * 60 * 24;
         const month = 1000 * 60 * 60 * 24 * 29.82;
         const year = 1000 * 60 * 60 * 24 * 29.82 * 12;
 
-        let days = Math.floor(diff / day);
-        let months = Math.floor(diff / month);
-        let years = Math.floor(diff / year);
-        let diffInDays = Math.floor((diff - (year * years)) / day);
+        const days = Math.floor(diff / day);
+        const months = Math.floor(diff / month);
+        const years = Math.floor(diff / year);
+        const diffInDays = Math.floor((diff - (year * years)) / day);
 
         if (type === 'years') {
-            return years
+            return years;
         } else if (type === 'days') {
-            return diffInDays
+            return diffInDays;
         }
     }
 }
