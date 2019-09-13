@@ -9,12 +9,15 @@ export class SocialListComponent implements OnInit {
     @Input('isOnlyText') isOnlyText: any;
     @Input('className') className = 'regular';
     @Input('data') data = [];
-    Object = Object;
 
     constructor() {
     }
 
     ngOnInit() {
+    }
+
+    getItemName(item: any) {
+        return Object.keys(item)[0];
     }
 
 }
