@@ -55,3 +55,9 @@ a:hover {
 .text-bold {
   font-weight: bold;
 }
+// General styles for modal
+.modal {
+  &-lg {
+    max-width: 1024px;
+  }
+}

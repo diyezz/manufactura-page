@@ -33,6 +33,9 @@
 
       }
     }
+    &--in-progress {
+      filter: grayscale(100%);
+    }
     @keyframes myMove {
       from { background-position: 25% 0; }
       to { background-position: 45% 25%; }

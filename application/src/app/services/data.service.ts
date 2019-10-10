@@ -130,6 +130,7 @@ export class DataService {
 
     private handleError(error: Response | any) {
         console.error(error.message || error);
+        console.log(error);
         return throwError(error.status);
     }
 

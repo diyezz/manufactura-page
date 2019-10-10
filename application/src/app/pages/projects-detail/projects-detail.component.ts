@@ -13,9 +13,10 @@ import {DeviceDetectorService} from 'ngx-device-detector';
     encapsulation: ViewEncapsulation.None,
 })
 export class ProjectsDetailComponent implements OnInit {
+    currentProject: any;
+    isMobileDevice: boolean;
 
     @HostBinding('class.empty') emptyComponentClass = true;
-    isMobileDevice: boolean;
 
     @HostListener('window:resize', []) onWindowResize() {
         this.checkCurrentDeviceInfo();
@@ -29,8 +30,6 @@ export class ProjectsDetailComponent implements OnInit {
         public locationService: LocationService
     ) {
     }
-
-    currentProject;
 
     getProject(id: number) {
         return this.dataService.getProjects().pipe(

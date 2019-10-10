@@ -1,8 +1,8 @@
-import * as express from 'express';
+import express from 'express';
 import * as path from 'path';
 import * as dotenv from 'dotenv';
 import router from './routes';
-
+import * as events from './utils';
 /**
  * Initiate configuration
  */
@@ -25,6 +25,8 @@ if (devEnv) {
 * Express router
 */
 app.use('/api', router);
+// @ts-ignore
+app.get('/events', events.subscribe);
 
 app.listen(PORT, () => {
     console.log(`Server is running in '${process.env.NODE_ENV}' mode at http://localhost:${PORT}`);

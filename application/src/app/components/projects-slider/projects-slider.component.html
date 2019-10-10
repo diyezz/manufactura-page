@@ -4,7 +4,9 @@
   <div ngxSlickItem *ngFor="let slide of slideData | filterByCategory: 'category' : slideCategory : 'all'" class="slide">
     <div>
       <div class="projects__slide">
-        <div class="projects__image-wrapper" [style.background-image]="'url(' + slide.cover +')'">
+        <div class="projects__image-wrapper" 
+          [style.background-image]="'url(' + slide.cover +')'"
+          [class.projects__image-wrapper--in-progress]="slide.inProgress">
           <div class="projects__description">
             <div class="projects__name">
               <p class="date">{{slide.date}}</p>
@@ -15,7 +17,13 @@
             </div>
             <a class="projects__button link-button link-button--small" [routerLink]="['/project-detail', slide.id]">{{'SeeProject' | translate}}</a>
           </div>
-          <img class="projects__slide-background" src="{{slide.cover}}" alt="">
+          <img class="projects__slide-background" 
+            [class.projects__slide-background--in-progress]="slide.inProgress"
+            src="{{slide.cover}}" 
+            alt="">
+        </div>
+        <div *ngIf="slide.inProgress" class="projects__label projects__label--in-progress">
+          in progress
         </div>
       </div>
     </div>

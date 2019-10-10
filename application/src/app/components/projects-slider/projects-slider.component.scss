@@ -30,11 +30,30 @@
         transform: translateX(0);
       }
     }
+    &--in-progress {
+      filter: grayscale(100%);
+    }
+  }
+  &__label {
+    position: absolute;
+    top: 30px;
+    padding: 5px 15px;
+    color: $static-main-white;
+    background-color: $static-main-black;
+    font-size: $xs-font;
+    text-transform: uppercase;
+
+    &--in-progress {
+      background-color: $main-red;
+    }
   }
   &__slide-background {
     display: none;
     width: 0;
     height: 0;
+    &--in-progress {
+      filter: grayscale(100%);
+    }
   }
   &__description {
     width: 100%;

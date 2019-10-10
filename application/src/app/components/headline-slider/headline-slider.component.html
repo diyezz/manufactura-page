@@ -1,13 +1,22 @@
 <ngx-slick #slickModal="slick-modal" class="slider__slides-wrapper" [config]="getSliderSettings()">
-  <div ngxSlickItem *ngFor="let slide of images" class="slider__slide" [style.background-image]="'url(' + slide.image + ')'"
-   [class.slider__slide--setMaxWidth]="!fullHeightProp" [class.slider__slide--faded]="isSlideFaded" [class.slider__slide--cover]="isSlideCovered">
+  <div ngxSlickItem *ngFor="let slide of images" 
+    class="slider__slide" 
+    [style.background-image]="'url(' + slide.image + ')'"
+    [class.slider__slide--setMaxWidth]="!fullHeightProp" 
+    [class.slider__slide--in-progress]="inProgress"
+    [class.slider__slide--faded]="isSlideFaded" 
+    [class.slider__slide--cover]="isSlideCovered">
     <div class="slider__slide-content-wrapper">
       <div class="slider__slide-content" *ngIf="slide.text">
         <h2 #animatedText class="slider__slide-headline">{{slide.text.headline[translateService.currentLang]}}</h2>
         <p class="slider__slide-description">{{slide.text.description[translateService.currentLang]}}</p>
       </div>
     </div>
-    <img class="slider__slide-background" src="{{slide.image}}" alt="" (load)="onLoad($event)">
+    <img class="slider__slide-background" 
+      [class.slider__slide-background--in-progress]="inProgress"
+      src="{{slide.image}}" 
+      alt="" 
+      (load)="onLoad($event)">
   </div>
 </ngx-slick>
 

@@ -9,4 +9,5 @@ export class Project {
     id: number;
     images: Array<any>;
     link: string;
+    inProgress?: boolean;
 }
