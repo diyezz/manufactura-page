@@ -11,6 +11,7 @@ import { DataService } from '../../services/data.service';
 export class ProjectsSliderComponent implements OnInit {
     @Input() slideCategory: string;
     @Input() inProgress = false;
+
     @ViewChild('slickModal') slick;
     slideData: any[];
 
