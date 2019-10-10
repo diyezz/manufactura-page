@@ -22,8 +22,8 @@
       background-position: 25%;
       background-size: cover;
       &.slick-active {
-        animation: myMove 8s 1 ease-in-out;
-        animation-fill-mode: forwards;
+        // animation: myMove 8s 1 ease-in-out;
+        // animation-fill-mode: forwards;
       }
     }
     &--setMaxWidth {

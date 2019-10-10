@@ -1,16 +1,16 @@
 <div class="header__social-list header__social-list--{{className}}">
   <ul *ngIf="!isOnlyText">
     <li *ngFor="let item of data">
-      <a href="{{item[Object.keys(item)[0]]}}" target="_blank">
-        <i class="icon social-icon {{ 'icon-' + Object.keys(item)[0]}}"></i>
+      <a href="{{item[getItemName(item)]}}" target="_blank">
+        <i class="icon social-icon {{ 'icon-' + getItemName(item)}}"></i>
       </a>
     </li>
   </ul>
   <ul *ngIf="isOnlyText">
     <li *ngFor="let item of data" [ngStyle]="isOnlyText">
-      <i class="icon social-icon {{ 'icon-' + Object.keys(item)[0]}} mr-2"></i>
-      <a class="link-more" href="{{item[Object.keys(item)[0]]}}" target="_blank">
-        {{Object.keys(item)[0] | titlecase}}
+      <i class="icon social-icon {{ 'icon-' + getItemName(item)}} mr-2"></i>
+      <a class="link-more" href="{{item[getItemName(item)]}}" target="_blank">
+        {{getItemName(item) | titlecase}}
       </a>
     </li>
   </ul>

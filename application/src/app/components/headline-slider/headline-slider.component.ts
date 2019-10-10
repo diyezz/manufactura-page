@@ -22,7 +22,7 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
     @Input() images;
     @Input() projectTitle = 'Project images';
     @Input() fullHeightProp = false;
-    @Input() isInfinite = false;
+    @Input() isInfinite = true;
     @Input() isSlideFaded = false;
     @Input() isSlideCovered = false;
     @Input() isPopupAvailable = true;
@@ -58,7 +58,7 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
     }
 
     startAnimatedText() {
-        this.animatedText.forEach(item => this.animation(item.nativeElement));
+        // this.animatedText.forEach(item => this.animation(item.nativeElement));
     }
 
     getSliderSettings() {

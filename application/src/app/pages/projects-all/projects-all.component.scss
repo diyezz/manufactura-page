@@ -73,6 +73,20 @@
           transition: none;
         }
       }
+      .item__image-wrapper {
+        min-height: 360px;
+      }
+      @media (max-width: 992px) {
+        .item__image-wrapper {
+          min-height: 300px;
+        }
+      }
+      @media (max-width: 768px) {
+        .item__image-wrapper {
+          min-height: 240px;
+        }
+      }
+      
     }
   }
   &__content {
