@@ -28,7 +28,9 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
     @Input() isPopupAvailable = true;
     @Input() isDesktop = false;
     @Input() inProgress = false;
-    @ViewChild('imageModal') imageModal: ElementRef;
+    @ViewChild('imageModal', {
+        read: '', static: true
+    }) imageModal: ElementRef;
     @ViewChildren('animatedText') animatedText: QueryList<any>;
     isLoading: boolean;
     isModalShowed: boolean;

@@ -12,7 +12,9 @@ export class ProjectsSliderComponent implements OnInit {
     @Input() slideCategory: string;
     @Input() inProgress = false;
 
-    @ViewChild('slickModal') slick;
+    @ViewChild('slickModal', {
+        read: '', static: true
+    }) slick;
     slideData: any[];
 
     constructor(
