@@ -31,6 +31,9 @@ app-footer {
     margin-top: auto;
 }
 
+body.hide-overflow {
+    overflow: hidden;
+}
 
 @media (max-width: 992px) {
     body.hide-overflow {

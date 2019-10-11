@@ -4,22 +4,30 @@
   </button>
   <header class="container" [class.active]="isMenuVisible" [class.hidden]="!isHeaderVisible" [class.transparent]="!isMenuVisible && !isHeaderSticky && isHeaderTransparent">
     <div class="row align-items-center header">
-      <div class="col-lg-3 col-md-3 col-10">
+      <div class="col-lg-3 col-md-5 col-9">
         <div class="header__logo">
+
           <a routerLink="">
+            <div class="logo-text">
+                <div class="logo-text__main">Braharchuk</div>
+                <div class="logo-text__secondary">architects</div>
+            </div>
+          </a>
+
+          <!-- <a routerLink="">
             <img *ngIf="isMenuVisible || isHeaderSticky || !isHeaderTransparent" class="logo-image" src="{{defaultEnvironment.baseUrl}}assets/img/manufactura-logo-white.png" alt="">
             <img *ngIf="!isMenuVisible && !isHeaderSticky && isHeaderTransparent" class="logo-image" src="{{defaultEnvironment.baseUrl}}assets/img/manufactura-logo-white.png" alt="">
-          </a>
+          </a> -->
         </div>
       </div>
-      <div class="d-none d-md-block col-md-7 col-lg-7">
+      <div class="d-none d-md-block col-md-5 col-lg-7">
         <div class="header__adds-list">
-          <div class="header__call-us d-none d-sm-flex">
+          <div class="header__call-us d-none d-lg-flex">
             <span class="header__text-for-call d-none d-md-inline">{{'CallUs' | translate}}</span>
             <a class="header__back-call" href="javascript:void(0);">+38 (063) 241 27 23</a>
           </div>
 
-          <div class="header-delimiter d-none d-md-flex"></div>
+          <div class="header-delimiter d-none d-lg-flex"></div>
 
           <app-social-list [data]="socialList" [className]="!isMenuVisible && !isHeaderSticky && isHeaderTransparent ? 'footer' : 'regular'"></app-social-list>
         </div>

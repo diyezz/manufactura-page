@@ -42,7 +42,7 @@
     }
     &--faded {
       &::before {
-        background-color: rgba(0,0,0,.33);
+        // background-color: rgba(0,0,0,.33);
         content: '';
         display: block;
         position: absolute;
@@ -140,12 +140,12 @@
   &__slide-headline {
     min-height: 122px;
     min-width: 290px;
-    max-width: 460px;
+    max-width: 340px;
     //margin: auto;
-    color: $main-black;
+    color: $static-main-white;
     display: block;
     font-size: $xl-font;
-    font-weight: 900;
+    font-weight: $fat-weight;
     text-align: center;
     text-transform: uppercase;
     span {
@@ -177,8 +177,8 @@
   &__slide-description {
     max-width: 400px;
     min-width: 290px;
-    color: $main-black;
-    text-shadow: 0 0 4px $shadow-color;
+    color: $static-main-white;
+    // text-shadow: 0 0 4px $shadow-color;
     text-align: center;
     margin: auto;
     @media (min-width: 768px) {

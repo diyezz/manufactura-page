@@ -75,7 +75,7 @@ export class HeaderComponent implements OnInit {
     }
 
     setTransparencyClass() {
-        if (this.router.url.includes('/project-detail') || this.router.url === '/') {
+        if ( this.router.url.includes('/project-detail') || this.router.url === '/' ) {
             this.isHeaderTransparent = true;
         } else {
             this.isHeaderTransparent = false;

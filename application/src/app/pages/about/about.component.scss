@@ -90,7 +90,7 @@
   &__award-year {
     margin-bottom: 15px;
     color: $main-black;
-    font-weight: 700;
+    font-weight: $bolder-weight;
     span.place {
       color: transparentize($secondary-black, 0.3);
       font-size: $small-font;
@@ -98,26 +98,26 @@
   }
   &__award-name {
     color: $main-black;
-    font-weight: 700;
+    font-weight: $bolder-weight;
     margin: 0;
     padding: 0;
   }
   &__award-description {
     color: transparentize($secondary-black, 0.3);
     font-size: $small-font;
-    font-weight: 700;
+    font-weight: $bolder-weight;
     margin: 0;
     padding: 0;
   }
   &__award-nomination {
     color: $main-black;
-    font-weight: 700;
+    font-weight: $bolder-weight;
     margin: 0;
     padding: 10px 0;
     span {
       color: transparentize($secondary-black, 0.3);
       font-size: $small-font;
-      font-weight: normal;
+      font-weight: $normal-weight;
     }
     p {
       padding: 0;
@@ -130,6 +130,6 @@
 
   &__apply-header {
     color: $main-black;
-    font-weight: 700;
+    font-weight: $bolder-weight;
   }
 }

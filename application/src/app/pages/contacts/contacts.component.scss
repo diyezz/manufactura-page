@@ -19,7 +19,7 @@ agm-map {
     color: transparentize($secondary-black, 0.3);
     span {
       color: $main-black;
-      font-weight: 700;
+      font-weight: $bolder-weight;
     }
     *::selection {
       background: transparentize($main-red, 0.2);

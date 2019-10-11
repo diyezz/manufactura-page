@@ -41,7 +41,7 @@ footer {
   &__logo {
     text-transform: lowercase;
     color: $main-red;
-    font-weight: 700;
+    font-weight: $bold-weight;
     font-size: $large-font;
     line-height: 1;
 
@@ -63,6 +63,7 @@ footer {
     align-items: center;
   }
   &__copyright {
+    color: $static-main-white;
     text-align: left;
     font-size: $main-font;
     line-height: $middle-font;

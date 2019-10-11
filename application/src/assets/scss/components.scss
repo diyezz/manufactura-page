@@ -1,12 +1,44 @@
 @import './mixins';
-
+.theme-dark {
+    .icon {
+        width: 13px;
+        height: 13px;
+        display: block;
+        background-size: cover;
+        &-googlePlus {
+            @include icon-google-plus($static-main-white);
+        }
+        &-facebook {
+            @include icon-facebook($static-main-white);
+        }
+        &-twitter {
+            @include icon-twitter($static-main-white);
+        }
+        &-instagram {
+            @include icon-instagram($static-main-white);
+        }
+        &-pinterest {
+            @include icon-pinterest($static-main-white);
+        }
+        &-youtube {
+            @include icon-youtube($static-main-white);
+        }
+        &-behance {
+            @include icon-behance($static-main-white);
+        }
+        &-expand {
+            @include icon-expand($static-main-white);
+        }
+        &-open-in-modal {
+            @include icon-open-in-modal($static-main-white);
+        }
+    }
+}
 .icon {
     width: 13px;
     height: 13px;
     display: block;
     background-size: cover;
-    //transition: all 0.3s ease-in-out;
-
     &-googlePlus {
         @include icon-google-plus($main-black);
     }
@@ -32,7 +64,7 @@
         @include icon-expand($main-black);
     }
     &-open-in-modal {
-        @include icon-open-in-modal($main-black);
+        @include icon-open-in-modal($static-main-white);
     }
 }
 .logo-cutted {
@@ -97,7 +129,7 @@
         margin: 0;
         padding: 0;
         font-size: $middle-font;
-        font-weight: 800;
+        font-weight: $fat-weight;
         text-transform: uppercase;
         position: relative;
 
@@ -106,7 +138,7 @@
             position: absolute;
             background-color: $main-red;
             width: 65%;
-            height: 2px;
+            height: 1px;
             top: calc(1.125rem + 2px);
             left: 0;
         }
@@ -152,11 +184,17 @@
     &.is-active {
         color: $main-red;
     }
+    &--footer {
+        color: $static-main-white;
+        &:not([href]):not([tabindex]) {
+            color: $static-main-white; 
+        }
+    }
 }
 
 .headline-text {
     font-size: $xl-font;
-    font-weight: 800;
+    font-weight: $fat-weight;
     text-transform: uppercase;
     margin: 0;
 
@@ -177,6 +215,7 @@
         font-size: $middle-font;
         letter-spacing: 0px;
         line-height: normal;
+        color: $static-main-white;
     }
 
     @media (max-width: 576px) {
@@ -186,14 +225,14 @@
 
 .city {
     font-size: $small-font;
-    font-weight: 600;
+    font-weight: $bold-weight;
     text-transform: capitalize;
     padding: 0;
     margin: 0;
 }
 .date {
     font-size: $xs-font;
-    font-weight: 300;
+    font-weight: $normal-weight;
     text-transform: capitalize;
     line-height: 1;
     padding: 0;
@@ -208,7 +247,7 @@
         text-transform: uppercase;
     }
     &--light {
-        font-weight: 300;
+        font-weight: $normal-weight;
     }
 }
 
@@ -219,7 +258,7 @@
     text-transform: capitalize;
     color: $main-red;
     font-size: $middle-font;
-    font-weight: 600;
+    font-weight: $bold-weight;
     line-height: 1;
     bottom: 30px;
     right: 30px;
@@ -245,7 +284,47 @@
         }
     }
 }
-
+.theme-toggle {
+    &__btn {
+        border: 0;
+        padding: 0;
+        z-index: 12;
+        width: 20px;
+        height: 20px;
+        margin: auto;
+        margin-right: 5px;
+        margin-top: 5px;
+        @include icon-brightness-dark();
+        &--dark  {
+            @include icon-brightness-light();
+        }
+    }
+    &__triangle {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 11;
+        &:after{
+            position: absolute;
+            bottom: 0;
+            height: 0;
+            width: 0;
+            right:0;
+            border: 25px solid transparent;
+            border-top-color: $main-white;
+            border-right-color: $main-white;
+            content: "";
+        }
+    }
+    &__wrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 11;
+    }
+}
 .link-button {
     display: inline-flex;
     justify-content: center;
@@ -295,7 +374,7 @@
         list-style: none;
         margin: auto 10px;
         text-transform: capitalize;
-        font-weight: 700;
+        font-weight: $bolder-weight;
         font-size: $middle-font;
         line-height: 1;
         &:hover {

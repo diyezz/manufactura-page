@@ -29,7 +29,7 @@ agm-map {
 
 .info-table {
   &__headline {
-    font-weight: 600;
+    font-weight: $bold-weight;
     padding-bottom: 15px;
   }
 
@@ -51,7 +51,7 @@ agm-map {
 
 .location-info {
   &__headline {
-    font-weight: 600;
+    font-weight: $bold-weight;
     padding-bottom: 15px;
   }
   &__map {

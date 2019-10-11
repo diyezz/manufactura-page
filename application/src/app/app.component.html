@@ -1,6 +1,10 @@
-<div class="theme-wrapper dark-theme">
+<div class="theme-toggle__wrapper">
+    <div class="theme-toggle__triangle">
+        <button class="theme-toggle__btn" [class.theme-toggle__btn--dark]="theme === 'dark'" (click)="switchTheme()"></button>
+    </div>
+</div>
+<div class="theme-wrapper" [class.theme-dark]="theme === 'light'" [class.theme-light]="theme === 'dark'">
     <app-header></app-header>
     <router-outlet></router-outlet>
     <app-footer></app-footer>
-
 </div>

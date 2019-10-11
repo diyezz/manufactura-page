@@ -5,22 +5,22 @@
         <div class="col-12 col-sm-6 col-md-5 col-lg-4">
           <h3 class="headline-text headline-text--footer  pb-3">{{'QuickLinks' | translate}}</h3>
           <ul class="pb-2 pb-sm-5">
-            <li><a class="link-more" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">{{'Home' | translate}}</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/about">{{'AboutUs' | translate}}</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/projects-all">{{'AllProjects' | translate}}</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/services">{{'OurServices' | translate}}</a></li>
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/contacts">{{'Contacts' | translate}}</a></li>
-            <!--<li><a class="link-more" routerLinkActive="is-active" routerLink="/career">{{'Career' | translate}}</a></li>-->
-            <li><a class="link-more" routerLinkActive="is-active" routerLink="/help">{{'Help' | translate}}</a></li>
-            <!--<li><a class="link-more" routerLinkActive="is-active" routerLink="/edit-content">{{'EditContent' | translate}}</a></li>-->
+            <li><a class="link-more link-more--footer" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/">{{'Home' | translate}}</a></li>
+            <li><a class="link-more link-more--footer" routerLinkActive="is-active" routerLink="/about">{{'AboutUs' | translate}}</a></li>
+            <li><a class="link-more link-more--footer" routerLinkActive="is-active" routerLink="/projects-all">{{'AllProjects' | translate}}</a></li>
+            <li><a class="link-more link-more--footer" routerLinkActive="is-active" routerLink="/services">{{'OurServices' | translate}}</a></li>
+            <li><a class="link-more link-more--footer" routerLinkActive="is-active" routerLink="/contacts">{{'Contacts' | translate}}</a></li>
+            <!--<li><a class="link-more link-more--footer" routerLinkActive="is-active" routerLink="/career">{{'Career' | translate}}</a></li>-->
+            <li><a class="link-more link-more--footer" routerLinkActive="is-active" routerLink="/help">{{'Help' | translate}}</a></li>
+            <!--<li><a class="link-more link-more--footer" routerLinkActive="is-active" routerLink="/edit-content">{{'EditContent' | translate}}</a></li>-->
           </ul>
         </div>
         <div class="col-12 col-sm-6 col-md-5 col-lg-4">
           <h3 class="headline-text headline-text--footer pb-3">{{'Localization' | translate}}</h3>
           <ul class="language-switch pb-2 pb-sm-5">
-            <li><a class="link-more" [class.is-active]="checkCurrentLang('en')" (click)="setLang('en')">ENG</a></li>
-            <li><a class="link-more" [class.is-active]="checkCurrentLang('ua')" (click)="setLang('ua')">UA</a></li>
-            <li><a class="link-more" [class.is-active]="checkCurrentLang('ru')" (click)="setLang('ru')">RU</a></li>
+            <li><a class="link-more link-more--footer" [class.is-active]="checkCurrentLang('en')" (click)="setLang('en')">ENG</a></li>
+            <li><a class="link-more link-more--footer" [class.is-active]="checkCurrentLang('ua')" (click)="setLang('ua')">UA</a></li>
+            <li><a class="link-more link-more--footer" [class.is-active]="checkCurrentLang('ru')" (click)="setLang('ru')">RU</a></li>
           </ul>
         </div>
         <div class="col-12 col-sm-12 col-md-8 col-lg-4 pb-5">
@@ -38,7 +38,7 @@
         <div class="col-12">
           <div class="footer__copyright">
             © 2010-{{currentYear}}, {{'CopyrightDescription' | translate}} |
-            <a class="link-more is-active" routerLinkActive="is-active" routerLink="/privacy-policy">{{'PrivacyPolicy' | translate}}</a>
+            <a class="link-more link-more--footer is-active" routerLinkActive="is-active" routerLink="/privacy-policy">{{'PrivacyPolicy' | translate}}</a>
           </div>
         </div>
       </div>

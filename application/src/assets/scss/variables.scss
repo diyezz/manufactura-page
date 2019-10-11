@@ -5,27 +5,36 @@ $base-url: 'https://manufactura-d8bb1.firebaseapp.com';
 
 //Colors
 //$main-black: #262626; //
-//$main-red: #e41e1b;
 //$main-grey: #d2d2d2; //
 //$main-white: #ffffff; //
 
 //$secondary-black: #3D3D3D; //
-//$third-black: #1b1e21;
-//$valid-green: #cee002;
-
 
 // Inverted colors
-$main-black: #ffffff; //#262626
-$main-red: #e41e1b;
-$main-grey: #3D3D3D; //#d2d2d2
-$main-white: #1a1a1a; //#1a1a1a
+// $main-black: #ffffff; //#262626
+// $main-grey: #3D3D3D; //#d2d2d2
+// $main-white: #1a1a1a; //#1a1a1a
+
+:root {
+  --main-black: #262626;
+  --main-grey: #d2d2d2;
+  --main-white: #1a1a1a;
+}
+
+@function color($color-name) {
+  @return var(--main-#{$color-name});
+}
+// Theme colors 
+$main-black: color('black'); //#262626
+$main-grey: color('grey'); //#d2d2d2
+$main-white: color('white'); //#1a1a1a
 
 $secondary-black: #d2d2d2; //#3D3D3D
 $third-black: #1b1e21;
 $valid-green: #cee002;
 
-
 //Common colors
+$main-red: #e41e1b;
 $shadow-color: rgba(0,0,0,.7);
 $static-main-black: #262626;
 $static-main-white: #ffffff;
@@ -39,17 +48,27 @@ $large-font: 1.5rem;    //24px
 $xl-font: 2rem;         //32px
 $huge-font: 3rem;   //48px
 
+$thin-weight: 100;
+$normal-weight: 200;
+$bold-weight: 300;
+$bolder-weight: 300;
+$fat-weight: 300;
+
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: $main-white!important;
+  font-weight: $thin-weight;
+  background-color: $main-white;
   color: $main-black;
 }
 a:hover {
   text-decoration: none;
 }
+.icon-theme {
+  fill: $main-white;
+}
 // Typography
 .text-headline {
-  font-weight: 800;
+  font-weight: $fat-weight;
   text-transform: uppercase;
 }
 .text-bold {
