@@ -13,7 +13,7 @@ export class FilterPipe implements PipeTransform {
         if (!value || value.length === 0) { return items; }
         if (value === resetKey) { return items; }
         return items.filter(it =>
-            it[field].toLowerCase().indexOf(value.toLowerCase()) != -1);
+            it[field].toLowerCase().indexOf(value.toLowerCase()) !== -1);
     }
 
 }

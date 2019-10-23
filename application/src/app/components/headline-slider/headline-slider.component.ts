@@ -66,7 +66,7 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
     getSliderSettings() {
         return {
             'arrows': true,
-            'autoplay': false,
+            'autoplay': true,
             'autoplaySpeed': 5000,
             'dots': !this.isPopupAvailable,
             'dotsClass': 'slick-dots container',
@@ -116,31 +116,29 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
                     setTimeout(function() {
                         typeWriter(text, i + 1, fnCallback);
                     }, 300);
-                }
-                // text finished, call callback if there is a callback function
-                else if (typeof fnCallback == 'function') {
+                } else if (typeof fnCallback === 'function') {
                     // call callback after timeout
                     setTimeout(fnCallback, 5700);
                 }
             }
 
             // start a typewriter animation for a text in the dataText array
-            function StartTextAnimation(i) {
-                if (typeof textValue == 'undefined'){
+            function startTextAnimation(i) {
+                if (typeof textValue === 'undefined') {
                     setTimeout(function() {
-                        StartTextAnimation(0);
+                        startTextAnimation(0);
                     }, 20000);
                 }
                 // check if dataText[i] exists
                 // text exists! start typewriter animation
-                typeWriter(textValue, 0, function(){
+                typeWriter(textValue, 0, function() {
                     // after callback (and whole text has been animated), start next text
-                    StartTextAnimation(i + 1);
+                    startTextAnimation(i + 1);
                 });
             }
 
             // start the text animation
-            StartTextAnimation(0);
+            startTextAnimation(0);
     }
 
     toggleImageModal(closeOnly, event?) {

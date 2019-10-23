@@ -47,7 +47,7 @@ export class ProjectsSliderComponent implements OnInit {
             'autoplaySpeed': 3000,
             'dots': true,
             'dotsClass': 'slick-dots slick-dots--red',
-            'infinite': false,
+            'infinite': true,
             'speed': 300,
             'slidesToShow': 4,
             'slidesToScroll': 2,

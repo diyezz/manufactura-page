@@ -8,25 +8,28 @@
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
       "link": "",
       "date": "10.11.2017",
-      "cover": "../../../assets/img/projects/17.jpg",
+      "cover": "../../../assets/img/projects/jarimcoffee/17.jpg",
       "images": [
         {
-          "image": "../../../assets/img/projects/17.jpg"
+          "image": "../../../assets/img/projects/jarimcoffee/17.jpg"
         },
         {
-          "image": "../../../assets/img/projects/18.jpg"
+          "image": "../../../assets/img/projects/jarimcoffee/18.jpg"
         },
         {
-          "image": "../../../assets/img/projects/19.jpg"
+          "image": "../../../assets/img/projects/jarimcoffee/19.jpg"
         },
         {
-          "image": "../../../assets/img/projects/20.jpg"
+          "image": "../../../assets/img/projects/jarimcoffee/20.jpg"
         },
         {
-          "image": "../../../assets/img/projects/22.jpg"
+          "image": "../../../assets/img/projects/jarimcoffee/22.jpg"
         },
         {
-          "image": "../../../assets/img/projects/21.jpg"
+          "image": "../../../assets/img/projects/jarimcoffee/21.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/jarimcoffee/23.JPG"
         }
       ],
       "category": "not selected",
@@ -77,31 +80,40 @@
     },
     {
       "id": 3,
-      "header": "Modern flat design",
-      "city": "Odessa",
-      "description": "Flat for yuong family",
+      "header": "Pizza Steak",
+      "city": "Yuzhny",
+      "description": "Restraunt in Yuzhny town.",
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
       "link": "",
       "date": "10.11.2017",
-      "cover": "../../../assets/img/projects/4.jpg",
-      "inProgress": true,
+      "cover": "../../../assets/img/projects/pizzasteakyuzhny/pizzaSteak_4.jpg",
+      "inProgress": false,
       "images": [
         {
-          "image": "../../../assets/img/projects/1.jpg"
+          "image": "../../../assets/img/projects/pizzasteakyuzhny/pizzaSteak_1.jpg"
         },
         {
-          "image": "../../../assets/img/projects/2.jpg"
+          "image": "../../../assets/img/projects/pizzasteakyuzhny/pizzaSteak_2.jpg"
         },
         {
-          "image": "../../../assets/img/projects/3.jpg"
+          "image": "../../../assets/img/projects/pizzasteakyuzhny/pizzaSteak_3.jpg"
         },
         {
-          "image": "../../../assets/img/projects/4.jpg"
+          "image": "../../../assets/img/projects/pizzasteakyuzhny/pizzaSteak_4.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/pizzasteakyuzhny/pizzaSteak_5.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/pizzasteakyuzhny/pizzaSteak_6.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/pizzasteakyuzhny/pizzaSteak_7.jpg"
         }
       ],
       "category": "interiors",
       "client": "Josph Cautington",
-      "projectType": "Cafe, Small business, Franchising",
+      "projectType": "Restraunt, Small business, Franchising",
       "architects": "Denis Braharchuk"
     },
     {
@@ -112,19 +124,19 @@
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
       "link": "",
       "date": "10.11.2017",
-      "cover": "../../../assets/img/projects/8.jpg",
+      "cover": "../../../assets/img/projects/modernflatdesign/1.jpg",
       "images": [
         {
-          "image": "../../../assets/img/projects/5.jpg"
+          "image": "../../../assets/img/projects/modernflatdesign/1.jpg"
         },
         {
-          "image": "../../../assets/img/projects/6.jpg"
+          "image": "../../../assets/img/projects/modernflatdesign/2.jpg"
         },
         {
-          "image": "../../../assets/img/projects/7.jpg"
+          "image": "../../../assets/img/projects/modernflatdesign/3.jpg"
         },
         {
-          "image": "../../../assets/img/projects/8.jpg"
+          "image": "../../../assets/img/projects/modernflatdesign/4.jpg"
         }
       ],
       "category": "interiors",
@@ -153,6 +165,156 @@
         },
         {
           "image": "../../../assets/img/projects/12.jpg"
+        }
+      ],
+      "category": "interiors",
+      "client": "Josph Cautington",
+      "projectType": "Cafe, Small business, Franchising",
+      "architects": "Denis Braharchuk"
+    },
+    {
+      "id": 6,
+      "header": "House Biskviniy, Odessa",
+      "city": "Odessa",
+      "description": "Architecture design of multi-apartment house.",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
+      "link": "",
+      "date": "10.11.2019",
+      "cover": "../../../assets/img/projects/bisquitniybuilding/building_biskvitniy_1.jpg",
+      "images": [
+        {
+          "image": "../../../assets/img/projects/bisquitniybuilding/building_biskvitniy_2.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/bisquitniybuilding/building_biskvitniy_3.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/bisquitniybuilding/building_biskvitniy_1.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/bisquitniybuilding/building_biskvitniy_4.png"
+        },
+        {
+          "image": "../../../assets/img/projects/bisquitniybuilding/building_biskvitniy_5.jpg"
+        },
+        {
+          "image": "../../../assets/img/projects/bisquitniybuilding/building_biskvitniy_7.jpg"
+        }
+      ],
+      "category": "buildings",
+      "client": "Josph Cautington",
+      "projectType": "Cafe, Small business, Franchising",
+      "architects": "Denis Braharchuk"
+    },
+    {
+      "id": 7,
+      "header": "Studio apartments",
+      "city": "Odessa",
+      "description": "Architecture design of multi-apartment house.",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
+      "link": "",
+      "date": "10.11.2019",
+      "cover": "../../../assets/img/projects/studioapartments/studioFlat_1.JPG",
+      "images": [
+        {
+          "image": "../../../assets/img/projects/studioapartments/studioFlat_1.JPG"
+        },
+        {
+          "image": "../../../assets/img/projects/studioapartments/studioFlat_2.JPG"
+        }
+      ],
+      "category": "interiors",
+      "client": "Josph Cautington",
+      "projectType": "Cafe, Small business, Franchising",
+      "architects": "Denis Braharchuk"
+    },
+    {
+      "id": 9,
+      "header": "City Hall, Yuzhny",
+      "city": "Yuzhny",
+      "description": "Architecture design of multi-apartment house.",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
+      "link": "",
+      "date": "10.11.2019",
+      "cover": "../../../assets/img/projects/cityhallyuzhny/cityHall_project_1.JPG",
+      "images": [
+        {
+          "image": "../../../assets/img/projects/cityhallyuzhny/cityHall_project_1.JPG"
+        },
+        {
+          "image": "../../../assets/img/projects/cityhallyuzhny/cityHall_project_2.JPG"
+        },
+        {
+          "image": "../../../assets/img/projects/cityhallyuzhny/cityHall_project_3.JPG"
+        },
+        {
+          "image": "../../../assets/img/projects/cityhallyuzhny/cityHall_project_4.JPG"
+        }
+      ],
+      "category": "buildings",
+      "client": "Josph Cautington",
+      "projectType": "Cafe, Small business, Franchising",
+      "architects": "Denis Braharchuk"
+    },
+    {
+      "id": 10,
+      "header": "Bathroom design",
+      "city": "Odessa",
+      "description": "Architecture design of multi-apartment house.",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
+      "link": "",
+      "date": "10.11.2019",
+      "cover": "../../../assets/img/projects/bathroomdesign/bathRoom_1.JPG",
+      "images": [
+        {
+          "image": "../../../assets/img/projects/bathroomdesign/bathRoom_1.JPG"
+        },
+        {
+          "image": "../../../assets/img/projects/bathroomdesign/bathRoom_2.JPG"
+        }
+      ],
+      "category": "interiors",
+      "client": "Josph Cautington",
+      "projectType": "Cafe, Small business, Franchising",
+      "architects": "Denis Braharchuk"
+    },
+    {
+      "id": 11,
+      "header": "Bedroom design",
+      "city": "Odessa",
+      "description": "Architecture design of multi-apartment house.",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
+      "link": "",
+      "date": "10.11.2019",
+      "cover": "../../../assets/img/projects/bedroomdesign/bedRoom_1.JPG",
+      "images": [
+        {
+          "image": "../../../assets/img/projects/bedroomdesign/bedRoom_1.JPG"
+        },
+        {
+          "image": "../../../assets/img/projects/bedroomdesign/bedRoom_2.JPG"
+        },
+        {
+          "image": "../../../assets/img/projects/bedroomdesign/bedRoom_3.JPG"
+        }
+      ],
+      "category": "interiors",
+      "client": "Josph Cautington",
+      "projectType": "Cafe, Small business, Franchising",
+      "architects": "Denis Braharchuk"
+    },
+    {
+      "id": 12,
+      "header": "Light bedroom design",
+      "city": "Odessa",
+      "description": "Architecture design of multi-apartment house.",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
+      "link": "",
+      "date": "10.11.2019",
+      "cover": "../../../assets/img/projects/lightbedroomdesign/lightBedRoom_1.JPG",
+      "images": [
+        {
+          "image": "../../../assets/img/projects/lightbedroomdesign/lightBedRoom_1.JPG"
         }
       ],
       "category": "interiors",
@@ -237,7 +399,7 @@
       "facebook": "https://www.facebook.com/denis.bragarchuk"
     },
     {
-      "instagram": "https://www.instagram.com/denis_bragarchuk/"
+      "instagram": "https://www.instagram.com/bragarchuk_architect/"
     },
     {
       "youtube": "https://www.youtube.com/"

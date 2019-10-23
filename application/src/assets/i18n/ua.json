@@ -1,7 +1,7 @@
 {
   "____GENERAL_TRANSLATION": "",
   "Home" : "Головна",
-  "AboutUs" : "Про нас",
+  "AboutUs" : "Інформація",
   "AllProjects" : "Проекти",
   "Contacts" : "Контакти",
   "Career" : "Кар'єра",
@@ -21,7 +21,7 @@
   "ViewAllProjects": "Всі проекти",
   "ViewOtherProjects": "Інші проекти",
   "GoBack": "Назад",
-  "OurServices": "Наші послуги",
+  "OurServices": "Послуги",
   "AllServices": "Всі послуги",
   "ViewAllServices": "Оглянути всі послуги",
   "OurClients": "Наші клієнти",

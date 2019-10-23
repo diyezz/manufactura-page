@@ -1,7 +1,7 @@
 {
   "____GENERAL_TRANSLATION": "",
   "Home" : "Home",
-  "AboutUs" : "About us",
+  "AboutUs" : "About",
   "AllProjects" : "All projects",
   "Contacts" : "Contacts",
   "Career" : "Career",
@@ -21,7 +21,7 @@
   "ViewAllProjects": "View all projects",
   "ViewOtherProjects": "View other projects",
   "GoBack": "Go back",
-  "OurServices": "Our services",
+  "OurServices": "Services",
   "AllServices": "All services",
   "ViewAllServices": "View all services",
   "OurClients": "Our Clients",

@@ -1,7 +1,7 @@
 {
   "____GENERAL_TRANSLATION": "",
   "Home" : "Главная",
-  "AboutUs" : "О нас",
+  "AboutUs" : "Информация",
   "AllProjects" : "Проекты",
   "Contacts" : "Контакты",
   "Career" : "Карьера",
@@ -21,7 +21,7 @@
   "ViewAllProjects": "Bсе проекты",
   "ViewOtherProjects": "Другие проекты",
   "GoBack": "Назад",
-  "OurServices": "Наши услуги",
+  "OurServices": "Услуги",
   "AllServices": "Все услуги",
   "ViewAllServices": "Посмотреть все услуги",
   "OurClients": "Наши клиенты",

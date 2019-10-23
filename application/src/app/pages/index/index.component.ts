@@ -24,7 +24,7 @@ export class IndexComponent implements OnInit {
 
     images = [
         {
-            image: `${environment.baseUrl}assets/img/original/8.jpg`,
+            image: `${environment.baseUrl}assets/img/projects/pizzasteakyuzhny/pizzaSteak_1.jpg`,
             text: {
                 headline: {
                     en: 'Create whatever you want',
@@ -39,7 +39,7 @@ export class IndexComponent implements OnInit {
             },
         },
         {
-            image: `${environment.baseUrl}assets/img/original/9.jpg`,
+            image: `${environment.baseUrl}assets/img/projects/studioapartments/studioFlat_2.JPG`,
             text: {
                 headline: {
                     en: 'Build your dreams',
@@ -54,7 +54,7 @@ export class IndexComponent implements OnInit {
             }
         },
         {
-            image: `${environment.baseUrl}assets/img/original/10.jpg`,
+            image: `${environment.baseUrl}assets/img/projects/lightbedroomdesign/lightBedRoom_1.JPG`,
             text: {
                 headline: {
                     en: 'Don\'t be afraid to experiment',
