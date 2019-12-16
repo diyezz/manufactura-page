@@ -1,0 +1,15 @@
+.clients {
+  // &__content {
+
+  // }
+  &__image {
+    width: 100%;
+
+    &--add-padding {
+      padding: 18px;
+    }
+    &--circle {
+      border-radius: 50%;
+    }
+  }
+}

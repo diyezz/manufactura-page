@@ -12,7 +12,7 @@ import {
     ProjectsDetailComponent,
     ProjectsAllComponent,
     LoginComponent, ServicesComponent
-} from './pages/pages';
+} from './containers/containers';
 
 const routes: Routes = [
     {

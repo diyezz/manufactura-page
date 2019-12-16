@@ -18,10 +18,10 @@ import {DeviceDetectorService} from 'ngx-device-detector';
     encapsulation: ViewEncapsulation.None
 })
 export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterViewInit, OnDestroy {
-
     @Input() images;
     @Input() projectTitle = 'Project images';
-    @Input() fullHeightProp = false;
+    @Input() disableFullHeightProp = false;
+    @Input() isResizeable = true;
     @Input() isInfinite = true;
     @Input() isSlideFaded = false;
     @Input() isSlideCovered = false;
@@ -75,8 +75,8 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
             // "fade": true,
             // "cssEase": 'linear',
             'slidesToShow': 1,
-            'nextArrow': '<button class="slider__arrow-btn slider__arrow-btn--next">></button>',
-            'prevArrow': '<button class="slider__arrow-btn slider__arrow-btn--previous"><</button>',
+            'nextArrow': '<button class="slider__arrow-btn slider__arrow-btn--next"><span>></span></button>',
+            'prevArrow': '<button class="slider__arrow-btn slider__arrow-btn--previous"><span><</span></button>',
             // "responsive": [
             //     {
             //         "breakpoint": "576",
@@ -92,8 +92,9 @@ export class HeadlineSliderComponent implements OnInit, AfterContentInit, AfterV
         if (this.isPopupAvailable && !this.isDesktop) {
             this.toggleImageModal(false);
         } else {
-            this.fullHeightProp = !this.fullHeightProp;
+            this.disableFullHeightProp = !this.disableFullHeightProp;
         }
+        console.log(this.disableFullHeightProp);
     }
 
     onLoad(event) {

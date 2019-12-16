@@ -1,0 +1,120 @@
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <agm-map
+                    [latitude]="46.462714"
+                    [longitude]="30.706107"
+                    [zoom]="13" 
+                    [zoomControl]="false"
+                    [scrollwheel]="false"
+                    [styles]="locationService.googleMapsStyles">
+                <agm-marker [latitude]="46.462714" [longitude]="30.706107"></agm-marker>
+            </agm-map>
+        </div>
+    </div>
+</section>
+<section class="top-padding-section">
+    <div class="container pb-lg-5">
+        <div class="row justify-content-end">
+            <div class="col-12 col-sm-4 col-lg-4">
+                <div class="header-text pb-5">
+                    <h2>{{'KeepInTouch' | translate}}</h2>
+                </div>
+            </div>
+            <div class="col-12 col-sm-8 col-lg-4">
+                <div class="contacts__address-wrapper pb-5">
+                    <h3 class="contacts__city"><span>Odesa</span>, Ukraine</h3>
+                    <!--<h4 class="contacts__adress-string">-->
+                        <!--Velyka Arnauts'ka St 38, Odesa, 65000, Ukraine-->
+                    <!--</h4>-->
+                    <h5 class="contacts__contact-field">
+                        <span>Email: </span>
+                        <a class="link-more" href="mailto:2342342">sales@manufactura.com</a>
+                    </h5>
+                    <h5 class="contacts__contact-field">
+                        <span>Skype: </span>
+                        <a class="link-more" href="mailto:2342342">manufactura.sales</a>
+                    </h5>
+                    <h5 class="contacts__contact-field">
+                        <span>Telegram: </span>
+                        <a class="link-more" href="mailto:2342342">manufactura</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="col-12 col-sm-8 col-lg-4">
+                <div class="contacts__address-wrapper pb-5">
+                    <div class="pb-3">
+                        <p class="text-bold mb-0">{{'CallUsDirectly' | translate}}:</p>
+                        <a href="tel:+380632412723" class="contacts__phone-number">
+                            <span>+38 (063) 241 27 23</span>
+                        </a>
+                    </div>
+                    <div class="contacts__schedule">
+                        <p class="text-bold mb-0">{{'WorkHours' | translate}}:</p>
+                        <p>{{'Monday' | translate}} - {{'Friday' | translate}}: 10.00 - 19.00</p>
+                        <p>{{'Saturday' | translate}}: 10.00 - 17.00.<br> {{'SundayDayOff' | translate}}</p>
+                    </div>
+                    <div class="contacts__social-list">
+                        <p class="text-bold">{{'FollowUs' | translate}}:</p>
+                        <app-social-list className="simple" [data]="socialList"></app-social-list>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pb-lg-5">
+        <div class="row" id="contactUsForm">
+            <div class="col-12 col-sm-4">
+                <div class="header-text pb-5">
+                    <h2>{{'ContactUs' | translate}}</h2>
+                </div>
+            </div>
+            <div class="col-12 col-sm-8">
+                <form class="pb-5" [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
+                    <div class="form__group-row">
+                        <div class="form__group">
+                            <input id="firstName" type="text" formControlName="firstName">
+                            <label for="firstName">{{'FirstName' | translate}}*</label>
+                        </div>
+                        <div class="form__group">
+                            <input id="lastName" type="text" formControlName="lastName">
+                            <label for="lastName">{{'LastName' | translate}}</label>
+                        </div>
+                        <div class="form__group">
+                            <input id="email" type="text" formControlName="email">
+                            <label for="email">{{'Email' | translate}}*</label>
+                        </div>
+                    </div>
+                    <div class="form__group-row">
+                        <div class="form__group">
+                            <input id="companyName" type="text" formControlName="companyName">
+                            <label for="companyName">{{'Company' | translate}}</label>
+                        </div>
+                        <div class="form__group">
+                            <select id="questionTheme" formControlName="theme">
+                                <option value="regular" selected>Regular question</option>
+                            </select>
+                            <label for="questionTheme">{{'YourInterest' | translate}}</label>
+                        </div>
+                    </div>
+                    <div class="form__group-row">
+                        <div class="form__group">
+                            <textarea id="description" formControlName="description"></textarea>
+                            <label for="description">{{'QuestionDescription' | translate}}</label>
+                            <div class="text-area__hint">
+                                {{symbolsCurrentLength <= symbolsMinLength ?
+                                textAreaLengthMinText + symbolsCurrentLength + '/' + symbolsMinLength :
+                                textAreaLengthMaxText + symbolsCurrentLength + '/' + symbolsMaxLength}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__group-row">
+                        <div class="form__group">
+                            <button type="submit" class="link-button link-button--accent-red">{{'SendMessage' | translate}}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

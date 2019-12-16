@@ -1,25 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
 app-root {
     display: flex;
     width: 100%;
     min-height: 100vh;
     flex-direction: column;
-}
-
-body {
-
-}
-
-body {
-    /*Dark theme*/
-    background-color: #1a1a1a;
-    color: white;
-    /*Light theme*/
-    /*background-color: white;*/
-    /*color: inherit;*/
 }
 
 app-projects-all {
@@ -33,6 +18,12 @@ app-footer {
 
 body.hide-overflow {
     overflow: hidden;
+}
+
+.mat-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 992px) {

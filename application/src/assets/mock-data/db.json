@@ -2,9 +2,9 @@
   "projects": [
     {
       "id": 1,
-      "header": "Zharim coffee",
-      "city": "Odessa",
-      "description": "Brand design of small cafe in center of Odessa",
+      "header": "Жарим кофе в Одессе",
+      "city": "Одесса",
+      "description": "Бренд-дизайн сети обжарочных кофе в Одессе",
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
       "link": "",
       "date": "10.11.2017",
@@ -32,16 +32,15 @@
           "image": "../../../assets/img/projects/jarimcoffee/23.JPG"
         }
       ],
-      "category": "not selected",
-      "client": "Josph Cautington",
+      "category": "commercial",
       "projectType": "Cafe, Small business, Franchising",
       "architects": "Denis Braharchuk"
     },
     {
       "id": 2,
-      "header": "Omega three",
-      "city": "Odessa",
-      "description": "кафе здорового питания",
+      "header": "OMEGA THREE",
+      "city": "Одесса",
+      "description": "Кафе здорового питания",
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
       "link": "",
       "date": "10.11.2017",
@@ -69,23 +68,25 @@
           "image": "../../../assets/img/projects/omegathree/omegathree9.png"
         }
       ],
-      "position": {
-        "longitude": 30.743637,
-        "latitude": 46.484798
-      },
-      "category": "buildings",
+      "positions": [
+        {
+          "latitude": 46.484845,
+          "longitude": 30.743395
+        }
+      ],
+      "category": "commercial",
       "client": "Josph Cautington",
       "projectType": "Cafe, Small business, Franchising",
       "architects": "Denis Braharchuk"
     },
     {
       "id": 3,
-      "header": "Pizza Steak",
-      "city": "Yuzhny",
-      "description": "Restraunt in Yuzhny town.",
-      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
-      "link": "",
-      "date": "10.11.2017",
+      "header": "Pizza & Steak",
+      "city": "Южное",
+      "description": "Ресторан в городе Южный",
+      "fullDescription": "Pizza & Steak - проект в котором основной задачей было создать уютный, запоминающийся и главное целостный интерьер, в который каждому клиенту захочется возвращаться снова и снова, не только ради вкусной еды, а и ради приятной и тёплой атмосферы. ",
+      "link": "https://yuzhnyiy.pizza-steak.com.ua/",
+      "date": "07.01.2019",
       "cover": "../../../assets/img/projects/pizzasteakyuzhny/pizzaSteak_4.jpg",
       "inProgress": false,
       "images": [
@@ -111,9 +112,28 @@
           "image": "../../../assets/img/projects/pizzasteakyuzhny/pizzaSteak_7.jpg"
         }
       ],
-      "category": "interiors",
-      "client": "Josph Cautington",
-      "projectType": "Restraunt, Small business, Franchising",
+      "progressImages": [
+        {
+          "image": "https://images.squarespace-cdn.com/content/v1/529b4956e4b0665935f8a730/1535535696301-AOM7JU1QPV2S76D8HKA3/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0mwONMR1ELp49Lyc52iWr5dNb1QJw9casjKdtTg1_-y4jz4ptJBmI9gQmbjSQnNGng/IMAGE.JPG"
+        },
+        {
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUvxHwx5qrAuB8e3uan5Zvqe82_tQw1-x0IZThzF2bN_8WXRms&s"
+        },
+        {
+          "image": "http://metrobud.kiev.ua/main/uploads/posts/2018-04/1524225236_jieokjy1q9o552w4h5tdqtvfxig42k0x4u1bsrg_sztv6a9ri8yfgxqntlnd_iqla-0gr3b7o0fnjhjfmdyvps9jtsmdjdq8oo5jropqr07hm5z_j5prvthfzfsrsanl.jpg"
+        },
+        {
+          "image": "http://d3e1m60ptf1oym.cloudfront.net/8dd51522-ecfe-11e1-867d-00259030440e/7763_xlarge.jpg"
+        }
+      ],
+      "positions": [
+        {
+          "latitude": 46.623037,
+          "longitude": 31.104698
+        }
+      ],
+      "category": "commercial",
+      "projectType": "Дизайн интерьера, Проектирование, Авторский надзор",
       "architects": "Denis Braharchuk"
     },
     {
@@ -174,13 +194,14 @@
     },
     {
       "id": 6,
-      "header": "House Biskviniy, Odessa",
-      "city": "Odessa",
-      "description": "Architecture design of multi-apartment house.",
+      "header": "ЖК Бисквитный",
+      "city": "Одесса",
+      "description": "Малоквартирный жилой комплекс",
       "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur expedita facere illo molestiae soluta. A aliquid architecto autem consequatur corporis cum deserunt doloremque ducimus exercitationem impedit laborum modi porro, quae quam recusandae reprehenderit ullam veniam? Accusamus architecto aut beatae consectetur cum cumque deleniti dolore dolorem doloremque eligendi facere labore maiores modi odio, porro, praesentium provident quam quod ratione recusandae reprehenderit rerum sit soluta sunt suscipit, totam ullam voluptatum! Alias aliquid asperiores aspernatur, autem, cum dolor dolorum eius error et excepturi, facere fuga fugiat id inventore iste iure iusto officiis omnis praesentium quas quis quod repellat sunt tempora totam veniam vitae voluptas voluptate voluptatem voluptatibus! Aut commodi corporis distinctio, dolore eaque labore laboriosam, molestias odit quasi repudiandae saepe totam ullam, vitae?",
-      "link": "",
-      "date": "10.11.2019",
+      "link": "https://biskvitniy.house/",
+      "date": "in progress",
       "cover": "../../../assets/img/projects/bisquitniybuilding/building_biskvitniy_1.jpg",
+      "inProgress": false,
       "images": [
         {
           "image": "../../../assets/img/projects/bisquitniybuilding/building_biskvitniy_2.jpg"
@@ -201,8 +222,13 @@
           "image": "../../../assets/img/projects/bisquitniybuilding/building_biskvitniy_7.jpg"
         }
       ],
-      "category": "buildings",
-      "client": "Josph Cautington",
+      "positions": [
+        {
+          "latitude": 46.456360,
+          "longitude": 30.740183
+        }
+      ],
+      "category": "architecture",
       "projectType": "Cafe, Small business, Franchising",
       "architects": "Denis Braharchuk"
     },
@@ -251,7 +277,7 @@
           "image": "../../../assets/img/projects/cityhallyuzhny/cityHall_project_4.JPG"
         }
       ],
-      "category": "buildings",
+      "category": "architecture",
       "client": "Josph Cautington",
       "projectType": "Cafe, Small business, Franchising",
       "architects": "Denis Braharchuk"
@@ -325,7 +351,7 @@
   ],
   "partners": [
     {
-      "image": "./assets/img/partners/SketchUP.png"
+      "image": "./assets/img/partners/sketchup.png"
     },
     {
       "image": "./assets/img/partners/3dsmax_logo.png"
@@ -409,6 +435,23 @@
     },
     {
       "behance": "https://www.behance.net/manufactura_studio"
+    }
+  ],
+  "clientsList": [
+    {
+      "name": "Omega Three",
+      "link": "",
+      "image": "../../../assets/img/512x512bb.jpg"
+    },
+    {
+      "name": "Pizza steak",
+      "link": "https://yuzhnyiy.pizza-steak.com.ua/",
+      "image": "./../../../assets/img/pizza_steak.jpg"
+    },
+    {
+      "name": "Zharim cofe",
+      "link": "",
+      "image": "./../../../assets/img/zharim-kofe-square.jpg"
     }
   ]
 }

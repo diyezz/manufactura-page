@@ -16,8 +16,10 @@
   "LatestProjects": "Latest projects",
   "Category": "Category",
   "all": "all",
-  "buildings": "buildings",
+  "architecture": "architecture",
   "interiors": "interiors",
+  "commercial": "commercial",
+  "houses/flats": "houses/flats",
   "ViewAllProjects": "View all projects",
   "ViewOtherProjects": "View other projects",
   "GoBack": "Go back",
@@ -32,6 +34,7 @@
   "ProjectType": "Project type",
   "Architects": "Architects",
   "Location": "Location",
+  "InProcessImages": "Building process",
   "KeepInTouch": "Keep in touch",
   "CallUsDirectly": "Call us directly",
   "WorkHours": "Work hours",
@@ -72,14 +75,21 @@
   "ArchitecturalDesign": "Architectural design",
   "InteriorDesign": "Interior Design",
   "PlanningApplication": "Planning application",
-  "CreateAndConstruct": "Create & Construct",
+  "CreateAndConstruct": "Author's supervision",
   "InteriorDesignDescription": "for residential and public places",
   "ArchitecturalDesignDescription": "detailed preparation of projects of any complexity",
   "PlanningApplicationDescription": "development of a construction plan",
   "CreateAndConstructDescription": "full project implementation",
   "FirstDescription": "Competent redevelopment, reconstruction or overhaul of the apartment can not be done without a detailed project.",
   "SecondDescription": "The project is being developed in stages.",
-  "ThirdDescription": "Each stage is a complete cycle, according to the results of which certain decisions are made and corrections are made."
+  "ThirdDescription": "Each stage is a complete cycle, according to the results of which certain decisions are made and corrections are made.",
+  "Download": "Download",
+  "PriceDescriptionEN": "Latest prices for every service in English language",
+  "PriceDescriptionRU": "Latest prices for every service in Russian language",
+  "PriceDescriptionUA": "Latest prices for every service in Ukrainian language",
+  "Feedback": "Do you have some questions?",
+  "FeedbackFirstDescription": "We are always opened for propositions. If you have some questions contact us",
+  "FeedbackSecondDescription": ""
 
 
 }

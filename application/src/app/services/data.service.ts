@@ -101,6 +101,17 @@ export class DataService {
             return this.productionApiRequest('companySocialList');
         }
     }
+    getClientsList() {
+        if (isDevMode()) {
+            const url = 'http://localhost:3004/clientsList';
+            return this.httpClient.get(url).pipe(
+                map((res) => this.extractData(res)),
+                catchError(error => this.handleError(error))
+            );
+        } else {
+            return this.productionApiRequest('clientsList');
+        }
+    }
 
     /**
      * Uncomment for prod version.
@@ -120,6 +131,9 @@ export class DataService {
     // }
     // getCompanySocialList() {
     //     return this.productionApiRequest('companySocialList');
+    // }
+    // getclientsList() {
+    //     return this.productionApiRequest('clientsList');
     // }
 
 

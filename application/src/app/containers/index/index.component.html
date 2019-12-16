@@ -1,0 +1,189 @@
+<section class="retina-size-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="slider">
+                    <div class="slider__header"></div>
+                    <app-headline-slider 
+                        [images]="images" 
+                        [disableFullHeightProp]="false"
+                        [isResizeable]="false"
+                        [isPopupAvailable]="false"
+                        [isSlideFaded]="true"
+                        [isSlideCovered]="true">
+                    </app-headline-slider>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="particles-wrapper">
+    <div id="particles-js" class="particles-js"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="about-us">
+                    <div class="about-us__header header-text header-text--spacing">
+                        <h2>{{'AboutUs' | translate}}</h2>
+                        <a class="link-more" routerLink="/about">{{'MoreAboutUs' | translate}}</a>
+                    </div>
+                    <div class="about-us__text">
+                        <h3 class="headline-text headline-text--spaced about-us__headline-text">
+                            {{texts.title[translateService.currentLang]}}
+                        </h3>
+                        <p>{{texts.fullText[translateService.currentLang]}}</p>
+                    </div>
+                    <div class="about-us__one-of-work">
+                        <img class="about-us__one-of-work-background"
+                            src="{{defaultEnvironment.baseUrl}}/assets/img/sketch.png" alt="">
+                        <div class="about-us__exp-badge text-headline">
+                            {{'WeHave' | translate}}
+                            <span class="counter">{{dateCounter('years')}}</span> {{'YearsAnd' | translate}}
+                            <span class="counter">{{dateCounter('days')}}</span> {{'DaysOfExp' | translate}}
+                        </div>
+                    </div>
+                    <div class="about-us__team-link d-none">
+                        <a class="link-button" routerLink="/about">{{'MeetOurTeam' | translate}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="projects">
+                    <div class="projects__header header-text header-text--spacing">
+                        <h2>{{'LatestProjects' | translate}}</h2>
+                        <ul class="filter__list">
+                            <li class="filter__item" *ngFor="let item of filters; let i = index"
+                                (click)="changeCategory($event, i)" [class.is-active]="i == selectedItem">
+                                {{ item.name | translate }}</li>
+                        </ul>
+                        <a class="link-more" routerLink="/projects-all">{{'ViewAllProjects' | translate}}</a>
+                    </div>
+                    <div class="projects__link-to-all-projects"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="retina-size-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <app-projects-slider [slideCategory]="slideCategoryName"></app-projects-slider>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center mb-5 mt-5">
+                <a routerLink="/projects-all" class="link-button">{{'ViewAllProjects' | translate}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="services">
+                    <div class="services__header header-text header-text--spacing">
+                        <h2>{{'OurServices' | translate}}</h2>
+                        <a class="link-more" routerLink="/services">{{'AllServices' | translate}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <div class="services__content text-center">
+                    <div class="services__image-wrapper">
+                        <img class="services__image" src="./../../../assets/img/company.svg" alt="">
+                    </div>
+                    <h5 class="headline-text headline-text--regular-h5">{{'ArchitecturalDesign' | translate}}</h5>
+                    <p class="">{{'ArchitecturalDesignDescription' | translate }}</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="services__content text-center">
+                    <div class="services__image-wrapper">
+                        <img class="services__image" src="./../../../assets/img/interior-design-1.svg" alt="">
+                    </div>
+                    <h5 class="headline-text headline-text--regular-h5"
+                        [class.mx-md-5]="translateService.currentLang !== 'en'">{{'InteriorDesign' | translate}}</h5>
+                    <p class="">{{'InteriorDesignDescription' | translate}}</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="services__content text-center">
+                    <div class="services__image-wrapper">
+                        <img class="services__image" src="./../../../assets/img/construction.svg" alt="">
+                    </div>
+                    <h5 class="headline-text headline-text--regular-h5">{{'PlanningApplication' | translate}}</h5>
+                    <p class="">{{'PlanningApplicationDescription' | translate}}</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="services__content text-center">
+                    <div class="services__image-wrapper">
+                        <img class="services__image" src="./../../../assets/img/architect.svg" alt="">
+                    </div>
+                    <h5 class="headline-text headline-text--regular-h5">{{'CreateAndConstruct' | translate}}</h5>
+                    <p class="">{{'CreateAndConstructDescription' | translate}}</p>
+                </div>
+            </div>
+            <div class="col-12"></div>
+            <div class="col-12 col-md-9 mx-auto mt-5">
+                <div class="services__content-description">
+                    <ul>
+                        <li>{{'FirstDescription' | translate}}</li>
+                        <li>{{'SecondDescription' | translate}}</li>
+                        <li>{{'ThirdDescription' | translate}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center mb-5 mt-5">
+                <a routerLink="/services" class="link-button">{{'ViewAllServices' | translate}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="clients-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="partners__header header-text header-text--spacing">
+                    <h2>{{'OurClients' | translate}}</h2>
+                </div>
+            </div>
+        </div>
+        <app-clients-list 
+            [clients]="clients"
+            [listItemClass]="'col-6 col-sm-4 col-md-2'"
+            [wrapperClass]="'row justify-content-center'">
+        </app-clients-list>
+    </div>
+</section>
+
+<section class="topography-patter">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="partners__header header-text header-text--spacing header-text--black">
+                    <h2>{{'OurPartners' | translate}}</h2>
+                </div>
+                <app-partners-slider></app-partners-slider>
+            </div>
+        </div>
+    </div>
+</section>

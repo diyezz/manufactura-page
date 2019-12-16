@@ -1,0 +1,16 @@
+{
+  "firstName": "Dmytro",
+  "lastName": "Prokudin",
+  "email": "dprokudin@gmail.com",
+  "companyName": "Lohika",
+  "theme": "",
+  "description": "Added non-passive event listener to a scroll-blocking 'touchstart' event. "
+}, 
+{
+  "firstName": "Dima",
+  "lastName": "Prokudin",
+  "email": "dprokudin@gmail.com",
+  "companyName": "Lohika",
+  "theme": "",
+  "description": "Added non-passive event listener to a scroll-blocking 'touchstart' event. "
+}

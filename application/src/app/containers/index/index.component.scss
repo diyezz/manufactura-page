@@ -1,0 +1,44 @@
+@import "../../../assets/scss/main";
+
+.particles-wrapper {
+  position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+  .particles-js {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.services-section {
+  padding-top: 40px;
+}
+
+.services {
+  // &__content {
+
+  // }
+  &__image-wrapper {
+    background-color: var(--main-black);
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 15px;
+    height: 130px;
+    width: 130px;
+  }
+  &__image {
+    filter: invert(1);
+    width: 80px;
+  }
+}
+
+.clients-section {
+  padding-bottom: 100px;
+  padding-top: 40px;
+}

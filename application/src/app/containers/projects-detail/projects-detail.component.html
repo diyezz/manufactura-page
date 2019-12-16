@@ -1,0 +1,82 @@
+<section class="retina-size-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="slider">
+          <div class="slider__header"></div>
+          <app-headline-slider *ngIf="currentProject" [projectTitle]="currentProject.header"
+            [images]="currentProject.images" [isPopupAvailable]="true" [inProgress]="currentProject.inProgress"
+            [isInfinite]="true" [disableFullHeightProp]="true">
+          </app-headline-slider>
+        </div>
+      </div>
+    </div>
+    <app-loading class="loading-wrapper" *ngIf="!currentProject"></app-loading>
+  </div>
+</section>
+<section class="">
+  <div class="container" *ngIf="currentProject">
+    <div class="row">
+      <div class="col-12">
+        <div class="projects">
+          <div class="projects__header header-text header-text--spacing">
+            <h2>{{currentProject.header}}</h2>
+            <a class="link-more" href="javascript:void(0);" (click)="goBack()">{{'GoBack' | translate}}</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8 col-12">
+        <div class="project__wrapper">
+          <div class="project__description">
+            <p>{{currentProject.city}}, {{currentProject.date | date}}, {{'Category' | translate}}:
+              <b>{{currentProject.category | translate}}</b></p>
+            <p>
+              {{currentProject.fullDescription}}
+            </p>
+          </div>
+          <div class="project__inprogress-images" *ngIf="currentProject && currentProject.progressImages">
+            <h5 class="location-info__headline">{{'InProcessImages' | translate}}</h5>
+            <div class="project__inprogress-images-wrapper">
+                <img *ngFor="let progressImage of currentProject.progressImages" class="project__inprogress-image-item" src="{{progressImage.image}}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-12">
+        <div class="info-table">
+          <h5 class="info-table__headline">{{currentProject.description}}</h5>
+          <ul class="info-table__list">
+            <li *ngIf="currentProject.client"><span>{{'Client' | translate}}:</span>{{currentProject.client}}</li>
+            <li *ngIf="currentProject.date"><span>{{'Completion' | translate}}:</span> {{currentProject.date | date}}</li>
+            <li *ngIf="currentProject.projectType"><span>{{'ProjectType' | translate}}:</span>{{currentProject.projectType}}</li>
+            <li *ngIf="currentProject.architects"><span>{{'Architects' | translate}}:</span>{{currentProject.architects}}</li>
+            <li *ngIf="checkDescriptionInformation(currentProject)">Sorry, we have no information yet.</li>
+          </ul>
+        </div>
+        <div class="location-info">
+          <h5 class="location-info__headline">{{'Location' | translate}}</h5>
+          <div class="location-info__map">
+            <agm-map 
+              [latitude]="currentProject.positions && currentProject.positions[0] ? currentProject.positions[0].latitude : 0"
+              [longitude]="currentProject.positions && currentProject.positions[0] ? currentProject.positions[0].longitude : 0"
+              [zoom]="14"
+              [zoomControl]="true"
+              [scrollwheel]="false"
+              [styles]="locationService.googleMapsStyles">
+                  <agm-marker 
+                  *ngFor="let m of currentProject.positions"
+                  [latitude]="m.latitude"
+                  [longitude]="m.longitude">
+                </agm-marker>
+            </agm-map>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center mb-5 mt-5">
+        <a routerLink="/projects-all" class="link-button">{{'ViewOtherProjects' | translate}}</a>
+      </div>
+    </div>
+  </div>
+</section>

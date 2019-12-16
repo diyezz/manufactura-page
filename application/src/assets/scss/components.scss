@@ -1,4 +1,37 @@
 @import './mixins';
+.icon {
+    width: 13px;
+    height: 13px;
+    display: block;
+    background-size: cover;
+    &-googlePlus {
+        @include icon-google-plus($main-black);
+    }
+    &-facebook {
+        @include icon-facebook($main-black);
+    }
+    &-twitter {
+        @include icon-twitter($main-black);
+    }
+    &-instagram {
+        @include icon-instagram($main-black);
+    }
+    &-pinterest {
+        @include icon-pinterest($main-black);
+    }
+    &-youtube {
+        @include icon-youtube($main-black);
+    }
+    &-behance {
+        @include icon-behance($main-black);
+    }
+    &-expand {
+        @include icon-expand($main-black);
+    }
+    &-open-in-modal {
+        @include icon-open-in-modal($static-main-white);
+    }
+}
 .theme-dark {
     .icon {
         width: 13px;
@@ -33,39 +66,14 @@
             @include icon-open-in-modal($static-main-white);
         }
     }
+    img[class*='services__image'] {
+        filter: none;
+    }
 }
-.icon {
-    width: 13px;
-    height: 13px;
-    display: block;
-    background-size: cover;
-    &-googlePlus {
-        @include icon-google-plus($main-black);
-    }
-    &-facebook {
-        @include icon-facebook($main-black);
-    }
-    &-twitter {
-        @include icon-twitter($main-black);
-    }
-    &-instagram {
-        @include icon-instagram($main-black);
-    }
-    &-pinterest {
-        @include icon-pinterest($main-black);
-    }
-    &-youtube {
-        @include icon-youtube($main-black);
-    }
-    &-behance {
-        @include icon-behance($main-black);
-    }
-    &-expand {
-        @include icon-expand($main-black);
-    }
-    &-open-in-modal {
-        @include icon-open-in-modal($static-main-white);
-    }
+.theme-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 .logo-cutted {
     display: inline-block;
@@ -211,6 +219,12 @@
         letter-spacing: 2px;
         margin-bottom: 1rem;
     }
+    &--regular-h5 {
+        font-size: $middle-font;
+        letter-spacing: 0px;
+        line-height: normal;
+        color: $main-black;
+    }
     &--footer {
         font-size: $middle-font;
         letter-spacing: 0px;
@@ -344,6 +358,7 @@
 
     &--accent-red {
         background-color: $main-red;
+        color: $static-main-white;
     }
 
     &:hover {

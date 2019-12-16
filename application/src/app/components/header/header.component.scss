@@ -245,7 +245,7 @@ header {
   &__text-for-call {
     text-transform: uppercase;
     margin-right: 0.5rem;
-    color: $main-grey;
+    color: $secondary-black;
   }
 
   &__back-call {
@@ -324,7 +324,7 @@ header {
       pointer-events: none;
       padding-bottom: 1rem;
       padding-left: 10px;
-      color: transparentize($secondary-black, 0.2);
+      color: transparentize($secondary-black, 0.1);
       &::selection {
         background-color: $secondary-black;
         color: $main-white;

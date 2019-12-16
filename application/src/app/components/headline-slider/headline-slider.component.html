@@ -2,7 +2,7 @@
   <div ngxSlickItem *ngFor="let slide of images" 
     class="slider__slide" 
     [style.background-image]="'url(' + slide.image + ')'"
-    [class.slider__slide--setMaxWidth]="!fullHeightProp" 
+    [class.slider__slide--setMaxWidth]="disableFullHeightProp" 
     [class.slider__slide--in-progress]="inProgress"
     [class.slider__slide--faded]="isSlideFaded" 
     [class.slider__slide--cover]="isSlideCovered">
@@ -25,7 +25,7 @@
 </div>
 
 <div class="container slider__slide-height-toggle-wrapper">
-  <button *ngIf="isDesktop" class="btn-toggle" (click)="toggleSliderHeight()" matTooltip="{{'ExpandTooltip' | translate}}">
+  <button *ngIf="isDesktop && isResizeable" class="btn-toggle" (click)="toggleSliderHeight()" matTooltip="{{'ExpandTooltip' | translate}}">
     <i class="icon icon-expand"></i>
   </button>
   <button *ngIf="isPopupAvailable" class="btn-toggle ml-2" (click)="toggleImageModal(false)" matTooltip="{{'ExpandTooltip' | translate}}">

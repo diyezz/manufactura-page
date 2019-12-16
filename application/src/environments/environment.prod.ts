@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://manufactura-d8bb1.firebaseapp.com/'
+  baseUrl: 'https://bragarchuk-beta.firebaseapp.com/'
 };

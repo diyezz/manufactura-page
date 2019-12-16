@@ -1,0 +1,12 @@
+<div class="clients" [ngClass]="wrapperClass">
+  <div *ngFor="let client of clientsList" class="{{listItemClass}}">
+    <div class="clients__content">
+      <a *ngIf="client.link && client.link !== '' ; else withoutLink" href="{{client.link}}" target="_blank">
+        <img class="clients__image" src="{{client.image}}" alt="{{client.name}}">
+      </a>
+      <ng-template #withoutLink>
+        <img class="clients__image" src="{{client.image}}" alt="{{client.name}}">
+      </ng-template>
+    </div>
+  </div>
+</div>

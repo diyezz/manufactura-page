@@ -35,12 +35,12 @@ import {
     ProjectsDetailComponent,
     ProjectsAllComponent,
     ServicesComponent
-} from './pages/pages';
+} from './containers/containers';
 
 import {JwtInterceptor} from './interceptors/jwt.interceptor';
 import {ErrorInterceptor} from './interceptors/error.interceptor';
 import {fakeBackendProvider} from './_helpers/fake-backend';
-import {LoginComponent} from './pages/login/login.component';
+import {LoginComponent} from './containers/login/login.component';
 import {
     MatIconModule,
     MatProgressBarModule,
@@ -55,6 +55,7 @@ import {TranslatePipe} from './pipes/translate.pipe';
 import {LoadingComponent} from './components/loading/loading.component';
 import {TypeLettersPipe} from './pipes/type-letters.pipe';
 import { TranslateDynamicPipe } from './pipes/translate-dynamic.pipe';
+import { ClientsListComponent } from './components/clients-list/clients-list.component';
 
 
 export function setupTranslateFactory(
@@ -86,7 +87,8 @@ export function setupTranslateFactory(
         FilterPipe,
         TypeLettersPipe,
         TranslatePipe,
-        TranslateDynamicPipe
+        TranslateDynamicPipe,
+        ClientsListComponent
     ],
     imports: [
         BrowserModule,
@@ -103,7 +105,7 @@ export function setupTranslateFactory(
         SlickModule.forRoot(),
         AgmCoreModule.forRoot(
             {
-                apiKey: 'AIzaSyDLKDCwRSdQrWwwbhHyxnFaKR0ojm8tTwk'
+                apiKey: 'AIzaSyAA62D36RMZE2nROgW1NU9vMYGAV5b6yTY'
             }
         )
     ],
