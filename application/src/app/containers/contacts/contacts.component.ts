@@ -66,17 +66,17 @@ export class ContactsComponent implements OnInit, OnDestroy {
     }
 
     onSubmit({ value, valid }: { value: ContactData, valid: boolean }) {
-        const apiUrl = 'https://manufactura-backend.firebaseapp.com/api/uploadContact';
+        const apiUrl = 'http://localhost:5000/api/uploadContact';
         const formData = JSON.stringify(value);
 
         this.markAllFormFieldsAsTouched(this.contactForm);
 
         console.log(value, valid);
         this.httpService.post(apiUrl, formData)
-        .subscribe(
-            (res) => console.log(res),
-            (err) => console.log(err)
-        );
+            .subscribe(
+                (res) => console.log(res),
+                (err) => console.log(err)
+            );
     }
 
     checkDescriptionValidity() {
@@ -96,13 +96,15 @@ export class ContactsComponent implements OnInit, OnDestroy {
 
     markNestedControlsAsTouched(form: FormGroup | FormArray) {
         for (const control in form.controls) {
-            const currentForm = form.get(control) as FormArray;
-            form.get(control).markAsTouched();
-            form.get(control).updateValueAndValidity();
+            if (form.controls.hasOwnProperty(control)) {
+                const currentForm = form.get(control) as FormArray;
+                form.get(control).markAsTouched();
+                form.get(control).updateValueAndValidity();
 
-            if (currentForm.controls) {
-                const newForm = form.get(control) as FormArray;
-                this.markNestedControlsAsTouched(newForm);
+                if (currentForm.controls) {
+                    const newForm = form.get(control) as FormArray;
+                    this.markNestedControlsAsTouched(newForm);
+                }
             }
         }
     }

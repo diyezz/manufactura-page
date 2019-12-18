@@ -13,4 +13,68 @@
   "companyName": "Lohika",
   "theme": "",
   "description": "Added non-passive event listener to a scroll-blocking 'touchstart' event. "
+}, 
+{
+  "firstName": "Dima",
+  "lastName": "Prokudin",
+  "email": "pro.diyezz@gmail.com",
+  "companyName": "Test",
+  "theme": "",
+  "description": "Some additional information"
+}, 
+{
+  "firstName": "Dima",
+  "lastName": "Prokudin",
+  "email": "pro.diyezz@gmail.com",
+  "companyName": "Test",
+  "theme": "",
+  "description": "Some additional information"
+}, 
+{
+  "firstName": "Dima",
+  "lastName": "Prokudin",
+  "email": "pro.diyezz@gmail.com",
+  "companyName": "Test",
+  "theme": "",
+  "description": "Some additional information"
+}, 
+{
+  "firstName": "Dima",
+  "lastName": "Prokudin",
+  "email": "pro.diyezz@gmail.com",
+  "companyName": "Test",
+  "theme": "",
+  "description": "Some additional information"
+}, 
+{
+  "firstName": "Dima",
+  "lastName": "Prokudin",
+  "email": "pro.diyezz@gmail.com",
+  "companyName": "Test",
+  "theme": "",
+  "description": "Some additional information\n"
+}, 
+{
+  "firstName": "Dima",
+  "lastName": "Prokudin",
+  "email": "pro.diyezz@gmail.com",
+  "companyName": "Test",
+  "theme": "",
+  "description": "test additional informaion"
+}, 
+{
+  "firstName": "Dima",
+  "lastName": "Prokudin",
+  "email": "pro.diyezz@gmail.com",
+  "companyName": "Test",
+  "theme": "",
+  "description": "test additional informaion"
+}, 
+{
+  "firstName": "Dima",
+  "lastName": "Prokudin",
+  "email": "pro.diyezz@gmail.com",
+  "companyName": "Test",
+  "theme": "",
+  "description": "test additional information"
 }
