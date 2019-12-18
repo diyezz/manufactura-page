@@ -2,8 +2,8 @@ import * as TelegramBot from 'node-telegram-bot-api';
 import * as fs from 'fs';
 
 export default class ContactsController {
-  static TTOKEN = '1039070964:AAEHjR1rUY7ZFH2KLreHub8LQdbGpcbYZOI';
-  static TPUBLICCHATID = '@bragarchukarchitect';
+  static TTOKEN = '';
+  static TPUBLICCHATID = '';
   static TOPTIONS = { polling: true };
 
   // Initialize Telegram Bot
